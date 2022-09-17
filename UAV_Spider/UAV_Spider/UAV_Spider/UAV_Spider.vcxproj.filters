@@ -1,0 +1,382 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="库文件">
+      <UniqueIdentifier>{3543ec70-a770-4c89-9534-31ffef00945a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\UAV_Spider.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\UAV_SpiderDoc.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\UAV_Spider.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\paneicons.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Pan.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ZoomIn.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ZoomOut.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Toolbar1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\toolbar2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\bitmap2.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\bitmap3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\bmp00001.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ToolbarUser.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\..\ai-set.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\..\shebeizhuangtai.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\..\shijian.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\..\yichang.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\..\zhengchang.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Abnormal.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\EquipStatus.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Normal.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Setting.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Time.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ToolbarUser.png">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\toolbar_.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\toolbar3.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Setting.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\Pan.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ZoomIn.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\ZoomOut.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\icon1.ico">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\OpenCVConfig.cmake">
+      <Filter>库文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="UAV_Spider.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UAV_SpiderDoc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UAV_SpiderView.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgDetectCtrl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgTrapCtrl.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DetectReportPane.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="UserDef.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CTCPSock.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DetectCtrlPane.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="TrapCtrlPane.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="OpLogPane.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgOpLog.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="map_mapwingis.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Bing_TileSystem.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MyBtn.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ToolbarPane.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="DlgToolbar.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="U_StaticTime.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="iledroundx_detect.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="ButtonDlg.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CvvImage.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="UAV_Spider.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UAV_SpiderDoc.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="UAV_SpiderView.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgDetectCtrl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DetectReportPane.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TrapReportPane.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CTCPSock.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgTrapCtrl.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DetectCtrlPane.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="TrapCtrlPane.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="OpLogPane.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgOpLog.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="map_mapwingis.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Bing_TileSystem.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MyBtn.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ToolbarPane.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="DlgToolbar.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="U_StaticTime.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="iledroundx_detect.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ButtonDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CvvImage.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UAV_Spider.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_calib3d242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_calib3d242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_contrib242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_contrib242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_core242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_core242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_features2d242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_features2d242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_flann242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_flann242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_gpu242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_gpu242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_haartraining_engine.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_haartraining_engined.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_highgui242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_highgui242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_imgproc242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_imgproc242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_legacy242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_legacy242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_ml242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_ml242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_nonfree242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_nonfree242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_objdetect242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_objdetect242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_photo242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_photo242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_stitching242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_stitching242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_ts242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_ts242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_video242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_video242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_videostab242.lib">
+      <Filter>库文件</Filter>
+    </Library>
+    <Library Include="..\..\..\..\opencv\opencv\opencv\build\x86\vc10\lib\opencv_videostab242d.lib">
+      <Filter>库文件</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

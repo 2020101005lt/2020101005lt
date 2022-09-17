@@ -1,0 +1,4776 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (8d4ab8a2).
+//
+// c:\xinhaoyuxitong\20200106uav_spider\20200106uav_spider\uav_spider\uav_spider\debug\mapwingis.tli
+//
+// Wrapper implementations for Win32 type library C:\Program Files (x86)\Common Files\MapWindow\MapWinGIS.ocx
+// compiler-generated file created 04/15/22 at 01:46:26 - DO NOT EDIT!
+
+#pragma once
+
+//
+// dispinterface _DMap wrapper method implementations
+//
+
+inline HRESULT _DMap::Redraw ( ) {
+    return _com_dispatch_method(this, 0x15, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline long _DMap::AddLayer ( IDispatch * Object, VARIANT_BOOL Visible ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x16, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0009\x000b", Object, Visible);
+    return _result;
+}
+
+inline HRESULT _DMap::RemoveLayer ( long LayerHandle ) {
+    return _com_dispatch_method(this, 0x17, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", LayerHandle);
+}
+
+inline HRESULT _DMap::RemoveLayerWithoutClosing ( long LayerHandle ) {
+    return _com_dispatch_method(this, 0x8a, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", LayerHandle);
+}
+
+inline HRESULT _DMap::RemoveAllLayers ( ) {
+    return _com_dispatch_method(this, 0x18, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline VARIANT_BOOL _DMap::MoveLayerUp ( long InitialPosition ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x19, DISPATCH_METHOD, VT_BOOL, (void*)&_result, 
+        L"\x0003", InitialPosition);
+    return _result;
+}
+
+inline VARIANT_BOOL _DMap::MoveLayerDown ( long InitialPosition ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x1a, DISPATCH_METHOD, VT_BOOL, (void*)&_result, 
+        L"\x0003", InitialPosition);
+    return _result;
+}
+
+inline VARIANT_BOOL _DMap::MoveLayer ( long InitialPosition, long TargetPosition ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x1b, DISPATCH_METHOD, VT_BOOL, (void*)&_result, 
+        L"\x0003\x0003", InitialPosition, TargetPosition);
+    return _result;
+}
+
+inline VARIANT_BOOL _DMap::MoveLayerTop ( long InitialPosition ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x1c, DISPATCH_METHOD, VT_BOOL, (void*)&_result, 
+        L"\x0003", InitialPosition);
+    return _result;
+}
+
+inline VARIANT_BOOL _DMap::MoveLayerBottom ( long InitialPosition ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x1d, DISPATCH_METHOD, VT_BOOL, (void*)&_result, 
+        L"\x0003", InitialPosition);
+    return _result;
+}
+
+inline HRESULT _DMap::ZoomToMaxExtents ( ) {
+    return _com_dispatch_method(this, 0x1e, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline HRESULT _DMap::ZoomToLayer ( long LayerHandle ) {
+    return _com_dispatch_method(this, 0x1f, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", LayerHandle);
+}
+
+inline HRESULT _DMap::ZoomToShape ( long LayerHandle, long Shape ) {
+    return _com_dispatch_method(this, 0x20, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", LayerHandle, Shape);
+}
+
+inline HRESULT _DMap::ZoomIn ( double Percent ) {
+    return _com_dispatch_method(this, 0x21, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005", Percent);
+}
+
+inline HRESULT _DMap::ZoomOut ( double Percent ) {
+    return _com_dispatch_method(this, 0x22, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005", Percent);
+}
+
+inline long _DMap::ZoomToPrev ( ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x23, DISPATCH_METHOD, VT_I4, (void*)&_result, NULL);
+    return _result;
+}
+
+inline HRESULT _DMap::ProjToPixel ( double projX, double projY, double * pixelX, double * pixelY ) {
+    return _com_dispatch_method(this, 0x24, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x4005\x4005", projX, projY, pixelX, pixelY);
+}
+
+inline HRESULT _DMap::PixelToProj ( double pixelX, double pixelY, double * projX, double * projY ) {
+    return _com_dispatch_method(this, 0x25, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x4005\x4005", pixelX, pixelY, projX, projY);
+}
+
+inline HRESULT _DMap::ClearDrawing ( long DrawHandle ) {
+    return _com_dispatch_method(this, 0x26, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", DrawHandle);
+}
+
+inline HRESULT _DMap::ClearDrawings ( ) {
+    return _com_dispatch_method(this, 0x27, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline IDispatchPtr _DMap::SnapShot ( IDispatch * BoundBox ) {
+    IDispatch * _result = 0;
+    _com_dispatch_method(this, 0x28, DISPATCH_METHOD, VT_DISPATCH, (void*)&_result, 
+        L"\x0009", BoundBox);
+    return IDispatchPtr(_result, false);
+}
+
+inline VARIANT_BOOL _DMap::ApplyLegendColors ( IDispatch * Legend ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x29, DISPATCH_METHOD, VT_BOOL, (void*)&_result, 
+        L"\x0009", Legend);
+    return _result;
+}
+
+inline HRESULT _DMap::LockWindow ( enum tkLockMode LockMode ) {
+    return _com_dispatch_method(this, 0x2a, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", LockMode);
+}
+
+inline HRESULT _DMap::Resize ( long Width, long Height ) {
+    return _com_dispatch_method(this, 0x2b, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", Width, Height);
+}
+
+inline HRESULT _DMap::ShowToolTip ( _bstr_t Text, long Milliseconds ) {
+    return _com_dispatch_method(this, 0x2c, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008\x0003", (BSTR)Text, Milliseconds);
+}
+
+inline HRESULT _DMap::AddLabel ( long LayerHandle, _bstr_t Text, OLE_COLOR Color, double x, double y, enum tkHJustification hJustification ) {
+    return _com_dispatch_method(this, 0x2d, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0003\x0005\x0005\x0003", LayerHandle, (BSTR)Text, Color, x, y, hJustification);
+}
+
+inline HRESULT _DMap::ClearLabels ( long LayerHandle ) {
+    return _com_dispatch_method(this, 0x2e, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", LayerHandle);
+}
+
+inline HRESULT _DMap::LayerFont ( long LayerHandle, _bstr_t FontName, long FontSize ) {
+    return _com_dispatch_method(this, 0x2f, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0003", LayerHandle, (BSTR)FontName, FontSize);
+}
+
+inline IDispatchPtr _DMap::GetColorScheme ( long LayerHandle ) {
+    IDispatch * _result = 0;
+    _com_dispatch_method(this, 0x30, DISPATCH_METHOD, VT_DISPATCH, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return IDispatchPtr(_result, false);
+}
+
+inline long _DMap::NewDrawing ( enum tkDrawReferenceList Projection ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x31, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003", Projection);
+    return _result;
+}
+
+inline HRESULT _DMap::DrawPoint ( double x, double y, long pixelSize, OLE_COLOR Color ) {
+    return _com_dispatch_method(this, 0x32, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0003\x0003", x, y, pixelSize, Color);
+}
+
+inline HRESULT _DMap::DrawLine ( double x1, double y1, double x2, double y2, long pixelWidth, OLE_COLOR Color ) {
+    return _com_dispatch_method(this, 0x33, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0005\x0003\x0003", x1, y1, x2, y2, pixelWidth, Color);
+}
+
+inline HRESULT _DMap::DrawCircle ( double x, double y, double pixelRadius, OLE_COLOR Color, VARIANT_BOOL fill ) {
+    return _com_dispatch_method(this, 0x34, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0003\x000b", x, y, pixelRadius, Color, fill);
+}
+
+inline HRESULT _DMap::DrawPolygon ( VARIANT * xPoints, VARIANT * yPoints, long numPoints, OLE_COLOR Color, VARIANT_BOOL fill ) {
+    return _com_dispatch_method(this, 0x35, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x400c\x400c\x0003\x0003\x000b", xPoints, yPoints, numPoints, Color, fill);
+}
+
+inline _bstr_t _DMap::GetLayerKey ( long LayerHandle ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x36, DISPATCH_PROPERTYGET, VT_BSTR, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _bstr_t(_result, false);
+}
+
+inline void _DMap::PutLayerKey ( long LayerHandle, _bstr_t _arg2 ) {
+    _com_dispatch_method(this, 0x36, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0008", LayerHandle, (BSTR)_arg2);
+}
+
+inline long _DMap::GetLayerPosition ( long LayerHandle ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x37, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline long _DMap::GetLayerHandle ( long LayerPosition ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x38, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003", LayerPosition);
+    return _result;
+}
+
+inline VARIANT_BOOL _DMap::GetLayerVisible ( long LayerHandle ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x39, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutLayerVisible ( long LayerHandle, VARIANT_BOOL _arg2 ) {
+    _com_dispatch_method(this, 0x39, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x000b", LayerHandle, _arg2);
+}
+
+inline OLE_COLOR _DMap::GetShapeLayerFillColor ( long LayerHandle ) {
+    OLE_COLOR _result;
+    _com_dispatch_method(this, 0x3a, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutShapeLayerFillColor ( long LayerHandle, OLE_COLOR _arg2 ) {
+    _com_dispatch_method(this, 0x3a, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003", LayerHandle, _arg2);
+}
+
+inline OLE_COLOR _DMap::GetShapeFillColor ( long LayerHandle, long Shape ) {
+    OLE_COLOR _result;
+    _com_dispatch_method(this, 0x3b, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapeFillColor ( long LayerHandle, long Shape, OLE_COLOR _arg3 ) {
+    _com_dispatch_method(this, 0x3b, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003", LayerHandle, Shape, _arg3);
+}
+
+inline OLE_COLOR _DMap::GetShapeLayerLineColor ( long LayerHandle ) {
+    OLE_COLOR _result;
+    _com_dispatch_method(this, 0x3c, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutShapeLayerLineColor ( long LayerHandle, OLE_COLOR _arg2 ) {
+    _com_dispatch_method(this, 0x3c, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003", LayerHandle, _arg2);
+}
+
+inline OLE_COLOR _DMap::GetShapeLineColor ( long LayerHandle, long Shape ) {
+    OLE_COLOR _result;
+    _com_dispatch_method(this, 0x3d, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapeLineColor ( long LayerHandle, long Shape, OLE_COLOR _arg3 ) {
+    _com_dispatch_method(this, 0x3d, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003", LayerHandle, Shape, _arg3);
+}
+
+inline OLE_COLOR _DMap::GetShapeLayerPointColor ( long LayerHandle ) {
+    OLE_COLOR _result;
+    _com_dispatch_method(this, 0x3e, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutShapeLayerPointColor ( long LayerHandle, OLE_COLOR _arg2 ) {
+    _com_dispatch_method(this, 0x3e, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003", LayerHandle, _arg2);
+}
+
+inline OLE_COLOR _DMap::GetShapePointColor ( long LayerHandle, long Shape ) {
+    OLE_COLOR _result;
+    _com_dispatch_method(this, 0x3f, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapePointColor ( long LayerHandle, long Shape, OLE_COLOR _arg3 ) {
+    _com_dispatch_method(this, 0x3f, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003", LayerHandle, Shape, _arg3);
+}
+
+inline VARIANT_BOOL _DMap::GetShapeLayerDrawFill ( long LayerHandle ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x40, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutShapeLayerDrawFill ( long LayerHandle, VARIANT_BOOL _arg2 ) {
+    _com_dispatch_method(this, 0x40, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x000b", LayerHandle, _arg2);
+}
+
+inline VARIANT_BOOL _DMap::GetShapeDrawFill ( long LayerHandle, long Shape ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x41, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapeDrawFill ( long LayerHandle, long Shape, VARIANT_BOOL _arg3 ) {
+    _com_dispatch_method(this, 0x41, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x000b", LayerHandle, Shape, _arg3);
+}
+
+inline VARIANT_BOOL _DMap::GetShapeLayerDrawLine ( long LayerHandle ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x42, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutShapeLayerDrawLine ( long LayerHandle, VARIANT_BOOL _arg2 ) {
+    _com_dispatch_method(this, 0x42, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x000b", LayerHandle, _arg2);
+}
+
+inline VARIANT_BOOL _DMap::GetShapeDrawLine ( long LayerHandle, long Shape ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x43, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapeDrawLine ( long LayerHandle, long Shape, VARIANT_BOOL _arg3 ) {
+    _com_dispatch_method(this, 0x43, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x000b", LayerHandle, Shape, _arg3);
+}
+
+inline VARIANT_BOOL _DMap::GetShapeLayerDrawPoint ( long LayerHandle ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x44, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutShapeLayerDrawPoint ( long LayerHandle, VARIANT_BOOL _arg2 ) {
+    _com_dispatch_method(this, 0x44, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x000b", LayerHandle, _arg2);
+}
+
+inline VARIANT_BOOL _DMap::GetShapeDrawPoint ( long LayerHandle, long Shape ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x45, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapeDrawPoint ( long LayerHandle, long Shape, VARIANT_BOOL _arg3 ) {
+    _com_dispatch_method(this, 0x45, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x000b", LayerHandle, Shape, _arg3);
+}
+
+inline float _DMap::GetShapeLayerLineWidth ( long LayerHandle ) {
+    float _result = 0;
+    _com_dispatch_method(this, 0x46, DISPATCH_PROPERTYGET, VT_R4, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutShapeLayerLineWidth ( long LayerHandle, float _arg2 ) {
+    _com_dispatch_method(this, 0x46, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0004", LayerHandle, _arg2);
+}
+
+inline float _DMap::GetShapeLineWidth ( long LayerHandle, long Shape ) {
+    float _result = 0;
+    _com_dispatch_method(this, 0x47, DISPATCH_PROPERTYGET, VT_R4, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapeLineWidth ( long LayerHandle, long Shape, float _arg3 ) {
+    _com_dispatch_method(this, 0x47, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0004", LayerHandle, Shape, _arg3);
+}
+
+inline float _DMap::GetShapeLayerPointSize ( long LayerHandle ) {
+    float _result = 0;
+    _com_dispatch_method(this, 0x48, DISPATCH_PROPERTYGET, VT_R4, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutShapeLayerPointSize ( long LayerHandle, float _arg2 ) {
+    _com_dispatch_method(this, 0x48, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0004", LayerHandle, _arg2);
+}
+
+inline float _DMap::GetShapePointSize ( long LayerHandle, long Shape ) {
+    float _result = 0;
+    _com_dispatch_method(this, 0x49, DISPATCH_PROPERTYGET, VT_R4, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapePointSize ( long LayerHandle, long Shape, float _arg3 ) {
+    _com_dispatch_method(this, 0x49, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0004", LayerHandle, Shape, _arg3);
+}
+
+inline float _DMap::GetShapeLayerFillTransparency ( long LayerHandle ) {
+    float _result = 0;
+    _com_dispatch_method(this, 0x4a, DISPATCH_PROPERTYGET, VT_R4, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutShapeLayerFillTransparency ( long LayerHandle, float _arg2 ) {
+    _com_dispatch_method(this, 0x4a, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0004", LayerHandle, _arg2);
+}
+
+inline float _DMap::GetShapeFillTransparency ( long LayerHandle, long Shape ) {
+    float _result = 0;
+    _com_dispatch_method(this, 0x4b, DISPATCH_PROPERTYGET, VT_R4, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapeFillTransparency ( long LayerHandle, long Shape, float _arg3 ) {
+    _com_dispatch_method(this, 0x4b, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0004", LayerHandle, Shape, _arg3);
+}
+
+inline enum tkLineStipple _DMap::GetShapeLayerLineStipple ( long LayerHandle ) {
+    enum tkLineStipple _result;
+    _com_dispatch_method(this, 0x4c, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutShapeLayerLineStipple ( long LayerHandle, enum tkLineStipple _arg2 ) {
+    _com_dispatch_method(this, 0x4c, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003", LayerHandle, _arg2);
+}
+
+inline enum tkLineStipple _DMap::GetShapeLineStipple ( long LayerHandle, long Shape ) {
+    enum tkLineStipple _result;
+    _com_dispatch_method(this, 0x4d, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapeLineStipple ( long LayerHandle, long Shape, enum tkLineStipple _arg3 ) {
+    _com_dispatch_method(this, 0x4d, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003", LayerHandle, Shape, _arg3);
+}
+
+inline enum tkFillStipple _DMap::GetShapeLayerFillStipple ( long LayerHandle ) {
+    enum tkFillStipple _result;
+    _com_dispatch_method(this, 0x4e, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutShapeLayerFillStipple ( long LayerHandle, enum tkFillStipple _arg2 ) {
+    _com_dispatch_method(this, 0x4e, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003", LayerHandle, _arg2);
+}
+
+inline enum tkFillStipple _DMap::GetShapeFillStipple ( long LayerHandle, long Shape ) {
+    enum tkFillStipple _result;
+    _com_dispatch_method(this, 0x4f, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapeFillStipple ( long LayerHandle, long Shape, enum tkFillStipple _arg3 ) {
+    _com_dispatch_method(this, 0x4f, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003", LayerHandle, Shape, _arg3);
+}
+
+inline VARIANT_BOOL _DMap::GetShapeVisible ( long LayerHandle, long Shape ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x50, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapeVisible ( long LayerHandle, long Shape, VARIANT_BOOL _arg3 ) {
+    _com_dispatch_method(this, 0x50, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x000b", LayerHandle, Shape, _arg3);
+}
+
+inline float _DMap::GetImageLayerPercentTransparent ( long LayerHandle ) {
+    float _result = 0;
+    _com_dispatch_method(this, 0x51, DISPATCH_PROPERTYGET, VT_R4, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutImageLayerPercentTransparent ( long LayerHandle, float _arg2 ) {
+    _com_dispatch_method(this, 0x51, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0004", LayerHandle, _arg2);
+}
+
+inline _bstr_t _DMap::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x52, DISPATCH_PROPERTYGET, VT_BSTR, (void*)&_result, 
+        L"\x0003", ErrorCode);
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t _DMap::GetDrawingKey ( long DrawHandle ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x53, DISPATCH_PROPERTYGET, VT_BSTR, (void*)&_result, 
+        L"\x0003", DrawHandle);
+    return _bstr_t(_result, false);
+}
+
+inline void _DMap::PutDrawingKey ( long DrawHandle, _bstr_t _arg2 ) {
+    _com_dispatch_method(this, 0x53, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0008", DrawHandle, (BSTR)_arg2);
+}
+
+inline enum tkPointType _DMap::GetShapeLayerPointType ( long LayerHandle ) {
+    enum tkPointType _result;
+    _com_dispatch_method(this, 0x54, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutShapeLayerPointType ( long LayerHandle, enum tkPointType _arg2 ) {
+    _com_dispatch_method(this, 0x54, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003", LayerHandle, _arg2);
+}
+
+inline enum tkPointType _DMap::GetShapePointType ( long LayerHandle, long Shape ) {
+    enum tkPointType _result;
+    _com_dispatch_method(this, 0x55, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapePointType ( long LayerHandle, long Shape, enum tkPointType _arg3 ) {
+    _com_dispatch_method(this, 0x55, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003", LayerHandle, Shape, _arg3);
+}
+
+inline VARIANT_BOOL _DMap::GetLayerLabelsVisible ( long LayerHandle ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x56, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutLayerLabelsVisible ( long LayerHandle, VARIANT_BOOL _arg2 ) {
+    _com_dispatch_method(this, 0x56, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x000b", LayerHandle, _arg2);
+}
+
+inline long _DMap::GetUDLineStipple ( long LayerHandle ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x57, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutUDLineStipple ( long LayerHandle, long _arg2 ) {
+    _com_dispatch_method(this, 0x57, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003", LayerHandle, _arg2);
+}
+
+inline long _DMap::GetUDFillStipple ( long LayerHandle, long StippleRow ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x58, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, StippleRow);
+    return _result;
+}
+
+inline void _DMap::PutUDFillStipple ( long LayerHandle, long StippleRow, long _arg3 ) {
+    _com_dispatch_method(this, 0x58, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003", LayerHandle, StippleRow, _arg3);
+}
+
+inline IDispatchPtr _DMap::GetUDPointType ( long LayerHandle ) {
+    IDispatch * _result = 0;
+    _com_dispatch_method(this, 0x59, DISPATCH_PROPERTYGET, VT_DISPATCH, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return IDispatchPtr(_result, false);
+}
+
+inline void _DMap::PutRefUDPointType ( long LayerHandle, IDispatch * _arg2 ) {
+    _com_dispatch_method(this, 0x59, DISPATCH_PROPERTYPUTREF, VT_EMPTY, NULL, 
+        L"\x0003\x0009", LayerHandle, _arg2);
+}
+
+inline IDispatchPtr _DMap::GetMapWinGISGetObject ( long LayerHandle ) {
+    IDispatch * _result = 0;
+    _com_dispatch_method(this, 0x5a, DISPATCH_PROPERTYGET, VT_DISPATCH, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return IDispatchPtr(_result, false);
+}
+
+inline _bstr_t _DMap::GetLayerName ( long LayerHandle ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x5b, DISPATCH_PROPERTYGET, VT_BSTR, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _bstr_t(_result, false);
+}
+
+inline void _DMap::PutLayerName ( long LayerHandle, _bstr_t _arg2 ) {
+    _com_dispatch_method(this, 0x5b, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0008", LayerHandle, (BSTR)_arg2);
+}
+
+inline VARIANT_BOOL _DMap::SetImageLayerColorScheme ( long LayerHandle, IDispatch * ColorScheme ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x5c, DISPATCH_METHOD, VT_BOOL, (void*)&_result, 
+        L"\x0003\x0009", LayerHandle, ColorScheme);
+    return _result;
+}
+
+inline _bstr_t _DMap::GetGridFileName ( long LayerHandle ) {
+    BSTR _result = 0;
+    _com_dispatch_method(this, 0x5d, DISPATCH_PROPERTYGET, VT_BSTR, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _bstr_t(_result, false);
+}
+
+inline void _DMap::PutGridFileName ( long LayerHandle, _bstr_t _arg2 ) {
+    _com_dispatch_method(this, 0x5d, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0008", LayerHandle, (BSTR)_arg2);
+}
+
+inline HRESULT _DMap::UpdateImage ( long LayerHandle ) {
+    return _com_dispatch_method(this, 0x5e, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", LayerHandle);
+}
+
+inline VARIANT_BOOL _DMap::GetLayerLabelsShadow ( long LayerHandle ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x61, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutLayerLabelsShadow ( long LayerHandle, VARIANT_BOOL _arg2 ) {
+    _com_dispatch_method(this, 0x61, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x000b", LayerHandle, _arg2);
+}
+
+inline VARIANT_BOOL _DMap::GetLayerLabelsScale ( long LayerHandle ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x62, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutLayerLabelsScale ( long LayerHandle, VARIANT_BOOL _arg2 ) {
+    _com_dispatch_method(this, 0x62, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x000b", LayerHandle, _arg2);
+}
+
+inline HRESULT _DMap::AddLabelEx ( long LayerHandle, _bstr_t Text, OLE_COLOR Color, double x, double y, enum tkHJustification hJustification, double Rotation ) {
+    return _com_dispatch_method(this, 0x63, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0003\x0005\x0005\x0003\x0005", LayerHandle, (BSTR)Text, Color, x, y, hJustification, Rotation);
+}
+
+inline HRESULT _DMap::GetLayerStandardViewWidth ( long LayerHandle, double * Width ) {
+    return _com_dispatch_method(this, 0x64, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x4005", LayerHandle, Width);
+}
+
+inline HRESULT _DMap::SetLayerStandardViewWidth ( long LayerHandle, double Width ) {
+    return _com_dispatch_method(this, 0x65, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0005", LayerHandle, Width);
+}
+
+inline long _DMap::GetLayerLabelsOffset ( long LayerHandle ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x66, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutLayerLabelsOffset ( long LayerHandle, long _arg2 ) {
+    _com_dispatch_method(this, 0x66, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003", LayerHandle, _arg2);
+}
+
+inline OLE_COLOR _DMap::GetLayerLabelsShadowColor ( long LayerHandle ) {
+    OLE_COLOR _result;
+    _com_dispatch_method(this, 0x67, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutLayerLabelsShadowColor ( long LayerHandle, OLE_COLOR _arg2 ) {
+    _com_dispatch_method(this, 0x67, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003", LayerHandle, _arg2);
+}
+
+inline VARIANT_BOOL _DMap::GetUseLabelCollision ( long LayerHandle ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x68, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutUseLabelCollision ( long LayerHandle, VARIANT_BOOL _arg2 ) {
+    _com_dispatch_method(this, 0x68, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x000b", LayerHandle, _arg2);
+}
+
+inline VARIANT_BOOL _DMap::IsTIFFGrid ( _bstr_t Filename ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x69, DISPATCH_METHOD, VT_BOOL, (void*)&_result, 
+        L"\x0008", (BSTR)Filename);
+    return _result;
+}
+
+inline VARIANT_BOOL _DMap::IsSameProjection ( _bstr_t proj4_a, _bstr_t proj4_b ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x6a, DISPATCH_METHOD, VT_BOOL, (void*)&_result, 
+        L"\x0008\x0008", (BSTR)proj4_a, (BSTR)proj4_b);
+    return _result;
+}
+
+inline HRESULT _DMap::ZoomToMaxVisibleExtents ( ) {
+    return _com_dispatch_method(this, 0x6b, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline void _DMap::PutMapResizeBehavior ( enum tkResizeBehavior _arg1 ) {
+    _com_dispatch_method(this, 0x6c, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003", _arg1);
+}
+
+inline enum tkResizeBehavior _DMap::GetMapResizeBehavior ( ) {
+    enum tkResizeBehavior _result;
+    _com_dispatch_method(this, 0x6c, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, NULL);
+    return _result;
+}
+
+inline long _DMap::HWnd ( ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x6d, DISPATCH_METHOD, VT_I4, (void*)&_result, NULL);
+    return _result;
+}
+
+inline long _DMap::set_UDPointImageListAdd ( long LayerHandle, IDispatch * newValue ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x6e, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0009", LayerHandle, newValue);
+    return _result;
+}
+
+inline long _DMap::GetShapePointImageListID ( long LayerHandle, long Shape ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x6f, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapePointImageListID ( long LayerHandle, long Shape, long _arg3 ) {
+    _com_dispatch_method(this, 0x6f, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003", LayerHandle, Shape, _arg3);
+}
+
+inline long _DMap::get_UDPointImageListCount ( long LayerHandle ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x70, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline IDispatchPtr _DMap::get_UDPointImageListItem ( long LayerHandle, long ImageIndex ) {
+    IDispatch * _result = 0;
+    _com_dispatch_method(this, 0x71, DISPATCH_METHOD, VT_DISPATCH, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, ImageIndex);
+    return IDispatchPtr(_result, false);
+}
+
+inline HRESULT _DMap::ClearUDPointImageList ( long LayerHandle ) {
+    return _com_dispatch_method(this, 0x72, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", LayerHandle);
+}
+
+inline HRESULT _DMap::DrawLineEx ( long LayerHandle, double x1, double y1, double x2, double y2, long pixelWidth, OLE_COLOR Color ) {
+    return _com_dispatch_method(this, 0x73, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0005\x0005\x0005\x0005\x0003\x0003", LayerHandle, x1, y1, x2, y2, pixelWidth, Color);
+}
+
+inline HRESULT _DMap::DrawPointEx ( long LayerHandle, double x, double y, long pixelSize, OLE_COLOR Color ) {
+    return _com_dispatch_method(this, 0x74, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0005\x0005\x0003\x0003", LayerHandle, x, y, pixelSize, Color);
+}
+
+inline HRESULT _DMap::DrawCircleEx ( long LayerHandle, double x, double y, double pixelRadius, OLE_COLOR Color, VARIANT_BOOL fill ) {
+    return _com_dispatch_method(this, 0x75, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0005\x0005\x0005\x0003\x000b", LayerHandle, x, y, pixelRadius, Color, fill);
+}
+
+inline HRESULT _DMap::LabelColor ( long LayerHandle, OLE_COLOR LabelFontColor ) {
+    return _com_dispatch_method(this, 0x77, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003", LayerHandle, LabelFontColor);
+}
+
+inline HRESULT _DMap::SetDrawingLayerVisible ( long LayerHandle, VARIANT_BOOL Visiable ) {
+    return _com_dispatch_method(this, 0x78, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x000b", LayerHandle, Visiable);
+}
+
+inline HRESULT _DMap::ClearDrawingLabels ( long DrawHandle ) {
+    return _com_dispatch_method(this, 0x79, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", DrawHandle);
+}
+
+inline HRESULT _DMap::DrawingFont ( long DrawHandle, _bstr_t FontName, long FontSize ) {
+    return _com_dispatch_method(this, 0x7a, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0003", DrawHandle, (BSTR)FontName, FontSize);
+}
+
+inline HRESULT _DMap::AddDrawingLabelEx ( long DrawHandle, _bstr_t Text, OLE_COLOR Color, double x, double y, enum tkHJustification hJustification, double Rotation ) {
+    return _com_dispatch_method(this, 0x7b, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0003\x0005\x0005\x0003\x0005", DrawHandle, (BSTR)Text, Color, x, y, hJustification, Rotation);
+}
+
+inline HRESULT _DMap::AddDrawingLabel ( long DrawHandle, _bstr_t Text, OLE_COLOR Color, double x, double y, enum tkHJustification hJustification ) {
+    return _com_dispatch_method(this, 0x7c, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0003\x0005\x0005\x0003", DrawHandle, (BSTR)Text, Color, x, y, hJustification);
+}
+
+inline long _DMap::GetDrawingLabelsOffset ( long DrawHandle ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x7d, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003", DrawHandle);
+    return _result;
+}
+
+inline void _DMap::PutDrawingLabelsOffset ( long DrawHandle, long _arg2 ) {
+    _com_dispatch_method(this, 0x7d, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003", DrawHandle, _arg2);
+}
+
+inline VARIANT_BOOL _DMap::GetDrawingLabelsScale ( long DrawHandle ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x7e, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003", DrawHandle);
+    return _result;
+}
+
+inline void _DMap::PutDrawingLabelsScale ( long DrawHandle, VARIANT_BOOL _arg2 ) {
+    _com_dispatch_method(this, 0x7e, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x000b", DrawHandle, _arg2);
+}
+
+inline VARIANT_BOOL _DMap::GetDrawingLabelsShadow ( long DrawHandle ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x7f, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003", DrawHandle);
+    return _result;
+}
+
+inline void _DMap::PutDrawingLabelsShadow ( long DrawHandle, VARIANT_BOOL _arg2 ) {
+    _com_dispatch_method(this, 0x7f, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x000b", DrawHandle, _arg2);
+}
+
+inline OLE_COLOR _DMap::GetDrawingLabelsShadowColor ( long DrawHandle ) {
+    OLE_COLOR _result;
+    _com_dispatch_method(this, 0x80, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003", DrawHandle);
+    return _result;
+}
+
+inline void _DMap::PutDrawingLabelsShadowColor ( long DrawHandle, OLE_COLOR _arg2 ) {
+    _com_dispatch_method(this, 0x80, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003", DrawHandle, _arg2);
+}
+
+inline VARIANT_BOOL _DMap::GetUseDrawingLabelCollision ( long DrawHandle ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x81, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003", DrawHandle);
+    return _result;
+}
+
+inline void _DMap::PutUseDrawingLabelCollision ( long DrawHandle, VARIANT_BOOL _arg2 ) {
+    _com_dispatch_method(this, 0x81, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x000b", DrawHandle, _arg2);
+}
+
+inline VARIANT_BOOL _DMap::GetDrawingLabelsVisible ( long DrawHandle ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x82, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003", DrawHandle);
+    return _result;
+}
+
+inline void _DMap::PutDrawingLabelsVisible ( long DrawHandle, VARIANT_BOOL _arg2 ) {
+    _com_dispatch_method(this, 0x82, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x000b", DrawHandle, _arg2);
+}
+
+inline HRESULT _DMap::GetDrawingStandardViewWidth ( long DrawHandle, double * Width ) {
+    return _com_dispatch_method(this, 0x83, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x4005", DrawHandle, Width);
+}
+
+inline HRESULT _DMap::SetDrawingStandardViewWidth ( long DrawHandle, double Width ) {
+    return _com_dispatch_method(this, 0x84, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0005", DrawHandle, Width);
+}
+
+inline HRESULT _DMap::DrawWidePolygon ( VARIANT * xPoints, VARIANT * yPoints, long numPoints, OLE_COLOR Color, VARIANT_BOOL fill, short Width ) {
+    return _com_dispatch_method(this, 0x86, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x400c\x400c\x0003\x0003\x000b\x0002", xPoints, yPoints, numPoints, Color, fill, Width);
+}
+
+inline HRESULT _DMap::DrawWideCircle ( double x, double y, double pixelRadius, OLE_COLOR Color, VARIANT_BOOL fill, short Width ) {
+    return _com_dispatch_method(this, 0x87, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0005\x0005\x0005\x0003\x000b\x0002", x, y, pixelRadius, Color, fill, Width);
+}
+
+inline IDispatchPtr _DMap::SnapShot2 ( long ClippingLayerNbr, double Zoom, long pWidth ) {
+    IDispatch * _result = 0;
+    _com_dispatch_method(this, 0x88, DISPATCH_METHOD, VT_DISPATCH, (void*)&_result, 
+        L"\x0003\x0005\x0003", ClippingLayerNbr, Zoom, pWidth);
+    return IDispatchPtr(_result, false);
+}
+
+inline HRESULT _DMap::LayerFontEx ( long LayerHandle, _bstr_t FontName, long FontSize, VARIANT_BOOL isBold, VARIANT_BOOL isItalic, VARIANT_BOOL isUnderline ) {
+    return _com_dispatch_method(this, 0x89, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0003\x000b\x000b\x000b", LayerHandle, (BSTR)FontName, FontSize, isBold, isItalic, isUnderline);
+}
+
+inline HRESULT _DMap::set_UDPointFontCharFont ( long LayerHandle, _bstr_t FontName, float FontSize, VARIANT_BOOL isBold, VARIANT_BOOL isItalic, VARIANT_BOOL isUnderline ) {
+    return _com_dispatch_method(this, 0x8b, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008\x0004\x000b\x000b\x000b", LayerHandle, (BSTR)FontName, FontSize, isBold, isItalic, isUnderline);
+}
+
+inline long _DMap::set_UDPointFontCharListAdd ( long LayerHandle, long newValue, OLE_COLOR Color ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x8c, DISPATCH_METHOD, VT_I4, (void*)&_result, 
+        L"\x0003\x0003\x0003", LayerHandle, newValue, Color);
+    return _result;
+}
+
+inline HRESULT _DMap::set_UDPointFontCharFontSize ( long LayerHandle, float FontSize ) {
+    return _com_dispatch_method(this, 0x8d, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0004", LayerHandle, FontSize);
+}
+
+inline long _DMap::GetShapePointFontCharListID ( long LayerHandle, long Shape ) {
+    long _result = 0;
+    _com_dispatch_method(this, 0x8e, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapePointFontCharListID ( long LayerHandle, long Shape, long _arg3 ) {
+    _com_dispatch_method(this, 0x8e, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003", LayerHandle, Shape, _arg3);
+}
+
+inline HRESULT _DMap::ReSourceLayer ( long LayerHandle, _bstr_t newSrcPath ) {
+    return _com_dispatch_method(this, 0x8f, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0008", LayerHandle, (BSTR)newSrcPath);
+}
+
+inline OLE_COLOR _DMap::GetShapeLayerStippleColor ( long LayerHandle ) {
+    OLE_COLOR _result;
+    _com_dispatch_method(this, 0x90, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutShapeLayerStippleColor ( long LayerHandle, OLE_COLOR _arg2 ) {
+    _com_dispatch_method(this, 0x90, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003", LayerHandle, _arg2);
+}
+
+inline OLE_COLOR _DMap::GetShapeStippleColor ( long LayerHandle, long Shape ) {
+    OLE_COLOR _result;
+    _com_dispatch_method(this, 0x91, DISPATCH_PROPERTYGET, VT_I4, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapeStippleColor ( long LayerHandle, long Shape, OLE_COLOR _arg3 ) {
+    _com_dispatch_method(this, 0x91, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003", LayerHandle, Shape, _arg3);
+}
+
+inline VARIANT_BOOL _DMap::GetShapeStippleTransparent ( long LayerHandle, long Shape ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x92, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003\x0003", LayerHandle, Shape);
+    return _result;
+}
+
+inline void _DMap::PutShapeStippleTransparent ( long LayerHandle, long Shape, VARIANT_BOOL _arg3 ) {
+    _com_dispatch_method(this, 0x92, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x000b", LayerHandle, Shape, _arg3);
+}
+
+inline VARIANT_BOOL _DMap::GetShapeLayerStippleTransparent ( long LayerHandle ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x93, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline void _DMap::PutShapeLayerStippleTransparent ( long LayerHandle, VARIANT_BOOL _arg2 ) {
+    _com_dispatch_method(this, 0x93, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x0003\x000b", LayerHandle, _arg2);
+}
+
+inline VARIANT_BOOL _DMap::GetTrapRMouseDown ( ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x94, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, NULL);
+    return _result;
+}
+
+inline void _DMap::PutTrapRMouseDown ( VARIANT_BOOL _arg1 ) {
+    _com_dispatch_method(this, 0x94, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x000b", _arg1);
+}
+
+inline void _DMap::PutDisableWaitCursor ( VARIANT_BOOL _arg1 ) {
+    _com_dispatch_method(this, 0x95, DISPATCH_PROPERTYPUT, VT_EMPTY, NULL, 
+        L"\x000b", _arg1);
+}
+
+inline VARIANT_BOOL _DMap::GetDisableWaitCursor ( ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x95, DISPATCH_PROPERTYGET, VT_BOOL, (void*)&_result, NULL);
+    return _result;
+}
+
+inline VARIANT_BOOL _DMap::AdjustLayerExtents ( long LayerHandle ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_method(this, 0x96, DISPATCH_METHOD, VT_BOOL, (void*)&_result, 
+        L"\x0003", LayerHandle);
+    return _result;
+}
+
+inline IDispatchPtr _DMap::SnapShot3 ( double left, double right, double top, double bottom, long Width ) {
+    IDispatch * _result = 0;
+    _com_dispatch_method(this, 0x99, DISPATCH_METHOD, VT_DISPATCH, (void*)&_result, 
+        L"\x0005\x0005\x0005\x0005\x0003", left, right, top, bottom, Width);
+    return IDispatchPtr(_result, false);
+}
+
+inline HRESULT _DMap::DrawPolygonEx ( long LayerHandle, VARIANT * xPoints, VARIANT * yPoints, long numPoints, OLE_COLOR Color, VARIANT_BOOL fill ) {
+    return _com_dispatch_method(this, 0x9b, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x400c\x400c\x0003\x0003\x000b", LayerHandle, xPoints, yPoints, numPoints, Color, fill);
+}
+
+inline OLE_COLOR _DMap::GetBackColor ( ) {
+    OLE_COLOR _result;
+    _com_dispatch_propget(this, 0x1, VT_I4, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutBackColor ( OLE_COLOR _val ) {
+    _com_dispatch_propput(this, 0x1, VT_I4, _val);
+}
+
+inline double _DMap::GetZoomPercent ( ) {
+    double _result = 0;
+    _com_dispatch_propget(this, 0x2, VT_R8, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutZoomPercent ( double _val ) {
+    _com_dispatch_propput(this, 0x2, VT_R8, _val);
+}
+
+inline enum tkCursorMode _DMap::GetCursorMode ( ) {
+    enum tkCursorMode _result;
+    _com_dispatch_propget(this, 0x3, VT_I4, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutCursorMode ( enum tkCursorMode _val ) {
+    _com_dispatch_propput(this, 0x3, VT_I4, _val);
+}
+
+inline enum tkCursor _DMap::GetMapCursor ( ) {
+    enum tkCursor _result;
+    _com_dispatch_propget(this, 0x4, VT_I4, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutMapCursor ( enum tkCursor _val ) {
+    _com_dispatch_propput(this, 0x4, VT_I4, _val);
+}
+
+inline long _DMap::GetUDCursorHandle ( ) {
+    long _result = 0;
+    _com_dispatch_propget(this, 0x5, VT_I4, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutUDCursorHandle ( long _val ) {
+    _com_dispatch_propput(this, 0x5, VT_I4, _val);
+}
+
+inline VARIANT_BOOL _DMap::GetSendMouseDown ( ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_propget(this, 0x6, VT_BOOL, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutSendMouseDown ( VARIANT_BOOL _val ) {
+    _com_dispatch_propput(this, 0x6, VT_BOOL, _val);
+}
+
+inline VARIANT_BOOL _DMap::GetSendMouseUp ( ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_propget(this, 0x7, VT_BOOL, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutSendMouseUp ( VARIANT_BOOL _val ) {
+    _com_dispatch_propput(this, 0x7, VT_BOOL, _val);
+}
+
+inline VARIANT_BOOL _DMap::GetSendMouseMove ( ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_propget(this, 0x8, VT_BOOL, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutSendMouseMove ( VARIANT_BOOL _val ) {
+    _com_dispatch_propput(this, 0x8, VT_BOOL, _val);
+}
+
+inline VARIANT_BOOL _DMap::GetSendSelectBoxDrag ( ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_propget(this, 0x9, VT_BOOL, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutSendSelectBoxDrag ( VARIANT_BOOL _val ) {
+    _com_dispatch_propput(this, 0x9, VT_BOOL, _val);
+}
+
+inline VARIANT_BOOL _DMap::GetSendSelectBoxFinal ( ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_propget(this, 0xa, VT_BOOL, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutSendSelectBoxFinal ( VARIANT_BOOL _val ) {
+    _com_dispatch_propput(this, 0xa, VT_BOOL, _val);
+}
+
+inline double _DMap::GetExtentPad ( ) {
+    double _result = 0;
+    _com_dispatch_propget(this, 0xb, VT_R8, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutExtentPad ( double _val ) {
+    _com_dispatch_propput(this, 0xb, VT_R8, _val);
+}
+
+inline long _DMap::GetExtentHistory ( ) {
+    long _result = 0;
+    _com_dispatch_propget(this, 0xc, VT_I4, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutExtentHistory ( long _val ) {
+    _com_dispatch_propput(this, 0xc, VT_I4, _val);
+}
+
+inline _bstr_t _DMap::GetKey ( ) {
+    BSTR _result = 0;
+    _com_dispatch_propget(this, 0xd, VT_BSTR, (void*)&_result);
+    return _bstr_t(_result, false);
+}
+
+inline void _DMap::PutKey ( _bstr_t _val ) {
+    _com_dispatch_propput(this, 0xd, VT_BSTR, (BSTR)_val);
+}
+
+inline VARIANT_BOOL _DMap::GetDoubleBuffer ( ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_propget(this, 0xe, VT_BOOL, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutDoubleBuffer ( VARIANT_BOOL _val ) {
+    _com_dispatch_propput(this, 0xe, VT_BOOL, _val);
+}
+
+inline IDispatchPtr _DMap::GetGlobalCallback ( ) {
+    IDispatch * _result = 0;
+    _com_dispatch_propget(this, 0xf, VT_DISPATCH, (void*)&_result);
+    return IDispatchPtr(_result, false);
+}
+
+inline void _DMap::PutGlobalCallback ( IDispatch * _val ) {
+    _com_dispatch_propput(this, 0xf, VT_DISPATCH, _val);
+}
+
+inline long _DMap::GetNumLayers ( ) {
+    long _result = 0;
+    _com_dispatch_propget(this, 0x10, VT_I4, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutNumLayers ( long _val ) {
+    _com_dispatch_propput(this, 0x10, VT_I4, _val);
+}
+
+inline IDispatchPtr _DMap::GetExtents ( ) {
+    IDispatch * _result = 0;
+    _com_dispatch_propget(this, 0x11, VT_DISPATCH, (void*)&_result);
+    return IDispatchPtr(_result, false);
+}
+
+inline void _DMap::PutExtents ( IDispatch * _val ) {
+    _com_dispatch_propput(this, 0x11, VT_DISPATCH, _val);
+}
+
+inline long _DMap::GetLastErrorCode ( ) {
+    long _result = 0;
+    _com_dispatch_propget(this, 0x12, VT_I4, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutLastErrorCode ( long _val ) {
+    _com_dispatch_propput(this, 0x12, VT_I4, _val);
+}
+
+inline enum tkLockMode _DMap::GetIsLocked ( ) {
+    enum tkLockMode _result;
+    _com_dispatch_propget(this, 0x13, VT_I4, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutIsLocked ( enum tkLockMode _val ) {
+    _com_dispatch_propput(this, 0x13, VT_I4, _val);
+}
+
+inline _bstr_t _DMap::GetMapState ( ) {
+    BSTR _result = 0;
+    _com_dispatch_propget(this, 0x14, VT_BSTR, (void*)&_result);
+    return _bstr_t(_result, false);
+}
+
+inline void _DMap::PutMapState ( _bstr_t _val ) {
+    _com_dispatch_propput(this, 0x14, VT_BSTR, (BSTR)_val);
+}
+
+inline _bstr_t _DMap::GetSerialNumber ( ) {
+    BSTR _result = 0;
+    _com_dispatch_propget(this, 0x5f, VT_BSTR, (void*)&_result);
+    return _bstr_t(_result, false);
+}
+
+inline void _DMap::PutSerialNumber ( _bstr_t _val ) {
+    _com_dispatch_propput(this, 0x5f, VT_BSTR, (BSTR)_val);
+}
+
+inline long _DMap::GetLineSeparationFactor ( ) {
+    long _result = 0;
+    _com_dispatch_propget(this, 0x60, VT_I4, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutLineSeparationFactor ( long _val ) {
+    _com_dispatch_propput(this, 0x60, VT_I4, _val);
+}
+
+inline VARIANT_BOOL _DMap::GetSendOnDrawBackBuffer ( ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_propget(this, 0x76, VT_BOOL, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutSendOnDrawBackBuffer ( VARIANT_BOOL _val ) {
+    _com_dispatch_propput(this, 0x76, VT_BOOL, _val);
+}
+
+inline VARIANT_BOOL _DMap::GetMultilineLabels ( ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_propget(this, 0x85, VT_BOOL, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutMultilineLabels ( VARIANT_BOOL _val ) {
+    _com_dispatch_propput(this, 0x85, VT_BOOL, _val);
+}
+
+inline VARIANT_BOOL _DMap::GetUseSeamlessPan ( ) {
+    VARIANT_BOOL _result = 0;
+    _com_dispatch_propget(this, 0x97, VT_BOOL, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutUseSeamlessPan ( VARIANT_BOOL _val ) {
+    _com_dispatch_propput(this, 0x97, VT_BOOL, _val);
+}
+
+inline double _DMap::GetMouseWheelSpeed ( ) {
+    double _result = 0;
+    _com_dispatch_propget(this, 0x98, VT_R8, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutMouseWheelSpeed ( double _val ) {
+    _com_dispatch_propput(this, 0x98, VT_R8, _val);
+}
+
+inline enum tkShapeDrawingMethod _DMap::GetShapeDrawingMethod ( ) {
+    enum tkShapeDrawingMethod _result;
+    _com_dispatch_propget(this, 0x9a, VT_I4, (void*)&_result);
+    return _result;
+}
+
+inline void _DMap::PutShapeDrawingMethod ( enum tkShapeDrawingMethod _val ) {
+    _com_dispatch_propput(this, 0x9a, VT_I4, _val);
+}
+
+//
+// dispinterface _DMapEvents wrapper method implementations
+//
+
+inline HRESULT _DMapEvents::MouseDown ( short Button, short Shift, long x, long y ) {
+    return _com_dispatch_method(this, 0x1, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0002\x0002\x0003\x0003", Button, Shift, x, y);
+}
+
+inline HRESULT _DMapEvents::MouseUp ( short Button, short Shift, long x, long y ) {
+    return _com_dispatch_method(this, 0x2, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0002\x0002\x0003\x0003", Button, Shift, x, y);
+}
+
+inline HRESULT _DMapEvents::MouseMove ( short Button, short Shift, long x, long y ) {
+    return _com_dispatch_method(this, 0x3, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0002\x0002\x0003\x0003", Button, Shift, x, y);
+}
+
+inline HRESULT _DMapEvents::FileDropped ( _bstr_t Filename ) {
+    return _com_dispatch_method(this, 0x4, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0008", (BSTR)Filename);
+}
+
+inline HRESULT _DMapEvents::SelectBoxFinal ( long left, long right, long bottom, long top ) {
+    return _com_dispatch_method(this, 0x5, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003", left, right, bottom, top);
+}
+
+inline HRESULT _DMapEvents::SelectBoxDrag ( long left, long right, long bottom, long top ) {
+    return _com_dispatch_method(this, 0x6, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003\x0003\x0003\x0003", left, right, bottom, top);
+}
+
+inline HRESULT _DMapEvents::ExtentsChanged ( ) {
+    return _com_dispatch_method(this, 0x7, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+inline HRESULT _DMapEvents::MapState ( long LayerHandle ) {
+    return _com_dispatch_method(this, 0x8, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", LayerHandle);
+}
+
+inline HRESULT _DMapEvents::OnDrawBackBuffer ( long BackBuffer ) {
+    return _com_dispatch_method(this, 0x9, DISPATCH_METHOD, VT_EMPTY, NULL, 
+        L"\x0003", BackBuffer);
+}
+
+inline HRESULT _DMapEvents::DblClick ( ) {
+    return _com_dispatch_method(this, DISPID_DBLCLICK, DISPATCH_METHOD, VT_EMPTY, NULL, NULL);
+}
+
+//
+// interface IShapefileColorBreak wrapper method implementations
+//
+
+inline _variant_t IShapefileColorBreak::GetStartValue ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_StartValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IShapefileColorBreak::PutStartValue ( const _variant_t & pVal ) {
+    HRESULT _hr = put_StartValue(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t IShapefileColorBreak::GetEndValue ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_EndValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IShapefileColorBreak::PutEndValue ( const _variant_t & pVal ) {
+    HRESULT _hr = put_EndValue(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline OLE_COLOR IShapefileColorBreak::GetStartColor ( ) {
+    OLE_COLOR _result;
+    HRESULT _hr = get_StartColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapefileColorBreak::PutStartColor ( OLE_COLOR pVal ) {
+    HRESULT _hr = put_StartColor(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline OLE_COLOR IShapefileColorBreak::GetEndColor ( ) {
+    OLE_COLOR _result;
+    HRESULT _hr = get_EndColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapefileColorBreak::PutEndColor ( OLE_COLOR pVal ) {
+    HRESULT _hr = put_EndColor(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IShapefileColorBreak::GetCaption ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Caption(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IShapefileColorBreak::PutCaption ( _bstr_t pVal ) {
+    HRESULT _hr = put_Caption(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IShapefileColorBreak::GetVisible ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_Visible(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapefileColorBreak::PutVisible ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_Visible(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface ICallback wrapper method implementations
+//
+
+inline HRESULT ICallback::Progress ( _bstr_t KeyOfSender, long Percent, _bstr_t Message ) {
+    HRESULT _hr = raw_Progress(KeyOfSender, Percent, Message);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICallback::Error ( _bstr_t KeyOfSender, _bstr_t ErrorMsg ) {
+    HRESULT _hr = raw_Error(KeyOfSender, ErrorMsg);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IShapefileColorScheme wrapper method implementations
+//
+
+inline long IShapefileColorScheme::NumBreaks ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_NumBreaks(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IShapefileColorScheme::Remove ( long Index ) {
+    HRESULT _hr = raw_Remove(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline long IShapefileColorScheme::Add ( struct IShapefileColorBreak * Break ) {
+    long _result = 0;
+    HRESULT _hr = raw_Add(Break, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IShapefileColorBreakPtr IShapefileColorScheme::GetColorBreak ( long Index ) {
+    struct IShapefileColorBreak * _result = 0;
+    HRESULT _hr = get_ColorBreak(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapefileColorBreakPtr(_result, false);
+}
+
+inline void IShapefileColorScheme::PutColorBreak ( long Index, struct IShapefileColorBreak * pVal ) {
+    HRESULT _hr = put_ColorBreak(Index, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IShapefileColorScheme::GetLayerHandle ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LayerHandle(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapefileColorScheme::PutLayerHandle ( long pVal ) {
+    HRESULT _hr = put_LayerHandle(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IShapefileColorScheme::GetFieldIndex ( ) {
+    long _result = 0;
+    HRESULT _hr = get_FieldIndex(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapefileColorScheme::PutFieldIndex ( long pVal ) {
+    HRESULT _hr = put_FieldIndex(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IShapefileColorScheme::GetLastErrorCode ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IShapefileColorScheme::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrorMsg(ErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ICallbackPtr IShapefileColorScheme::GetGlobalCallback ( ) {
+    struct ICallback * _result = 0;
+    HRESULT _hr = get_GlobalCallback(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICallbackPtr(_result, false);
+}
+
+inline void IShapefileColorScheme::PutGlobalCallback ( struct ICallback * pVal ) {
+    HRESULT _hr = put_GlobalCallback(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IShapefileColorScheme::GetKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Key(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IShapefileColorScheme::PutKey ( _bstr_t pVal ) {
+    HRESULT _hr = put_Key(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IShapefileColorScheme::InsertAt ( int Position, struct IShapefileColorBreak * Break ) {
+    long _result = 0;
+    HRESULT _hr = raw_InsertAt(Position, Break, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IGridHeader wrapper method implementations
+//
+
+inline long IGridHeader::GetNumberCols ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NumberCols(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IGridHeader::PutNumberCols ( long pVal ) {
+    HRESULT _hr = put_NumberCols(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IGridHeader::GetNumberRows ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NumberRows(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IGridHeader::PutNumberRows ( long pVal ) {
+    HRESULT _hr = put_NumberRows(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _variant_t IGridHeader::GetNodataValue ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_NodataValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IGridHeader::PutNodataValue ( const _variant_t & pVal ) {
+    HRESULT _hr = put_NodataValue(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IGridHeader::GetdX ( ) {
+    double _result = 0;
+    HRESULT _hr = get_dX(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IGridHeader::PutdX ( double pVal ) {
+    HRESULT _hr = put_dX(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IGridHeader::GetdY ( ) {
+    double _result = 0;
+    HRESULT _hr = get_dY(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IGridHeader::PutdY ( double pVal ) {
+    HRESULT _hr = put_dY(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IGridHeader::GetXllCenter ( ) {
+    double _result = 0;
+    HRESULT _hr = get_XllCenter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IGridHeader::PutXllCenter ( double pVal ) {
+    HRESULT _hr = put_XllCenter(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IGridHeader::GetYllCenter ( ) {
+    double _result = 0;
+    HRESULT _hr = get_YllCenter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IGridHeader::PutYllCenter ( double pVal ) {
+    HRESULT _hr = put_YllCenter(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IGridHeader::GetProjection ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Projection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IGridHeader::PutProjection ( _bstr_t pVal ) {
+    HRESULT _hr = put_Projection(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IGridHeader::GetNotes ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Notes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IGridHeader::PutNotes ( _bstr_t pVal ) {
+    HRESULT _hr = put_Notes(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IGridHeader::GetLastErrorCode ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IGridHeader::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrorMsg(ErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ICallbackPtr IGridHeader::GetGlobalCallback ( ) {
+    struct ICallback * _result = 0;
+    HRESULT _hr = get_GlobalCallback(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICallbackPtr(_result, false);
+}
+
+inline void IGridHeader::PutGlobalCallback ( struct ICallback * pVal ) {
+    HRESULT _hr = put_GlobalCallback(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IGridHeader::GetKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Key(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IGridHeader::PutKey ( _bstr_t pVal ) {
+    HRESULT _hr = put_Key(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline void IGridHeader::PutOwner ( int * t, int * d, int * s, int * l, int * _arg5 ) {
+    HRESULT _hr = put_Owner(t, d, s, l, _arg5);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IGridHeader::CopyFrom ( struct IGridHeader * pVal ) {
+    HRESULT _hr = raw_CopyFrom(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IGridHeader::GetColorTable ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ColorTable(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IGridHeader::PutColorTable ( _bstr_t pVal ) {
+    HRESULT _hr = put_ColorTable(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IGridColorBreak wrapper method implementations
+//
+
+inline OLE_COLOR IGridColorBreak::GetHighColor ( ) {
+    OLE_COLOR _result;
+    HRESULT _hr = get_HighColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IGridColorBreak::PutHighColor ( OLE_COLOR pVal ) {
+    HRESULT _hr = put_HighColor(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline OLE_COLOR IGridColorBreak::GetLowColor ( ) {
+    OLE_COLOR _result;
+    HRESULT _hr = get_LowColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IGridColorBreak::PutLowColor ( OLE_COLOR pVal ) {
+    HRESULT _hr = put_LowColor(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IGridColorBreak::GetHighValue ( ) {
+    double _result = 0;
+    HRESULT _hr = get_HighValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IGridColorBreak::PutHighValue ( double pVal ) {
+    HRESULT _hr = put_HighValue(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IGridColorBreak::GetLowValue ( ) {
+    double _result = 0;
+    HRESULT _hr = get_LowValue(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IGridColorBreak::PutLowValue ( double pVal ) {
+    HRESULT _hr = put_LowValue(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum ColoringType IGridColorBreak::GetColoringType ( ) {
+    enum ColoringType _result;
+    HRESULT _hr = get_ColoringType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IGridColorBreak::PutColoringType ( enum ColoringType pVal ) {
+    HRESULT _hr = put_ColoringType(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum GradientModel IGridColorBreak::GetGradientModel ( ) {
+    enum GradientModel _result;
+    HRESULT _hr = get_GradientModel(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IGridColorBreak::PutGradientModel ( enum GradientModel pVal ) {
+    HRESULT _hr = put_GradientModel(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IGridColorBreak::GetLastErrorCode ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IGridColorBreak::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrorMsg(ErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ICallbackPtr IGridColorBreak::GetGlobalCallback ( ) {
+    struct ICallback * _result = 0;
+    HRESULT _hr = get_GlobalCallback(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICallbackPtr(_result, false);
+}
+
+inline void IGridColorBreak::PutGlobalCallback ( struct ICallback * pVal ) {
+    HRESULT _hr = put_GlobalCallback(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IGridColorBreak::GetKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Key(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IGridColorBreak::PutKey ( _bstr_t pVal ) {
+    HRESULT _hr = put_Key(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IGridColorBreak::GetCaption ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Caption(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IGridColorBreak::PutCaption ( _bstr_t pVal ) {
+    HRESULT _hr = put_Caption(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IVector wrapper method implementations
+//
+
+inline double IVector::Geti ( ) {
+    double _result = 0;
+    HRESULT _hr = get_i(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IVector::Puti ( double pVal ) {
+    HRESULT _hr = put_i(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IVector::Getj ( ) {
+    double _result = 0;
+    HRESULT _hr = get_j(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IVector::Putj ( double pVal ) {
+    HRESULT _hr = put_j(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IVector::Getk ( ) {
+    double _result = 0;
+    HRESULT _hr = get_k(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IVector::Putk ( double pVal ) {
+    HRESULT _hr = put_k(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IVector::Normalize ( ) {
+    HRESULT _hr = raw_Normalize();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline double IVector::Dot ( struct IVector * V ) {
+    double _result = 0;
+    HRESULT _hr = raw_Dot(V, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IVectorPtr IVector::CrossProduct ( struct IVector * V ) {
+    struct IVector * _result = 0;
+    HRESULT _hr = raw_CrossProduct(V, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IVectorPtr(_result, false);
+}
+
+inline long IVector::GetLastErrorCode ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IVector::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrorMsg(ErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ICallbackPtr IVector::GetGlobalCallback ( ) {
+    struct ICallback * _result = 0;
+    HRESULT _hr = get_GlobalCallback(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICallbackPtr(_result, false);
+}
+
+inline void IVector::PutGlobalCallback ( struct ICallback * pVal ) {
+    HRESULT _hr = put_GlobalCallback(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IVector::GetKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Key(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IVector::PutKey ( _bstr_t pVal ) {
+    HRESULT _hr = put_Key(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IGridColorScheme wrapper method implementations
+//
+
+inline long IGridColorScheme::GetNumBreaks ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NumBreaks(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IGridColorScheme::GetAmbientIntensity ( ) {
+    double _result = 0;
+    HRESULT _hr = get_AmbientIntensity(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IGridColorScheme::PutAmbientIntensity ( double pVal ) {
+    HRESULT _hr = put_AmbientIntensity(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IGridColorScheme::GetLightSourceIntensity ( ) {
+    double _result = 0;
+    HRESULT _hr = get_LightSourceIntensity(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IGridColorScheme::PutLightSourceIntensity ( double pVal ) {
+    HRESULT _hr = put_LightSourceIntensity(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IGridColorScheme::GetLightSourceAzimuth ( ) {
+    double _result = 0;
+    HRESULT _hr = get_LightSourceAzimuth(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IGridColorScheme::GetLightSourceElevation ( ) {
+    double _result = 0;
+    HRESULT _hr = get_LightSourceElevation(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IGridColorScheme::SetLightSource ( double Azimuth, double Elevation ) {
+    HRESULT _hr = raw_SetLightSource(Azimuth, Elevation);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IGridColorScheme::InsertBreak ( struct IGridColorBreak * BrkInfo ) {
+    HRESULT _hr = raw_InsertBreak(BrkInfo);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IGridColorBreakPtr IGridColorScheme::GetBreak ( long Index ) {
+    struct IGridColorBreak * _result = 0;
+    HRESULT _hr = get_Break(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IGridColorBreakPtr(_result, false);
+}
+
+inline HRESULT IGridColorScheme::DeleteBreak ( long Index ) {
+    HRESULT _hr = raw_DeleteBreak(Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IGridColorScheme::Clear ( ) {
+    HRESULT _hr = raw_Clear();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline OLE_COLOR IGridColorScheme::GetNoDataColor ( ) {
+    OLE_COLOR _result;
+    HRESULT _hr = get_NoDataColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IGridColorScheme::PutNoDataColor ( OLE_COLOR pVal ) {
+    HRESULT _hr = put_NoDataColor(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IGridColorScheme::UsePredefined ( double LowValue, double HighValue, enum PredefinedColorScheme Preset ) {
+    HRESULT _hr = raw_UsePredefined(LowValue, HighValue, Preset);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IVectorPtr IGridColorScheme::GetLightSource ( ) {
+    struct IVector * _result = 0;
+    HRESULT _hr = raw_GetLightSource(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IVectorPtr(_result, false);
+}
+
+inline long IGridColorScheme::GetLastErrorCode ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IGridColorScheme::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrorMsg(ErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ICallbackPtr IGridColorScheme::GetGlobalCallback ( ) {
+    struct ICallback * _result = 0;
+    HRESULT _hr = get_GlobalCallback(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICallbackPtr(_result, false);
+}
+
+inline void IGridColorScheme::PutGlobalCallback ( struct ICallback * pVal ) {
+    HRESULT _hr = put_GlobalCallback(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IGridColorScheme::GetKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Key(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IGridColorScheme::PutKey ( _bstr_t pVal ) {
+    HRESULT _hr = put_Key(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IGridColorScheme::InsertAt ( int Position, struct IGridColorBreak * Break ) {
+    HRESULT _hr = raw_InsertAt(Position, Break);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IGrid wrapper method implementations
+//
+
+inline IGridHeaderPtr IGrid::GetHeader ( ) {
+    struct IGridHeader * _result = 0;
+    HRESULT _hr = get_Header(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IGridHeaderPtr(_result, false);
+}
+
+inline _variant_t IGrid::GetValue ( long Column, long Row ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Value(Column, Row, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline void IGrid::PutValue ( long Column, long Row, const _variant_t & pVal ) {
+    HRESULT _hr = put_Value(Column, Row, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IGrid::GetInRam ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_InRam(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _variant_t IGrid::GetMaximum ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Maximum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline _variant_t IGrid::GetMinimum ( ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_Minimum(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline enum GridDataType IGrid::GetDataType ( ) {
+    enum GridDataType _result;
+    HRESULT _hr = get_DataType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IGrid::GetFilename ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Filename(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IGrid::GetLastErrorCode ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IGrid::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrorMsg(ErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ICallbackPtr IGrid::GetGlobalCallback ( ) {
+    struct ICallback * _result = 0;
+    HRESULT _hr = get_GlobalCallback(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICallbackPtr(_result, false);
+}
+
+inline void IGrid::PutGlobalCallback ( struct ICallback * pVal ) {
+    HRESULT _hr = put_GlobalCallback(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IGrid::GetKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Key(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IGrid::PutKey ( _bstr_t pVal ) {
+    HRESULT _hr = put_Key(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IGrid::Open ( _bstr_t Filename, enum GridDataType DataType, VARIANT_BOOL InRam, enum GridFileType FileType, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Open(Filename, DataType, InRam, FileType, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IGrid::CreateNew ( _bstr_t Filename, struct IGridHeader * Header, enum GridDataType DataType, const _variant_t & InitialValue, VARIANT_BOOL InRam, enum GridFileType FileType, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CreateNew(Filename, Header, DataType, InitialValue, InRam, FileType, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IGrid::Close ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Close(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IGrid::Save ( _bstr_t Filename, enum GridFileType GridFileType, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Save(Filename, GridFileType, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IGrid::Clear ( const _variant_t & ClearValue ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Clear(ClearValue, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IGrid::ProjToCell ( double x, double y, long * Column, long * Row ) {
+    HRESULT _hr = raw_ProjToCell(x, y, Column, Row);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IGrid::CellToProj ( long Column, long Row, double * x, double * y ) {
+    HRESULT _hr = raw_CellToProj(Column, Row, x, y);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IGrid::GetCdlgFilter ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_CdlgFilter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL IGrid::AssignNewProjection ( _bstr_t Projection ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_AssignNewProjection(Projection, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IGridColorSchemePtr IGrid::GetRasterColorTableColoringScheme ( ) {
+    struct IGridColorScheme * _result = 0;
+    HRESULT _hr = get_RasterColorTableColoringScheme(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IGridColorSchemePtr(_result, false);
+}
+
+inline VARIANT_BOOL IGrid::GetRow ( long Row, float * Vals ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetRow(Row, Vals, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IGrid::PutRow ( long Row, float * Vals ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_PutRow(Row, Vals, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IGrid::GetFloatWindow ( long StartRow, long EndRow, long StartCol, long EndCol, float * Vals ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetFloatWindow(StartRow, EndRow, StartCol, EndCol, Vals, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IGrid::PutFloatWindow ( long StartRow, long EndRow, long StartCol, long EndCol, float * Vals ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_PutFloatWindow(StartRow, EndRow, StartCol, EndCol, Vals, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IGrid::SetInvalidValuesToNodata ( double MinThresholdValue, double MaxThresholdValue ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetInvalidValuesToNodata(MinThresholdValue, MaxThresholdValue, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IGrid::Resource ( _bstr_t newSrcPath ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Resource(newSrcPath, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IESRIGridManager wrapper method implementations
+//
+
+inline long IESRIGridManager::GetLastErrorCode ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IESRIGridManager::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrorMsg(ErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ICallbackPtr IESRIGridManager::GetGlobalCallback ( ) {
+    struct ICallback * _result = 0;
+    HRESULT _hr = get_GlobalCallback(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICallbackPtr(_result, false);
+}
+
+inline void IESRIGridManager::PutGlobalCallback ( struct ICallback * pVal ) {
+    HRESULT _hr = put_GlobalCallback(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IESRIGridManager::CanUseESRIGrids ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CanUseESRIGrids(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IESRIGridManager::DeleteESRIGrids ( _bstr_t Filename ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_DeleteESRIGrids(Filename, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IESRIGridManager::IsESRIGrid ( _bstr_t Filename ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_IsESRIGrid(Filename, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IImage wrapper method implementations
+//
+
+inline VARIANT_BOOL IImage::Open ( _bstr_t ImageFileName, enum ImageType FileType, VARIANT_BOOL InRam, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Open(ImageFileName, FileType, InRam, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IImage::Save ( _bstr_t ImageFileName, VARIANT_BOOL WriteWorldFile, enum ImageType FileType, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Save(ImageFileName, WriteWorldFile, FileType, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IImage::CreateNew ( long NewWidth, long NewHeight ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CreateNew(NewWidth, NewHeight, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IImage::Close ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Close(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IImage::Clear ( OLE_COLOR CanvasColor, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Clear(CanvasColor, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IImage::GetRow ( long Row, long * Vals ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetRow(Row, Vals, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IImage::GetWidth ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Width(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IImage::GetHeight ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Height(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IImage::GetYllCenter ( ) {
+    double _result = 0;
+    HRESULT _hr = get_YllCenter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IImage::PutYllCenter ( double pVal ) {
+    HRESULT _hr = put_YllCenter(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IImage::GetXllCenter ( ) {
+    double _result = 0;
+    HRESULT _hr = get_XllCenter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IImage::PutXllCenter ( double pVal ) {
+    HRESULT _hr = put_XllCenter(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IImage::GetdY ( ) {
+    double _result = 0;
+    HRESULT _hr = get_dY(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IImage::PutdY ( double pVal ) {
+    HRESULT _hr = put_dY(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IImage::GetdX ( ) {
+    double _result = 0;
+    HRESULT _hr = get_dX(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IImage::PutdX ( double pVal ) {
+    HRESULT _hr = put_dX(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IImage::GetValue ( long Row, long col ) {
+    long _result = 0;
+    HRESULT _hr = get_Value(Row, col, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IImage::PutValue ( long Row, long col, long pVal ) {
+    HRESULT _hr = put_Value(Row, col, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IImage::GetIsInRam ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsInRam(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline OLE_COLOR IImage::GetTransparencyColor ( ) {
+    OLE_COLOR _result;
+    HRESULT _hr = get_TransparencyColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IImage::PutTransparencyColor ( OLE_COLOR pVal ) {
+    HRESULT _hr = put_TransparencyColor(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IImage::GetUseTransparencyColor ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_UseTransparencyColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IImage::PutUseTransparencyColor ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_UseTransparencyColor(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IImage::GetLastErrorCode ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IImage::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrorMsg(ErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t IImage::GetCdlgFilter ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_CdlgFilter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ICallbackPtr IImage::GetGlobalCallback ( ) {
+    struct ICallback * _result = 0;
+    HRESULT _hr = get_GlobalCallback(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICallbackPtr(_result, false);
+}
+
+inline void IImage::PutGlobalCallback ( struct ICallback * pVal ) {
+    HRESULT _hr = put_GlobalCallback(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IImage::GetKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Key(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IImage::PutKey ( _bstr_t pVal ) {
+    HRESULT _hr = put_Key(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IImage::GetFileHandle ( ) {
+    long _result = 0;
+    HRESULT _hr = get_FileHandle(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum ImageType IImage::GetImageType ( ) {
+    enum ImageType _result;
+    HRESULT _hr = get_ImageType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IPictureDisp * IImage::GetPicture ( ) {
+    IPictureDisp * _result = 0;
+    HRESULT _hr = get_Picture(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IImage::PutRefPicture ( IPictureDisp * pVal ) {
+    HRESULT _hr = putref_Picture(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IImage::GetFilename ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Filename(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL IImage::GetImageBitsDC ( long hDC ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetImageBitsDC(hDC, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IImage::SetImageBitsDC ( long hDC ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetImageBitsDC(hDC, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IImage::SetVisibleExtents ( double newMinX, double newMinY, double newMaxX, double newMaxY, long newPixelsInView, float transPercent ) {
+    HRESULT _hr = raw_SetVisibleExtents(newMinX, newMinY, newMaxX, newMaxY, newPixelsInView, transPercent);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IImage::SetProjection ( _bstr_t Proj4 ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SetProjection(Proj4, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IImage::GetProjection ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_GetProjection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline HRESULT IImage::get_OriginalWidth ( long * OriginalWidth ) {
+    HRESULT _hr = raw_get_OriginalWidth(OriginalWidth);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IImage::get_OriginalHeight ( long * OriginalHeight ) {
+    HRESULT _hr = raw_get_OriginalHeight(OriginalHeight);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IImage::Resource ( _bstr_t newImgPath ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Resource(newImgPath, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IImage::_pushSchemetkRaster ( struct IGridColorScheme * cScheme ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw__pushSchemetkRaster(cScheme, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IImage::GetOriginalXllCenter ( ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetOriginalXllCenter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IImage::GetOriginalYllCenter ( ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetOriginalYllCenter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IImage::GetOriginal_dX ( ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetOriginal_dX(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IImage::GetOriginal_dY ( ) {
+    double _result = 0;
+    HRESULT _hr = raw_GetOriginal_dY(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IImage::GetOriginalHeight ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetOriginalHeight(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IImage::GetOriginalWidth ( ) {
+    long _result = 0;
+    HRESULT _hr = raw_GetOriginalWidth(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IImage::GetAllowHillshade ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_AllowHillshade(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IImage::PutAllowHillshade ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_AllowHillshade(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IImage::GetSetToGrey ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_SetToGrey(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IImage::PutSetToGrey ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_SetToGrey(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IImage::GetUseHistogram ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_UseHistogram(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IImage::PutUseHistogram ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_UseHistogram(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IImage::GetHasColorTable ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasColorTable(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IImage::GetPaletteInterpretation ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_PaletteInterpretation(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline int IImage::GetBufferSize ( ) {
+    int _result = 0;
+    HRESULT _hr = get_BufferSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IImage::PutBufferSize ( int pVal ) {
+    HRESULT _hr = put_BufferSize(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline int IImage::GetNoBands ( ) {
+    int _result = 0;
+    HRESULT _hr = get_NoBands(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum PredefinedColorScheme IImage::GetImageColorScheme ( ) {
+    enum PredefinedColorScheme _result;
+    HRESULT _hr = get_ImageColorScheme(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IImage::PutImageColorScheme ( enum PredefinedColorScheme pVal ) {
+    HRESULT _hr = put_ImageColorScheme(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline unsigned char * IImage::GetImageData ( ) {
+    unsigned char * _result = 0;
+    HRESULT _hr = get_ImageData(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IExtents wrapper method implementations
+//
+
+inline HRESULT IExtents::SetBounds ( double xMin, double yMin, double zMin, double xMax, double yMax, double zMax ) {
+    HRESULT _hr = raw_SetBounds(xMin, yMin, zMin, xMax, yMax, zMax);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IExtents::GetBounds ( double * xMin, double * yMin, double * zMin, double * xMax, double * yMax, double * zMax ) {
+    HRESULT _hr = raw_GetBounds(xMin, yMin, zMin, xMax, yMax, zMax);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline double IExtents::GetxMin ( ) {
+    double _result = 0;
+    HRESULT _hr = get_xMin(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IExtents::GetxMax ( ) {
+    double _result = 0;
+    HRESULT _hr = get_xMax(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IExtents::GetyMin ( ) {
+    double _result = 0;
+    HRESULT _hr = get_yMin(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IExtents::GetyMax ( ) {
+    double _result = 0;
+    HRESULT _hr = get_yMax(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IExtents::GetzMin ( ) {
+    double _result = 0;
+    HRESULT _hr = get_zMin(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IExtents::GetzMax ( ) {
+    double _result = 0;
+    HRESULT _hr = get_zMax(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IExtents::GetmMin ( ) {
+    double _result = 0;
+    HRESULT _hr = get_mMin(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IExtents::GetmMax ( ) {
+    double _result = 0;
+    HRESULT _hr = get_mMax(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IExtents::GetMeasureBounds ( double * mMin, double * mMax ) {
+    HRESULT _hr = raw_GetMeasureBounds(mMin, mMax);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IExtents::SetMeasureBounds ( double mMin, double mMax ) {
+    HRESULT _hr = raw_SetMeasureBounds(mMin, mMax);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IPoint wrapper method implementations
+//
+
+inline double IPoint::Getx ( ) {
+    double _result = 0;
+    HRESULT _hr = get_x(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IPoint::Putx ( double pVal ) {
+    HRESULT _hr = put_x(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IPoint::Gety ( ) {
+    double _result = 0;
+    HRESULT _hr = get_y(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IPoint::Puty ( double pVal ) {
+    HRESULT _hr = put_y(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IPoint::GetZ ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Z(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IPoint::PutZ ( double pVal ) {
+    HRESULT _hr = put_Z(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IPoint::GetLastErrorCode ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IPoint::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrorMsg(ErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ICallbackPtr IPoint::GetGlobalCallback ( ) {
+    struct ICallback * _result = 0;
+    HRESULT _hr = get_GlobalCallback(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICallbackPtr(_result, false);
+}
+
+inline void IPoint::PutGlobalCallback ( struct ICallback * pVal ) {
+    HRESULT _hr = put_GlobalCallback(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IPoint::GetKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Key(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IPoint::PutKey ( _bstr_t pVal ) {
+    HRESULT _hr = put_Key(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IPoint::GetM ( ) {
+    double _result = 0;
+    HRESULT _hr = get_M(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IPoint::PutM ( double pVal ) {
+    HRESULT _hr = put_M(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IShape wrapper method implementations
+//
+
+inline long IShape::GetnumPoints ( ) {
+    long _result = 0;
+    HRESULT _hr = get_numPoints(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IShape::GetNumParts ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NumParts(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline enum ShpfileType IShape::GetShapeType ( ) {
+    enum ShpfileType _result;
+    HRESULT _hr = get_ShapeType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShape::PutShapeType ( enum ShpfileType pVal ) {
+    HRESULT _hr = put_ShapeType(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IPointPtr IShape::GetPoint ( long PointIndex ) {
+    struct IPoint * _result = 0;
+    HRESULT _hr = get_Point(PointIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IPointPtr(_result, false);
+}
+
+inline void IShape::PutPoint ( long PointIndex, struct IPoint * pVal ) {
+    HRESULT _hr = put_Point(PointIndex, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IShape::GetPart ( long PartIndex ) {
+    long _result = 0;
+    HRESULT _hr = get_Part(PartIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShape::PutPart ( long PartIndex, long pVal ) {
+    HRESULT _hr = put_Part(PartIndex, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IShape::GetLastErrorCode ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IShape::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrorMsg(ErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ICallbackPtr IShape::GetGlobalCallback ( ) {
+    struct ICallback * _result = 0;
+    HRESULT _hr = get_GlobalCallback(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICallbackPtr(_result, false);
+}
+
+inline void IShape::PutGlobalCallback ( struct ICallback * pVal ) {
+    HRESULT _hr = put_GlobalCallback(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IShape::GetKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Key(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IShape::PutKey ( _bstr_t pVal ) {
+    HRESULT _hr = put_Key(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IShape::Create ( enum ShpfileType ShpType ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Create(ShpType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::InsertPoint ( struct IPoint * NewPoint, long * PointIndex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_InsertPoint(NewPoint, PointIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::DeletePoint ( long PointIndex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_DeletePoint(PointIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::InsertPart ( long PointIndex, long * PartIndex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_InsertPart(PointIndex, PartIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::DeletePart ( long PartIndex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_DeletePart(PartIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IExtentsPtr IShape::GetExtents ( ) {
+    struct IExtents * _result = 0;
+    HRESULT _hr = get_Extents(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IExtentsPtr(_result, false);
+}
+
+inline _bstr_t IShape::SerializeToString ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = raw_SerializeToString(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL IShape::CreateFromString ( _bstr_t Serialized ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CreateFromString(Serialized, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::PointInThisPoly ( struct IPoint * pt ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_PointInThisPoly(pt, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IPointPtr IShape::GetCentroid ( ) {
+    struct IPoint * _result = 0;
+    HRESULT _hr = get_Centroid(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IPointPtr(_result, false);
+}
+
+inline double IShape::GetLength ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Length(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IShape::GetPerimeter ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Perimeter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IShape::GetArea ( ) {
+    double _result = 0;
+    HRESULT _hr = get_Area(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::Relates ( struct IShape * Shape, enum tkSpatialRelation Relation ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Relates(Shape, Relation, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IShape::Distance ( struct IShape * Shape ) {
+    double _result = 0;
+    HRESULT _hr = raw_Distance(Shape, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IShapePtr IShape::Buffer ( double Distance, long nQuadSegments ) {
+    struct IShape * _result = 0;
+    HRESULT _hr = raw_Buffer(Distance, nQuadSegments, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapePtr(_result, false);
+}
+
+inline IShapePtr IShape::Clip ( struct IShape * Shape, enum tkClipOperation Operation ) {
+    struct IShape * _result = 0;
+    HRESULT _hr = raw_Clip(Shape, Operation, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapePtr(_result, false);
+}
+
+inline VARIANT_BOOL IShape::Contains ( struct IShape * Shape ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Contains(Shape, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::Crosses ( struct IShape * Shape ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Crosses(Shape, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::Disjoint ( struct IShape * Shape ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Disjoint(Shape, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::Equals ( struct IShape * Shape ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Equals(Shape, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::Intersects ( struct IShape * Shape ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Intersects(Shape, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::Overlaps ( struct IShape * Shape ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Overlaps(Shape, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::Touches ( struct IShape * Shape ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Touches(Shape, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::Within ( struct IShape * Shape ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Within(Shape, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IShapePtr IShape::Boundry ( ) {
+    struct IShape * _result = 0;
+    HRESULT _hr = raw_Boundry(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapePtr(_result, false);
+}
+
+inline IShapePtr IShape::ConvexHull ( ) {
+    struct IShape * _result = 0;
+    HRESULT _hr = raw_ConvexHull(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapePtr(_result, false);
+}
+
+inline VARIANT_BOOL IShape::GetIsValid ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsValid(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::GetXY ( long PointIndex, double * x, double * y ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_XY(PointIndex, x, y, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::GetPartIsClockWise ( long PartIndex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_PartIsClockWise(PartIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::ReversePointsOrder ( long PartIndex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_ReversePointsOrder(PartIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShape::GetIntersection ( struct IShape * Shape, VARIANT * Results ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GetIntersection(Shape, Results, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IField wrapper method implementations
+//
+
+inline _bstr_t IField::GetName ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Name(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IField::PutName ( _bstr_t pVal ) {
+    HRESULT _hr = put_Name(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IField::GetWidth ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Width(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IField::PutWidth ( long pVal ) {
+    HRESULT _hr = put_Width(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IField::GetPrecision ( ) {
+    long _result = 0;
+    HRESULT _hr = get_Precision(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IField::PutPrecision ( long pVal ) {
+    HRESULT _hr = put_Precision(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum FieldType IField::GetType ( ) {
+    enum FieldType _result;
+    HRESULT _hr = get_Type(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IField::PutType ( enum FieldType pVal ) {
+    HRESULT _hr = put_Type(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IField::GetLastErrorCode ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IField::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrorMsg(ErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ICallbackPtr IField::GetGlobalCallback ( ) {
+    struct ICallback * _result = 0;
+    HRESULT _hr = get_GlobalCallback(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICallbackPtr(_result, false);
+}
+
+inline void IField::PutGlobalCallback ( struct ICallback * pVal ) {
+    HRESULT _hr = put_GlobalCallback(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IField::GetKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Key(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IField::PutKey ( _bstr_t pVal ) {
+    HRESULT _hr = put_Key(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+//
+// interface IShapeDrawingOptions wrapper method implementations
+//
+
+inline VARIANT_BOOL IShapeDrawingOptions::GetDrawFill ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_DrawFill(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapeDrawingOptions::PutDrawFill ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_DrawFill(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IShapeDrawingOptions::GetDrawLine ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_DrawLine(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapeDrawingOptions::PutDrawLine ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_DrawLine(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IShapeDrawingOptions::GetDrawPoint ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_DrawPoint(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapeDrawingOptions::PutDrawPoint ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_DrawPoint(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline OLE_COLOR IShapeDrawingOptions::GetFillColor ( ) {
+    OLE_COLOR _result;
+    HRESULT _hr = get_FillColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapeDrawingOptions::PutFillColor ( OLE_COLOR pVal ) {
+    HRESULT _hr = put_FillColor(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline OLE_COLOR IShapeDrawingOptions::GetLineColor ( ) {
+    OLE_COLOR _result;
+    HRESULT _hr = get_LineColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapeDrawingOptions::PutLineColor ( OLE_COLOR pVal ) {
+    HRESULT _hr = put_LineColor(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline OLE_COLOR IShapeDrawingOptions::GetPointColor ( ) {
+    OLE_COLOR _result;
+    HRESULT _hr = get_PointColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapeDrawingOptions::PutPointColor ( OLE_COLOR pVal ) {
+    HRESULT _hr = put_PointColor(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum tkFillStipple IShapeDrawingOptions::GetFillStipple ( ) {
+    enum tkFillStipple _result;
+    HRESULT _hr = get_FillStipple(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapeDrawingOptions::PutFillStipple ( enum tkFillStipple pVal ) {
+    HRESULT _hr = put_FillStipple(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum tkLineStipple IShapeDrawingOptions::GetLineStipple ( ) {
+    enum tkLineStipple _result;
+    HRESULT _hr = get_LineStipple(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapeDrawingOptions::PutLineStipple ( enum tkLineStipple pVal ) {
+    HRESULT _hr = put_LineStipple(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline enum tkPointType IShapeDrawingOptions::GetPointType ( ) {
+    enum tkPointType _result;
+    HRESULT _hr = get_PointType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapeDrawingOptions::PutPointType ( enum tkPointType pVal ) {
+    HRESULT _hr = put_PointType(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float IShapeDrawingOptions::GetFillTransparency ( ) {
+    float _result = 0;
+    HRESULT _hr = get_FillTransparency(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapeDrawingOptions::PutFillTransparency ( float pVal ) {
+    HRESULT _hr = put_FillTransparency(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float IShapeDrawingOptions::GetLineWidth ( ) {
+    float _result = 0;
+    HRESULT _hr = get_LineWidth(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapeDrawingOptions::PutLineWidth ( float pVal ) {
+    HRESULT _hr = put_LineWidth(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline float IShapeDrawingOptions::GetPointSize ( ) {
+    float _result = 0;
+    HRESULT _hr = get_PointSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapeDrawingOptions::PutPointSize ( float pVal ) {
+    HRESULT _hr = put_PointSize(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IShapeDrawingOptions::GetStippleTransparent ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_StippleTransparent(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapeDrawingOptions::PutStippleTransparent ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_StippleTransparent(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline OLE_COLOR IShapeDrawingOptions::GetStippleColor ( ) {
+    OLE_COLOR _result;
+    HRESULT _hr = get_StippleColor(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapeDrawingOptions::PutStippleColor ( OLE_COLOR pVal ) {
+    HRESULT _hr = put_StippleColor(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IImagePtr IShapeDrawingOptions::get_RasterFill ( ) {
+    struct IImage * _result = 0;
+    HRESULT _hr = raw_get_RasterFill(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IImagePtr(_result, false);
+}
+
+inline HRESULT IShapeDrawingOptions::put_RasterFill ( struct IImage * newValue ) {
+    HRESULT _hr = raw_put_RasterFill(newValue);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface IShapefile wrapper method implementations
+//
+
+inline long IShapefile::GetNumShapes ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NumShapes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IShapefile::GetNumFields ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NumFields(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IExtentsPtr IShapefile::GetExtents ( ) {
+    struct IExtents * _result = 0;
+    HRESULT _hr = get_Extents(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IExtentsPtr(_result, false);
+}
+
+inline enum ShpfileType IShapefile::GetShapefileType ( ) {
+    enum ShpfileType _result;
+    HRESULT _hr = get_ShapefileType(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IShapePtr IShapefile::GetShape ( long ShapeIndex ) {
+    struct IShape * _result = 0;
+    HRESULT _hr = get_Shape(ShapeIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapePtr(_result, false);
+}
+
+inline VARIANT_BOOL IShapefile::GetEditingShapes ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_EditingShapes(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IShapefile::GetLastErrorCode ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IShapefile::GetCdlgFilter ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_CdlgFilter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ICallbackPtr IShapefile::GetGlobalCallback ( ) {
+    struct ICallback * _result = 0;
+    HRESULT _hr = get_GlobalCallback(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICallbackPtr(_result, false);
+}
+
+inline void IShapefile::PutGlobalCallback ( struct ICallback * pVal ) {
+    HRESULT _hr = put_GlobalCallback(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IShapefile::GetKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Key(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IShapefile::PutKey ( _bstr_t pVal ) {
+    HRESULT _hr = put_Key(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IShapefile::Open ( _bstr_t ShapefileName, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Open(ShapefileName, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::CreateNew ( _bstr_t ShapefileName, enum ShpfileType ShapefileType ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CreateNew(ShapefileName, ShapefileType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::SaveAs ( _bstr_t ShapefileName, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SaveAs(ShapefileName, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::Close ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Close(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::EditClear ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_EditClear(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::EditInsertShape ( struct IShape * Shape, long * ShapeIndex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_EditInsertShape(Shape, ShapeIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::EditDeleteShape ( long ShapeIndex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_EditDeleteShape(ShapeIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::SelectShapes ( struct IExtents * BoundBox, double Tolerance, enum SelectMode SelectMode, VARIANT * result ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SelectShapes(BoundBox, Tolerance, SelectMode, result, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::StartEditingShapes ( VARIANT_BOOL StartEditTable, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_StartEditingShapes(StartEditTable, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::StopEditingShapes ( VARIANT_BOOL ApplyChanges, VARIANT_BOOL StopEditTable, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_StopEditingShapes(ApplyChanges, StopEditTable, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::EditInsertField ( struct IField * NewField, long * FieldIndex, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_EditInsertField(NewField, FieldIndex, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::EditDeleteField ( long FieldIndex, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_EditDeleteField(FieldIndex, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::EditCellValue ( long FieldIndex, long ShapeIndex, const _variant_t & NewVal ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_EditCellValue(FieldIndex, ShapeIndex, NewVal, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::StartEditingTable ( struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_StartEditingTable(cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::StopEditingTable ( VARIANT_BOOL ApplyChanges, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_StopEditingTable(ApplyChanges, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IFieldPtr IShapefile::GetField ( long FieldIndex ) {
+    struct IField * _result = 0;
+    HRESULT _hr = get_Field(FieldIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IFieldPtr(_result, false);
+}
+
+inline _variant_t IShapefile::GetCellValue ( long FieldIndex, long ShapeIndex ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_CellValue(FieldIndex, ShapeIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline VARIANT_BOOL IShapefile::GetEditingTable ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_EditingTable(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IShapefile::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrorMsg(ErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline long IShapefile::GetFileHandle ( ) {
+    long _result = 0;
+    HRESULT _hr = get_FileHandle(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IShapefile::GetFilename ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Filename(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline IPointPtr IShapefile::QuickPoint ( long ShapeIndex, long PointIndex ) {
+    struct IPoint * _result = 0;
+    HRESULT _hr = raw_QuickPoint(ShapeIndex, PointIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IPointPtr(_result, false);
+}
+
+inline IExtentsPtr IShapefile::QuickExtents ( long ShapeIndex ) {
+    struct IExtents * _result = 0;
+    HRESULT _hr = raw_QuickExtents(ShapeIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IExtentsPtr(_result, false);
+}
+
+inline SAFEARRAY * IShapefile::QuickPoints ( long ShapeIndex, long * numPoints ) {
+    SAFEARRAY * _result = 0;
+    HRESULT _hr = raw_QuickPoints(ShapeIndex, numPoints, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::PointInShape ( long ShapeIndex, double x, double y ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_PointInShape(ShapeIndex, x, y, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IShapefile::PointInShapefile ( double x, double y ) {
+    long _result = 0;
+    HRESULT _hr = raw_PointInShapefile(x, y, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::BeginPointInShapefile ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_BeginPointInShapefile(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IShapefile::EndPointInShapefile ( ) {
+    HRESULT _hr = raw_EndPointInShapefile();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t IShapefile::GetProjection ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Projection(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IShapefile::PutProjection ( _bstr_t pVal ) {
+    HRESULT _hr = put_Projection(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IFieldPtr IShapefile::GetFieldByName ( _bstr_t Fieldname ) {
+    struct IField * _result = 0;
+    HRESULT _hr = get_FieldByName(Fieldname, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IFieldPtr(_result, false);
+}
+
+inline long IShapefile::GetnumPoints ( long ShapeIndex ) {
+    long _result = 0;
+    HRESULT _hr = get_numPoints(ShapeIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::CreateNewWithShapeID ( _bstr_t ShapefileName, enum ShpfileType ShapefileType ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CreateNewWithShapeID(ShapefileName, ShapefileType, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::GetUseSpatialIndex ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_UseSpatialIndex(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapefile::PutUseSpatialIndex ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_UseSpatialIndex(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IShapefile::CreateSpatialIndex ( _bstr_t ShapefileName ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CreateSpatialIndex(ShapefileName, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::GetHasSpatialIndex ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_HasSpatialIndex(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapefile::PutHasSpatialIndex ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_HasSpatialIndex(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IShapefile::Resource ( _bstr_t newShpPath ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Resource(newShpPath, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::GetCacheExtents ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_CacheExtents(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapefile::PutCacheExtents ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_CacheExtents(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IShapefile::RefreshExtents ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_RefreshExtents(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::RefreshShapeExtents ( long ShapeId ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_RefreshShapeExtents(ShapeId, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT IShapefile::QuickQueryInEditMode ( struct IExtents * BoundBox, int * * result, int * ResultCount ) {
+    HRESULT _hr = raw_QuickQueryInEditMode(BoundBox, result, ResultCount);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL IShapefile::GetUseQTree ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_UseQTree(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapefile::PutUseQTree ( VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_UseQTree(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IShapefile::Save ( struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Save(cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::IsSpatialIndexValid ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_IsSpatialIndexValid(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapefile::PutSpatialIndexMaxAreaPercent ( double pVal ) {
+    HRESULT _hr = put_SpatialIndexMaxAreaPercent(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline double IShapefile::GetSpatialIndexMaxAreaPercent ( ) {
+    double _result = 0;
+    HRESULT _hr = get_SpatialIndexMaxAreaPercent(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::GetCanUseSpatialIndex ( struct IExtents * pArea ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_CanUseSpatialIndex(pArea, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IShapefilePtr IShapefile::GetIntersection ( VARIANT_BOOL SelectedOnlyOfThis, struct IShapefile * sf, VARIANT_BOOL SelectedOnly, enum ShpfileType FileType, struct ICallback * cBack ) {
+    struct IShapefile * _result = 0;
+    HRESULT _hr = raw_GetIntersection(SelectedOnlyOfThis, sf, SelectedOnly, FileType, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapefilePtr(_result, false);
+}
+
+inline VARIANT_BOOL IShapefile::SelectByShapefile ( struct IShapefile * sf, enum tkSpatialRelation Relation, VARIANT_BOOL SelectedOnly, VARIANT * result, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SelectByShapefile(sf, Relation, SelectedOnly, result, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IShapefile::GetNumSelected ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NumSelected(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapefile::GetShapeSelected ( long ShapeIndex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_ShapeSelected(ShapeIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapefile::PutShapeSelected ( long ShapeIndex, VARIANT_BOOL pVal ) {
+    HRESULT _hr = put_ShapeSelected(ShapeIndex, pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IShapeDrawingOptionsPtr IShapefile::GetSelectionDrawingOptions ( ) {
+    struct IShapeDrawingOptions * _result = 0;
+    HRESULT _hr = get_SelectionDrawingOptions(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapeDrawingOptionsPtr(_result, false);
+}
+
+inline void IShapefile::PutSelectionDrawingOptions ( struct IShapeDrawingOptions * pVal ) {
+    HRESULT _hr = put_SelectionDrawingOptions(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT IShapefile::SelectAll ( ) {
+    HRESULT _hr = raw_SelectAll();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IShapefile::SelectNone ( ) {
+    HRESULT _hr = raw_SelectNone();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT IShapefile::InvertSelection ( ) {
+    HRESULT _hr = raw_InvertSelection();
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline IShapefilePtr IShapefile::Dissolve ( long FieldIndex, VARIANT_BOOL SelectedOnly ) {
+    struct IShapefile * _result = 0;
+    HRESULT _hr = raw_Dissolve(FieldIndex, SelectedOnly, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapefilePtr(_result, false);
+}
+
+//
+// interface ITable wrapper method implementations
+//
+
+inline long ITable::GetNumRows ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NumRows(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ITable::GetNumFields ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NumFields(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IFieldPtr ITable::GetField ( long FieldIndex ) {
+    struct IField * _result = 0;
+    HRESULT _hr = get_Field(FieldIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IFieldPtr(_result, false);
+}
+
+inline _variant_t ITable::GetCellValue ( long FieldIndex, long RowIndex ) {
+    VARIANT _result;
+    VariantInit(&_result);
+    HRESULT _hr = get_CellValue(FieldIndex, RowIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _variant_t(_result, false);
+}
+
+inline VARIANT_BOOL ITable::GetEditingTable ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_EditingTable(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ITable::GetLastErrorCode ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t ITable::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrorMsg(ErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t ITable::GetCdlgFilter ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_CdlgFilter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ICallbackPtr ITable::GetGlobalCallback ( ) {
+    struct ICallback * _result = 0;
+    HRESULT _hr = get_GlobalCallback(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICallbackPtr(_result, false);
+}
+
+inline void ITable::PutGlobalCallback ( struct ICallback * pVal ) {
+    HRESULT _hr = put_GlobalCallback(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t ITable::GetKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Key(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void ITable::PutKey ( _bstr_t pVal ) {
+    HRESULT _hr = put_Key(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL ITable::Open ( _bstr_t dbfFilename, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Open(dbfFilename, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITable::CreateNew ( _bstr_t dbfFilename ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CreateNew(dbfFilename, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITable::SaveAs ( _bstr_t dbfFilename, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_SaveAs(dbfFilename, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITable::Close ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Close(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITable::EditClear ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_EditClear(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITable::EditInsertField ( struct IField * Field, long * FieldIndex, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_EditInsertField(Field, FieldIndex, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITable::EditReplaceField ( long FieldIndex, struct IField * NewField, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_EditReplaceField(FieldIndex, NewField, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITable::EditDeleteField ( long FieldIndex, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_EditDeleteField(FieldIndex, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITable::EditInsertRow ( long * RowIndex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_EditInsertRow(RowIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITable::EditCellValue ( long FieldIndex, long RowIndex, const _variant_t & NewVal ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_EditCellValue(FieldIndex, RowIndex, NewVal, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITable::StartEditingTable ( struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_StartEditingTable(cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITable::StopEditingTable ( VARIANT_BOOL ApplyChanges, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_StopEditingTable(ApplyChanges, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITable::EditDeleteRow ( long RowIndex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_EditDeleteRow(RowIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITable::Save ( struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Save(cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IShapeNetwork wrapper method implementations
+//
+
+inline long IShapeNetwork::Build ( struct IShapefile * Shapefile, long ShapeIndex, long FinalPointIndex, double Tolerance, enum AmbiguityResolution ar, struct ICallback * cBack ) {
+    long _result = 0;
+    HRESULT _hr = raw_Build(Shapefile, ShapeIndex, FinalPointIndex, Tolerance, ar, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapeNetwork::DeleteShape ( long ShapeIndex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_DeleteShape(ShapeIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IGridPtr IShapeNetwork::RasterizeD8 ( VARIANT_BOOL UseNetworkBounds, struct IGridHeader * Header, double Cellsize, struct ICallback * cBack ) {
+    struct IGrid * _result = 0;
+    HRESULT _hr = raw_RasterizeD8(UseNetworkBounds, Header, Cellsize, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IGridPtr(_result, false);
+}
+
+inline VARIANT_BOOL IShapeNetwork::MoveUp ( long UpIndex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_MoveUp(UpIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapeNetwork::MoveDown ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_MoveDown(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapeNetwork::MoveTo ( long ShapeIndex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_MoveTo(ShapeIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapeNetwork::MoveToOutlet ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_MoveToOutlet(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IShapefilePtr IShapeNetwork::GetShapefile ( ) {
+    struct IShapefile * _result = 0;
+    HRESULT _hr = get_Shapefile(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapefilePtr(_result, false);
+}
+
+inline IShapePtr IShapeNetwork::GetCurrentShape ( ) {
+    struct IShape * _result = 0;
+    HRESULT _hr = get_CurrentShape(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapePtr(_result, false);
+}
+
+inline long IShapeNetwork::GetCurrentShapeIndex ( ) {
+    long _result = 0;
+    HRESULT _hr = get_CurrentShapeIndex(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IShapeNetwork::GetDistanceToOutlet ( long PointIndex ) {
+    double _result = 0;
+    HRESULT _hr = get_DistanceToOutlet(PointIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IShapeNetwork::GetNumDirectUps ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NumDirectUps(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IShapeNetwork::GetNetworkSize ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NetworkSize(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IShapeNetwork::GetAmbigShapeIndex ( long Index ) {
+    long _result = 0;
+    HRESULT _hr = get_AmbigShapeIndex(Index, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IShapeNetwork::GetLastErrorCode ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IShapeNetwork::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrorMsg(ErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ICallbackPtr IShapeNetwork::GetGlobalCallback ( ) {
+    struct ICallback * _result = 0;
+    HRESULT _hr = get_GlobalCallback(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICallbackPtr(_result, false);
+}
+
+inline void IShapeNetwork::PutGlobalCallback ( struct ICallback * pVal ) {
+    HRESULT _hr = put_GlobalCallback(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IShapeNetwork::GetKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Key(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IShapeNetwork::PutKey ( _bstr_t pVal ) {
+    HRESULT _hr = put_Key(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline long IShapeNetwork::GetParentIndex ( ) {
+    long _result = 0;
+    HRESULT _hr = get_ParentIndex(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline void IShapeNetwork::PutParentIndex ( long pVal ) {
+    HRESULT _hr = put_ParentIndex(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline VARIANT_BOOL IShapeNetwork::Open ( struct IShapefile * sf, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Open(sf, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IShapeNetwork::Close ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Close(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface ITin wrapper method implementations
+//
+
+inline VARIANT_BOOL ITin::Open ( _bstr_t TinFile, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Open(TinFile, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITin::CreateNew ( struct IGrid * Grid, double Deviation, enum SplitMethod SplitTest, double STParam, long MeshDivisions, long MaximumTriangles, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CreateNew(Grid, Deviation, SplitTest, STParam, MeshDivisions, MaximumTriangles, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITin::Save ( _bstr_t TinFilename, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Save(TinFilename, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITin::Close ( ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Close(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL ITin::Select ( long * TriangleHint, double x, double y, double * Z ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_Select(TriangleHint, x, y, Z, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ITin::GetNumTriangles ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NumTriangles(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ITin::GetNumVertices ( ) {
+    long _result = 0;
+    HRESULT _hr = get_NumVertices(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long ITin::GetLastErrorCode ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t ITin::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrorMsg(ErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline _bstr_t ITin::GetCdlgFilter ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_CdlgFilter(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ICallbackPtr ITin::GetGlobalCallback ( ) {
+    struct ICallback * _result = 0;
+    HRESULT _hr = get_GlobalCallback(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICallbackPtr(_result, false);
+}
+
+inline void ITin::PutGlobalCallback ( struct ICallback * pVal ) {
+    HRESULT _hr = put_GlobalCallback(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t ITin::GetKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Key(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void ITin::PutKey ( _bstr_t pVal ) {
+    HRESULT _hr = put_Key(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline HRESULT ITin::Triangle ( long TriIndex, long * vtx1Index, long * vtx2Index, long * vtx3Index ) {
+    HRESULT _hr = raw_Triangle(TriIndex, vtx1Index, vtx2Index, vtx3Index);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITin::Vertex ( long VtxIndex, double * x, double * y, double * Z ) {
+    HRESULT _hr = raw_Vertex(VtxIndex, x, y, Z);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITin::Max ( double * x, double * y, double * Z ) {
+    HRESULT _hr = raw_Max(x, y, Z);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ITin::Min ( double * x, double * y, double * Z ) {
+    HRESULT _hr = raw_Min(x, y, Z);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline _bstr_t ITin::GetFilename ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Filename(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline VARIANT_BOOL ITin::GetIsNDTriangle ( long TriIndex ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = get_IsNDTriangle(TriIndex, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline HRESULT ITin::TriangleNeighbors ( long TriIndex, long * triIndex1, long * triIndex2, long * triIndex3 ) {
+    HRESULT _hr = raw_TriangleNeighbors(TriIndex, triIndex1, triIndex2, triIndex3);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline VARIANT_BOOL ITin::CreateTinFromPoints ( SAFEARRAY * Points ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_CreateTinFromPoints(Points, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+//
+// interface IUtils wrapper method implementations
+//
+
+inline VARIANT_BOOL IUtils::PointInPolygon ( struct IShape * Shp, struct IPoint * TestPoint ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_PointInPolygon(Shp, TestPoint, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IUtils::GridReplace ( struct IGrid * Grd, const _variant_t & OldValue, const _variant_t & newValue, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GridReplace(Grd, OldValue, newValue, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IUtils::GridInterpolateNoData ( struct IGrid * Grd, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GridInterpolateNoData(Grd, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IUtils::RemoveColinearPoints ( struct IShapefile * Shapes, double LinearTolerance, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_RemoveColinearPoints(Shapes, LinearTolerance, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IUtils::GetLength ( struct IShape * Shape ) {
+    double _result = 0;
+    HRESULT _hr = get_Length(Shape, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IUtils::GetPerimeter ( struct IShape * Shape ) {
+    double _result = 0;
+    HRESULT _hr = get_Perimeter(Shape, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline double IUtils::GetArea ( struct IShape * Shape ) {
+    double _result = 0;
+    HRESULT _hr = get_Area(Shape, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline long IUtils::GetLastErrorCode ( ) {
+    long _result = 0;
+    HRESULT _hr = get_LastErrorCode(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline _bstr_t IUtils::GetErrorMsg ( long ErrorCode ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_ErrorMsg(ErrorCode, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline ICallbackPtr IUtils::GetGlobalCallback ( ) {
+    struct ICallback * _result = 0;
+    HRESULT _hr = get_GlobalCallback(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return ICallbackPtr(_result, false);
+}
+
+inline void IUtils::PutGlobalCallback ( struct ICallback * pVal ) {
+    HRESULT _hr = put_GlobalCallback(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline _bstr_t IUtils::GetKey ( ) {
+    BSTR _result = 0;
+    HRESULT _hr = get_Key(&_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _bstr_t(_result, false);
+}
+
+inline void IUtils::PutKey ( _bstr_t pVal ) {
+    HRESULT _hr = put_Key(pVal);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+}
+
+inline IShapePtr IUtils::ClipPolygon ( enum PolygonOperation op, struct IShape * SubjectPolygon, struct IShape * ClipPolygon ) {
+    struct IShape * _result = 0;
+    HRESULT _hr = raw_ClipPolygon(op, SubjectPolygon, ClipPolygon, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapePtr(_result, false);
+}
+
+inline IGridPtr IUtils::GridMerge ( const _variant_t & Grids, _bstr_t MergeFilename, VARIANT_BOOL InRam, enum GridFileType GrdFileType, struct ICallback * cBack ) {
+    struct IGrid * _result = 0;
+    HRESULT _hr = raw_GridMerge(Grids, MergeFilename, InRam, GrdFileType, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IGridPtr(_result, false);
+}
+
+inline IShapePtr IUtils::ShapeMerge ( struct IShapefile * Shapes, long IndexOne, long IndexTwo, struct ICallback * cBack ) {
+    struct IShape * _result = 0;
+    HRESULT _hr = raw_ShapeMerge(Shapes, IndexOne, IndexTwo, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapePtr(_result, false);
+}
+
+inline IImagePtr IUtils::GridToImage ( struct IGrid * Grid, struct IGridColorScheme * cScheme, struct ICallback * cBack ) {
+    struct IImage * _result = 0;
+    HRESULT _hr = raw_GridToImage(Grid, cScheme, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IImagePtr(_result, false);
+}
+
+inline IShapefilePtr IUtils::GridToShapefile ( struct IGrid * Grid, struct IGrid * ConnectionGrid, struct ICallback * cBack ) {
+    struct IShapefile * _result = 0;
+    HRESULT _hr = raw_GridToShapefile(Grid, ConnectionGrid, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapefilePtr(_result, false);
+}
+
+inline IGridPtr IUtils::GridToGrid ( struct IGrid * Grid, enum GridDataType OutDataType, struct ICallback * cBack ) {
+    struct IGrid * _result = 0;
+    HRESULT _hr = raw_GridToGrid(Grid, OutDataType, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IGridPtr(_result, false);
+}
+
+inline IShapefilePtr IUtils::ShapeToShapeZ ( struct IShapefile * Shapefile, struct IGrid * Grid, struct ICallback * cBack ) {
+    struct IShapefile * _result = 0;
+    HRESULT _hr = raw_ShapeToShapeZ(Shapefile, Grid, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapefilePtr(_result, false);
+}
+
+inline IShapefilePtr IUtils::TinToShapefile ( struct ITin * Tin, enum ShpfileType Type, struct ICallback * cBack ) {
+    struct IShapefile * _result = 0;
+    HRESULT _hr = raw_TinToShapefile(Tin, Type, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapefilePtr(_result, false);
+}
+
+inline IGridPtr IUtils::ShapefileToGrid ( struct IShapefile * Shpfile, VARIANT_BOOL UseShapefileBounds, struct IGridHeader * GrdHeader, double Cellsize, VARIANT_BOOL UseShapeNumber, short SingleValue ) {
+    struct IGrid * _result = 0;
+    HRESULT _hr = raw_ShapefileToGrid(Shpfile, UseShapefileBounds, GrdHeader, Cellsize, UseShapeNumber, SingleValue, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IGridPtr(_result, false);
+}
+
+inline IPictureDisp * IUtils::hBitmapToPicture ( long hBitmap ) {
+    IPictureDisp * _result = 0;
+    HRESULT _hr = raw_hBitmapToPicture(hBitmap, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IUtils::GenerateHillShade ( _bstr_t bstrGridFilename, _bstr_t bstrShadeFilename, float Z, float scale, float az, float alt ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GenerateHillShade(bstrGridFilename, bstrShadeFilename, Z, scale, az, alt, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IUtils::GenerateContour ( _bstr_t pszSrcFilename, _bstr_t pszDstFilename, double dfInterval, double dfNoData, VARIANT_BOOL Is3D, const _variant_t & dblFLArray, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_GenerateContour(pszSrcFilename, pszDstFilename, dfInterval, dfNoData, Is3D, dblFLArray, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline VARIANT_BOOL IUtils::TranslateRaster ( _bstr_t bstrSrcFilename, _bstr_t bstrDstFilename, _bstr_t bstrOptions, struct ICallback * cBack ) {
+    VARIANT_BOOL _result = 0;
+    HRESULT _hr = raw_TranslateRaster(bstrSrcFilename, bstrDstFilename, bstrOptions, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _result;
+}
+
+inline IShapefilePtr IUtils::OGRLayerToShapefile ( _bstr_t Filename, enum ShpfileType ShpType, struct ICallback * cBack ) {
+    struct IShapefile * _result = 0;
+    HRESULT _hr = raw_OGRLayerToShapefile(Filename, ShpType, cBack, &_result);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return IShapefilePtr(_result, false);
+}

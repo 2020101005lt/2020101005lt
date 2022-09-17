@@ -1,0 +1,30 @@
+﻿生成启动时间为 2022/4/25 22:40:42。
+     1>项目“C:\xinhaoyuxitong\20200106UAV_Spider\20200106UAV_Spider\UAV_Spider\UAV_Spider\UAV_Spider.vcxproj”在节点 2 上(build 个目标)。
+       项目文件包含 ToolsVersion="12.0"。此工具集可能未知或缺失。在这种情况下，通过安装 MSBuild 的正确版本，或许可以解决此问题。否则，该 build 可能已因策略原因而被强制为某个特定 ToolsVersion。将该项目视为其已具有 ToolsVersion="4.0"。有关详细信息，请参阅 http://go.microsoft.com/fwlink/?LinkId=291333。
+     1>InitializeBuildStatus:
+         正在对“Debug\UAV_Spider.unsuccessfulbuild”执行 Touch 任务。
+       ClCompile:
+         所有输出均为最新。
+         c:\xinhaoyuxitong\VS2010\VC\bin\CL.exe /c /IC:\xinhaoyuxitong\opencv /I"C:\xinhaoyuxitong\Xtreme.Toolkit.Pro.v15.0.1\Xtreme ToolkitPro v15.0.1\Source" /ID:\opencv\build\include /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D _MBCS /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\UAV_Spider.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Bing_TileSystem.cpp ButtonDlg.cpp CTCPSock.cpp CvvImage.cpp DlgTrapCtrl.cpp MainFrm.cpp UAV_Spider.cpp UAV_SpiderView.cpp
+         UAV_SpiderView.cpp
+     1>c:\xinhaoyuxitong\20200106uav_spider\20200106uav_spider\uav_spider\uav_spider\bing_tilesystem.h(5): fatal error C1083: 无法打开包括文件:“opencv2/core/core.hpp”: No such file or directory
+         UAV_Spider.cpp
+     1>c:\xinhaoyuxitong\20200106uav_spider\20200106uav_spider\uav_spider\uav_spider\userdef.h(2): fatal error C1083: 无法打开包括文件:“opencv2/opencv.hpp”: No such file or directory
+         MainFrm.cpp
+     1>c:\xinhaoyuxitong\20200106uav_spider\20200106uav_spider\uav_spider\uav_spider\userdef.h(2): fatal error C1083: 无法打开包括文件:“opencv2/opencv.hpp”: No such file or directory
+         DlgTrapCtrl.cpp
+     1>c:\xinhaoyuxitong\20200106uav_spider\20200106uav_spider\uav_spider\uav_spider\userdef.h(2): fatal error C1083: 无法打开包括文件:“opencv2/opencv.hpp”: No such file or directory
+         CvvImage.cpp
+     1>c:\xinhaoyuxitong\20200106uav_spider\20200106uav_spider\uav_spider\uav_spider\cvvimage.h(5): fatal error C1083: 无法打开包括文件:“opencv2/highgui/highgui.hpp”: No such file or directory
+         CTCPSock.cpp
+     1>c:\xinhaoyuxitong\20200106uav_spider\20200106uav_spider\uav_spider\uav_spider\userdef.h(2): fatal error C1083: 无法打开包括文件:“opencv2/opencv.hpp”: No such file or directory
+         ButtonDlg.cpp
+     1>c:\xinhaoyuxitong\20200106uav_spider\20200106uav_spider\uav_spider\uav_spider\bing_tilesystem.h(5): fatal error C1083: 无法打开包括文件:“opencv2/core/core.hpp”: No such file or directory
+         Bing_TileSystem.cpp
+     1>c:\xinhaoyuxitong\20200106uav_spider\20200106uav_spider\uav_spider\uav_spider\bing_tilesystem.h(5): fatal error C1083: 无法打开包括文件:“opencv2/core/core.hpp”: No such file or directory
+         正在生成代码...
+     1>已完成生成项目“C:\xinhaoyuxitong\20200106UAV_Spider\20200106UAV_Spider\UAV_Spider\UAV_Spider\UAV_Spider.vcxproj”(build 个目标)的操作 - 失败。
+
+生成失败。
+
+已用时间 00:00:05.26

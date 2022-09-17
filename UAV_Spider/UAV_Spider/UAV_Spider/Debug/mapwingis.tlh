@@ -1,0 +1,4547 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 10.00.30319.01 (8d4ab8a2).
+//
+// c:\xinhaoyuxitong\20200106uav_spider\20200106uav_spider\uav_spider\uav_spider\debug\mapwingis.tlh
+//
+// C++ source equivalent of Win32 type library C:\Program Files (x86)\Common Files\MapWindow\MapWinGIS.ocx
+// compiler-generated file created 04/15/22 at 01:46:26 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace MapWinGIS {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("c368d713-cc5f-40ed-9f53-f84fe197b96a"))
+/* LIBID */ __MapWinGIS;
+struct __declspec(uuid("1d077739-e866-46a0-b256-8aecc04f2312"))
+/* dispinterface */ _DMap;
+enum tkCursorMode;
+enum tkCursor;
+enum tkLockMode;
+enum tkShapeDrawingMethod;
+enum tkHJustification;
+enum tkDrawReferenceList;
+enum tkLineStipple;
+enum tkFillStipple;
+enum tkPointType;
+enum tkResizeBehavior;
+struct __declspec(uuid("abea1545-08ab-4d5c-a594-d3017211ea95"))
+/* dispinterface */ _DMapEvents;
+struct __declspec(uuid("fae1b21a-10c5-4c33-8dc2-931edc9fbf82"))
+/* dual interface */ IShapefileColorScheme;
+struct __declspec(uuid("e6d4eb7a-3e8f-45b2-a514-90ef7b2f5c0a"))
+/* dual interface */ IShapefileColorBreak;
+struct __declspec(uuid("90e6bbf7-a956-49be-a5cd-a4640c263ab6"))
+/* dual interface */ ICallback;
+struct /* coclass */ Map;
+struct /* coclass */ ShapefileColorScheme;
+struct /* coclass */ ShapefileColorBreak;
+struct /* coclass */ Grid;
+struct __declspec(uuid("18dfb64a-9e72-4cbe-afd6-a5b7421dd0cb"))
+/* dual interface */ IGrid;
+struct __declspec(uuid("e42814d1-6269-41b1-93c2-aa848f00e459"))
+/* dual interface */ IGridHeader;
+enum GridDataType;
+enum GridFileType;
+struct __declspec(uuid("1c43b56d-2065-4953-9138-31afe8470ff5"))
+/* dual interface */ IGridColorScheme;
+struct __declspec(uuid("1c6ecf5d-04fa-43c4-97b1-22d5ffb55fbd"))
+/* dual interface */ IGridColorBreak;
+enum ColoringType;
+enum GradientModel;
+enum PredefinedColorScheme;
+struct __declspec(uuid("c60625ab-ad4c-405e-8ca2-62e36e4b3f73"))
+/* dual interface */ IVector;
+struct /* coclass */ GridHeader;
+struct /* coclass */ ESRIGridManager;
+struct __declspec(uuid("55b3f2da-eb09-4fa9-b74b-9a1b3e457318"))
+/* dual interface */ IESRIGridManager;
+struct /* coclass */ Image;
+struct __declspec(uuid("79c5f83e-fb53-4189-9ec4-4ac25440d825"))
+/* dual interface */ IImage;
+enum ImageType;
+struct /* coclass */ Shapefile;
+struct __declspec(uuid("5dc72405-c39c-4755-8cfc-9876a89225bc"))
+/* dual interface */ IShapefile;
+struct __declspec(uuid("a5692259-035e-487a-8d89-509dd6dd0f64"))
+/* dual interface */ IExtents;
+enum ShpfileType;
+struct __declspec(uuid("5fa550e3-2044-4034-baaa-b4cce90a0c41"))
+/* dual interface */ IShape;
+struct __declspec(uuid("74f07889-1380-43ee-837a-bbb268311005"))
+/* dual interface */ IPoint;
+enum tkSpatialRelation;
+enum tkClipOperation;
+enum SelectMode;
+struct __declspec(uuid("3f3751a5-4cf8-4ac3-afc2-60de8b90fc7b"))
+/* dual interface */ IField;
+enum FieldType;
+struct __declspec(uuid("7399b752-61d9-4a23-973f-1033431dd009"))
+/* dual interface */ IShapeDrawingOptions;
+struct /* coclass */ Shape;
+struct /* coclass */ Extents;
+struct /* coclass */ Point;
+struct /* coclass */ Table;
+struct __declspec(uuid("4365a8a1-2e46-4223-b2dc-65764262d88b"))
+/* dual interface */ ITable;
+struct /* coclass */ Field;
+struct /* coclass */ ShapeNetwork;
+struct __declspec(uuid("2d4968f2-40d9-4f25-8be6-b51b959cc1b0"))
+/* dual interface */ IShapeNetwork;
+enum AmbiguityResolution;
+struct /* coclass */ Utils;
+struct __declspec(uuid("360bec33-7703-4693-b6ca-90fea22cf1b7"))
+/* dual interface */ IUtils;
+enum PolygonOperation;
+struct __declspec(uuid("55dd824e-332e-41ca-b40c-c8dc81ee209c"))
+/* dual interface */ ITin;
+enum SplitMethod;
+struct /* coclass */ Vector;
+struct /* coclass */ GridColorScheme;
+struct /* coclass */ GridColorBreak;
+struct /* coclass */ Tin;
+struct /* coclass */ ShapeDrawingOptions;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_DMap, __uuidof(_DMap));
+_COM_SMARTPTR_TYPEDEF(_DMapEvents, __uuidof(_DMapEvents));
+_COM_SMARTPTR_TYPEDEF(IShapefileColorBreak, __uuidof(IShapefileColorBreak));
+_COM_SMARTPTR_TYPEDEF(ICallback, __uuidof(ICallback));
+_COM_SMARTPTR_TYPEDEF(IShapefileColorScheme, __uuidof(IShapefileColorScheme));
+_COM_SMARTPTR_TYPEDEF(IGridHeader, __uuidof(IGridHeader));
+_COM_SMARTPTR_TYPEDEF(IGridColorBreak, __uuidof(IGridColorBreak));
+_COM_SMARTPTR_TYPEDEF(IVector, __uuidof(IVector));
+_COM_SMARTPTR_TYPEDEF(IGridColorScheme, __uuidof(IGridColorScheme));
+_COM_SMARTPTR_TYPEDEF(IGrid, __uuidof(IGrid));
+_COM_SMARTPTR_TYPEDEF(IESRIGridManager, __uuidof(IESRIGridManager));
+_COM_SMARTPTR_TYPEDEF(IImage, __uuidof(IImage));
+_COM_SMARTPTR_TYPEDEF(IExtents, __uuidof(IExtents));
+_COM_SMARTPTR_TYPEDEF(IPoint, __uuidof(IPoint));
+_COM_SMARTPTR_TYPEDEF(IShape, __uuidof(IShape));
+_COM_SMARTPTR_TYPEDEF(IField, __uuidof(IField));
+_COM_SMARTPTR_TYPEDEF(IShapeDrawingOptions, __uuidof(IShapeDrawingOptions));
+_COM_SMARTPTR_TYPEDEF(IShapefile, __uuidof(IShapefile));
+_COM_SMARTPTR_TYPEDEF(ITable, __uuidof(ITable));
+_COM_SMARTPTR_TYPEDEF(IShapeNetwork, __uuidof(IShapeNetwork));
+_COM_SMARTPTR_TYPEDEF(ITin, __uuidof(ITin));
+_COM_SMARTPTR_TYPEDEF(IUtils, __uuidof(IUtils));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("1d077739-e866-46a0-b256-8aecc04f2312"))
+_DMap : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetShapePointImageListID,put=PutShapePointImageListID))
+    long ShapePointImageListID[][];
+    __declspec(property(get=GetDrawingLabelsOffset,put=PutDrawingLabelsOffset))
+    long DrawingLabelsOffset[];
+    __declspec(property(get=GetDrawingLabelsScale,put=PutDrawingLabelsScale))
+    VARIANT_BOOL DrawingLabelsScale[];
+    __declspec(property(get=GetDrawingLabelsShadow,put=PutDrawingLabelsShadow))
+    VARIANT_BOOL DrawingLabelsShadow[];
+    __declspec(property(get=GetDrawingLabelsShadowColor,put=PutDrawingLabelsShadowColor))
+    OLE_COLOR DrawingLabelsShadowColor[];
+    __declspec(property(get=GetUseDrawingLabelCollision,put=PutUseDrawingLabelCollision))
+    VARIANT_BOOL UseDrawingLabelCollision[];
+    __declspec(property(get=GetDrawingLabelsVisible,put=PutDrawingLabelsVisible))
+    VARIANT_BOOL DrawingLabelsVisible[];
+    __declspec(property(get=GetShapePointFontCharListID,put=PutShapePointFontCharListID))
+    long ShapePointFontCharListID[][];
+    __declspec(property(get=GetShapeLayerStippleColor,put=PutShapeLayerStippleColor))
+    OLE_COLOR ShapeLayerStippleColor[];
+    __declspec(property(get=GetShapeStippleColor,put=PutShapeStippleColor))
+    OLE_COLOR ShapeStippleColor[][];
+    __declspec(property(get=GetShapeStippleTransparent,put=PutShapeStippleTransparent))
+    VARIANT_BOOL ShapeStippleTransparent[][];
+    __declspec(property(get=GetShapeLayerStippleTransparent,put=PutShapeLayerStippleTransparent))
+    VARIANT_BOOL ShapeLayerStippleTransparent[];
+    __declspec(property(get=GetTrapRMouseDown,put=PutTrapRMouseDown))
+    VARIANT_BOOL TrapRMouseDown;
+    __declspec(property(get=GetDisableWaitCursor,put=PutDisableWaitCursor))
+    VARIANT_BOOL DisableWaitCursor;
+    __declspec(property(get=GetLayerKey,put=PutLayerKey))
+    _bstr_t LayerKey[];
+    __declspec(property(get=GetLayerPosition))
+    long LayerPosition[];
+    __declspec(property(get=GetLayerHandle))
+    long LayerHandle[];
+    __declspec(property(get=GetLayerVisible,put=PutLayerVisible))
+    VARIANT_BOOL LayerVisible[];
+    __declspec(property(get=GetShapeLayerFillColor,put=PutShapeLayerFillColor))
+    OLE_COLOR ShapeLayerFillColor[];
+    __declspec(property(get=GetShapeFillColor,put=PutShapeFillColor))
+    OLE_COLOR ShapeFillColor[][];
+    __declspec(property(get=GetShapeLayerLineColor,put=PutShapeLayerLineColor))
+    OLE_COLOR ShapeLayerLineColor[];
+    __declspec(property(get=GetShapeLineColor,put=PutShapeLineColor))
+    OLE_COLOR ShapeLineColor[][];
+    __declspec(property(get=GetShapeLayerPointColor,put=PutShapeLayerPointColor))
+    OLE_COLOR ShapeLayerPointColor[];
+    __declspec(property(get=GetShapePointColor,put=PutShapePointColor))
+    OLE_COLOR ShapePointColor[][];
+    __declspec(property(get=GetShapeLayerDrawFill,put=PutShapeLayerDrawFill))
+    VARIANT_BOOL ShapeLayerDrawFill[];
+    __declspec(property(get=GetShapeDrawFill,put=PutShapeDrawFill))
+    VARIANT_BOOL ShapeDrawFill[][];
+    __declspec(property(get=GetShapeLayerDrawLine,put=PutShapeLayerDrawLine))
+    VARIANT_BOOL ShapeLayerDrawLine[];
+    __declspec(property(get=GetShapeDrawLine,put=PutShapeDrawLine))
+    VARIANT_BOOL ShapeDrawLine[][];
+    __declspec(property(get=GetShapeLayerDrawPoint,put=PutShapeLayerDrawPoint))
+    VARIANT_BOOL ShapeLayerDrawPoint[];
+    __declspec(property(get=GetShapeDrawPoint,put=PutShapeDrawPoint))
+    VARIANT_BOOL ShapeDrawPoint[][];
+    __declspec(property(get=GetShapeLayerLineWidth,put=PutShapeLayerLineWidth))
+    float ShapeLayerLineWidth[];
+    __declspec(property(get=GetShapeLineWidth,put=PutShapeLineWidth))
+    float ShapeLineWidth[][];
+    __declspec(property(get=GetShapeLayerPointSize,put=PutShapeLayerPointSize))
+    float ShapeLayerPointSize[];
+    __declspec(property(get=GetShapePointSize,put=PutShapePointSize))
+    float ShapePointSize[][];
+    __declspec(property(get=GetShapeLayerFillTransparency,put=PutShapeLayerFillTransparency))
+    float ShapeLayerFillTransparency[];
+    __declspec(property(get=GetShapeFillTransparency,put=PutShapeFillTransparency))
+    float ShapeFillTransparency[][];
+    __declspec(property(get=GetShapeLayerLineStipple,put=PutShapeLayerLineStipple))
+    enum tkLineStipple ShapeLayerLineStipple[];
+    __declspec(property(get=GetShapeLineStipple,put=PutShapeLineStipple))
+    enum tkLineStipple ShapeLineStipple[][];
+    __declspec(property(get=GetShapeLayerFillStipple,put=PutShapeLayerFillStipple))
+    enum tkFillStipple ShapeLayerFillStipple[];
+    __declspec(property(get=GetShapeFillStipple,put=PutShapeFillStipple))
+    enum tkFillStipple ShapeFillStipple[][];
+    __declspec(property(get=GetShapeVisible,put=PutShapeVisible))
+    VARIANT_BOOL ShapeVisible[][];
+    __declspec(property(get=GetImageLayerPercentTransparent,put=PutImageLayerPercentTransparent))
+    float ImageLayerPercentTransparent[];
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetDrawingKey,put=PutDrawingKey))
+    _bstr_t DrawingKey[];
+    __declspec(property(get=GetShapeLayerPointType,put=PutShapeLayerPointType))
+    enum tkPointType ShapeLayerPointType[];
+    __declspec(property(get=GetShapePointType,put=PutShapePointType))
+    enum tkPointType ShapePointType[][];
+    __declspec(property(get=GetLayerLabelsVisible,put=PutLayerLabelsVisible))
+    VARIANT_BOOL LayerLabelsVisible[];
+    __declspec(property(get=GetUDLineStipple,put=PutUDLineStipple))
+    long UDLineStipple[];
+    __declspec(property(get=GetUDFillStipple,put=PutUDFillStipple))
+    long UDFillStipple[][];
+    __declspec(property(get=GetUDPointType,put=PutRefUDPointType))
+    IDispatchPtr UDPointType[];
+    __declspec(property(get=GetMapWinGISGetObject))
+    IDispatchPtr MapWinGISGetObject[];
+    __declspec(property(get=GetLayerName,put=PutLayerName))
+    _bstr_t LayerName[];
+    __declspec(property(get=GetGridFileName,put=PutGridFileName))
+    _bstr_t GridFileName[];
+    __declspec(property(get=GetLayerLabelsShadow,put=PutLayerLabelsShadow))
+    VARIANT_BOOL LayerLabelsShadow[];
+    __declspec(property(get=GetLayerLabelsScale,put=PutLayerLabelsScale))
+    VARIANT_BOOL LayerLabelsScale[];
+    __declspec(property(get=GetLayerLabelsOffset,put=PutLayerLabelsOffset))
+    long LayerLabelsOffset[];
+    __declspec(property(get=GetLayerLabelsShadowColor,put=PutLayerLabelsShadowColor))
+    OLE_COLOR LayerLabelsShadowColor[];
+    __declspec(property(get=GetUseLabelCollision,put=PutUseLabelCollision))
+    VARIANT_BOOL UseLabelCollision[];
+    __declspec(property(get=GetMapResizeBehavior,put=PutMapResizeBehavior))
+    enum tkResizeBehavior MapResizeBehavior;
+    __declspec(property(get=GetBackColor,put=PutBackColor))
+    OLE_COLOR BackColor;
+    __declspec(property(get=GetZoomPercent,put=PutZoomPercent))
+    double ZoomPercent;
+    __declspec(property(get=GetCursorMode,put=PutCursorMode))
+    enum tkCursorMode CursorMode;
+    __declspec(property(get=GetMapCursor,put=PutMapCursor))
+    enum tkCursor MapCursor;
+    __declspec(property(get=GetUDCursorHandle,put=PutUDCursorHandle))
+    long UDCursorHandle;
+    __declspec(property(get=GetSendMouseDown,put=PutSendMouseDown))
+    VARIANT_BOOL SendMouseDown;
+    __declspec(property(get=GetSendMouseUp,put=PutSendMouseUp))
+    VARIANT_BOOL SendMouseUp;
+    __declspec(property(get=GetSendMouseMove,put=PutSendMouseMove))
+    VARIANT_BOOL SendMouseMove;
+    __declspec(property(get=GetSendSelectBoxDrag,put=PutSendSelectBoxDrag))
+    VARIANT_BOOL SendSelectBoxDrag;
+    __declspec(property(get=GetSendSelectBoxFinal,put=PutSendSelectBoxFinal))
+    VARIANT_BOOL SendSelectBoxFinal;
+    __declspec(property(get=GetExtentPad,put=PutExtentPad))
+    double ExtentPad;
+    __declspec(property(get=GetExtentHistory,put=PutExtentHistory))
+    long ExtentHistory;
+    __declspec(property(get=GetKey,put=PutKey))
+    _bstr_t Key;
+    __declspec(property(get=GetDoubleBuffer,put=PutDoubleBuffer))
+    VARIANT_BOOL DoubleBuffer;
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    IDispatchPtr GlobalCallback;
+    __declspec(property(get=GetNumLayers,put=PutNumLayers))
+    long NumLayers;
+    __declspec(property(get=GetExtents,put=PutExtents))
+    IDispatchPtr Extents;
+    __declspec(property(get=GetLastErrorCode,put=PutLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetIsLocked,put=PutIsLocked))
+    enum tkLockMode IsLocked;
+    __declspec(property(get=GetMapState,put=PutMapState))
+    _bstr_t MapState;
+    __declspec(property(get=GetSerialNumber,put=PutSerialNumber))
+    _bstr_t SerialNumber;
+    __declspec(property(get=GetLineSeparationFactor,put=PutLineSeparationFactor))
+    long LineSeparationFactor;
+    __declspec(property(get=GetSendOnDrawBackBuffer,put=PutSendOnDrawBackBuffer))
+    VARIANT_BOOL SendOnDrawBackBuffer;
+    __declspec(property(get=GetMultilineLabels,put=PutMultilineLabels))
+    VARIANT_BOOL MultilineLabels;
+    __declspec(property(get=GetUseSeamlessPan,put=PutUseSeamlessPan))
+    VARIANT_BOOL UseSeamlessPan;
+    __declspec(property(get=GetMouseWheelSpeed,put=PutMouseWheelSpeed))
+    double MouseWheelSpeed;
+    __declspec(property(get=GetShapeDrawingMethod,put=PutShapeDrawingMethod))
+    enum tkShapeDrawingMethod ShapeDrawingMethod;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT Redraw ( );
+    long AddLayer (
+        IDispatch * Object,
+        VARIANT_BOOL Visible );
+    HRESULT RemoveLayer (
+        long LayerHandle );
+    HRESULT RemoveLayerWithoutClosing (
+        long LayerHandle );
+    HRESULT RemoveAllLayers ( );
+    VARIANT_BOOL MoveLayerUp (
+        long InitialPosition );
+    VARIANT_BOOL MoveLayerDown (
+        long InitialPosition );
+    VARIANT_BOOL MoveLayer (
+        long InitialPosition,
+        long TargetPosition );
+    VARIANT_BOOL MoveLayerTop (
+        long InitialPosition );
+    VARIANT_BOOL MoveLayerBottom (
+        long InitialPosition );
+    HRESULT ZoomToMaxExtents ( );
+    HRESULT ZoomToLayer (
+        long LayerHandle );
+    HRESULT ZoomToShape (
+        long LayerHandle,
+        long Shape );
+    HRESULT ZoomIn (
+        double Percent );
+    HRESULT ZoomOut (
+        double Percent );
+    long ZoomToPrev ( );
+    HRESULT ProjToPixel (
+        double projX,
+        double projY,
+        double * pixelX,
+        double * pixelY );
+    HRESULT PixelToProj (
+        double pixelX,
+        double pixelY,
+        double * projX,
+        double * projY );
+    HRESULT ClearDrawing (
+        long DrawHandle );
+    HRESULT ClearDrawings ( );
+    IDispatchPtr SnapShot (
+        IDispatch * BoundBox );
+    VARIANT_BOOL ApplyLegendColors (
+        IDispatch * Legend );
+    HRESULT LockWindow (
+        enum tkLockMode LockMode );
+    HRESULT Resize (
+        long Width,
+        long Height );
+    HRESULT ShowToolTip (
+        _bstr_t Text,
+        long Milliseconds );
+    HRESULT AddLabel (
+        long LayerHandle,
+        _bstr_t Text,
+        OLE_COLOR Color,
+        double x,
+        double y,
+        enum tkHJustification hJustification );
+    HRESULT ClearLabels (
+        long LayerHandle );
+    HRESULT LayerFont (
+        long LayerHandle,
+        _bstr_t FontName,
+        long FontSize );
+    IDispatchPtr GetColorScheme (
+        long LayerHandle );
+    long NewDrawing (
+        enum tkDrawReferenceList Projection );
+    HRESULT DrawPoint (
+        double x,
+        double y,
+        long pixelSize,
+        OLE_COLOR Color );
+    HRESULT DrawLine (
+        double x1,
+        double y1,
+        double x2,
+        double y2,
+        long pixelWidth,
+        OLE_COLOR Color );
+    HRESULT DrawCircle (
+        double x,
+        double y,
+        double pixelRadius,
+        OLE_COLOR Color,
+        VARIANT_BOOL fill );
+    HRESULT DrawPolygon (
+        VARIANT * xPoints,
+        VARIANT * yPoints,
+        long numPoints,
+        OLE_COLOR Color,
+        VARIANT_BOOL fill );
+    _bstr_t GetLayerKey (
+        long LayerHandle );
+    void PutLayerKey (
+        long LayerHandle,
+        _bstr_t _arg2 );
+    long GetLayerPosition (
+        long LayerHandle );
+    long GetLayerHandle (
+        long LayerPosition );
+    VARIANT_BOOL GetLayerVisible (
+        long LayerHandle );
+    void PutLayerVisible (
+        long LayerHandle,
+        VARIANT_BOOL _arg2 );
+    OLE_COLOR GetShapeLayerFillColor (
+        long LayerHandle );
+    void PutShapeLayerFillColor (
+        long LayerHandle,
+        OLE_COLOR _arg2 );
+    OLE_COLOR GetShapeFillColor (
+        long LayerHandle,
+        long Shape );
+    void PutShapeFillColor (
+        long LayerHandle,
+        long Shape,
+        OLE_COLOR _arg3 );
+    OLE_COLOR GetShapeLayerLineColor (
+        long LayerHandle );
+    void PutShapeLayerLineColor (
+        long LayerHandle,
+        OLE_COLOR _arg2 );
+    OLE_COLOR GetShapeLineColor (
+        long LayerHandle,
+        long Shape );
+    void PutShapeLineColor (
+        long LayerHandle,
+        long Shape,
+        OLE_COLOR _arg3 );
+    OLE_COLOR GetShapeLayerPointColor (
+        long LayerHandle );
+    void PutShapeLayerPointColor (
+        long LayerHandle,
+        OLE_COLOR _arg2 );
+    OLE_COLOR GetShapePointColor (
+        long LayerHandle,
+        long Shape );
+    void PutShapePointColor (
+        long LayerHandle,
+        long Shape,
+        OLE_COLOR _arg3 );
+    VARIANT_BOOL GetShapeLayerDrawFill (
+        long LayerHandle );
+    void PutShapeLayerDrawFill (
+        long LayerHandle,
+        VARIANT_BOOL _arg2 );
+    VARIANT_BOOL GetShapeDrawFill (
+        long LayerHandle,
+        long Shape );
+    void PutShapeDrawFill (
+        long LayerHandle,
+        long Shape,
+        VARIANT_BOOL _arg3 );
+    VARIANT_BOOL GetShapeLayerDrawLine (
+        long LayerHandle );
+    void PutShapeLayerDrawLine (
+        long LayerHandle,
+        VARIANT_BOOL _arg2 );
+    VARIANT_BOOL GetShapeDrawLine (
+        long LayerHandle,
+        long Shape );
+    void PutShapeDrawLine (
+        long LayerHandle,
+        long Shape,
+        VARIANT_BOOL _arg3 );
+    VARIANT_BOOL GetShapeLayerDrawPoint (
+        long LayerHandle );
+    void PutShapeLayerDrawPoint (
+        long LayerHandle,
+        VARIANT_BOOL _arg2 );
+    VARIANT_BOOL GetShapeDrawPoint (
+        long LayerHandle,
+        long Shape );
+    void PutShapeDrawPoint (
+        long LayerHandle,
+        long Shape,
+        VARIANT_BOOL _arg3 );
+    float GetShapeLayerLineWidth (
+        long LayerHandle );
+    void PutShapeLayerLineWidth (
+        long LayerHandle,
+        float _arg2 );
+    float GetShapeLineWidth (
+        long LayerHandle,
+        long Shape );
+    void PutShapeLineWidth (
+        long LayerHandle,
+        long Shape,
+        float _arg3 );
+    float GetShapeLayerPointSize (
+        long LayerHandle );
+    void PutShapeLayerPointSize (
+        long LayerHandle,
+        float _arg2 );
+    float GetShapePointSize (
+        long LayerHandle,
+        long Shape );
+    void PutShapePointSize (
+        long LayerHandle,
+        long Shape,
+        float _arg3 );
+    float GetShapeLayerFillTransparency (
+        long LayerHandle );
+    void PutShapeLayerFillTransparency (
+        long LayerHandle,
+        float _arg2 );
+    float GetShapeFillTransparency (
+        long LayerHandle,
+        long Shape );
+    void PutShapeFillTransparency (
+        long LayerHandle,
+        long Shape,
+        float _arg3 );
+    enum tkLineStipple GetShapeLayerLineStipple (
+        long LayerHandle );
+    void PutShapeLayerLineStipple (
+        long LayerHandle,
+        enum tkLineStipple _arg2 );
+    enum tkLineStipple GetShapeLineStipple (
+        long LayerHandle,
+        long Shape );
+    void PutShapeLineStipple (
+        long LayerHandle,
+        long Shape,
+        enum tkLineStipple _arg3 );
+    enum tkFillStipple GetShapeLayerFillStipple (
+        long LayerHandle );
+    void PutShapeLayerFillStipple (
+        long LayerHandle,
+        enum tkFillStipple _arg2 );
+    enum tkFillStipple GetShapeFillStipple (
+        long LayerHandle,
+        long Shape );
+    void PutShapeFillStipple (
+        long LayerHandle,
+        long Shape,
+        enum tkFillStipple _arg3 );
+    VARIANT_BOOL GetShapeVisible (
+        long LayerHandle,
+        long Shape );
+    void PutShapeVisible (
+        long LayerHandle,
+        long Shape,
+        VARIANT_BOOL _arg3 );
+    float GetImageLayerPercentTransparent (
+        long LayerHandle );
+    void PutImageLayerPercentTransparent (
+        long LayerHandle,
+        float _arg2 );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    _bstr_t GetDrawingKey (
+        long DrawHandle );
+    void PutDrawingKey (
+        long DrawHandle,
+        _bstr_t _arg2 );
+    enum tkPointType GetShapeLayerPointType (
+        long LayerHandle );
+    void PutShapeLayerPointType (
+        long LayerHandle,
+        enum tkPointType _arg2 );
+    enum tkPointType GetShapePointType (
+        long LayerHandle,
+        long Shape );
+    void PutShapePointType (
+        long LayerHandle,
+        long Shape,
+        enum tkPointType _arg3 );
+    VARIANT_BOOL GetLayerLabelsVisible (
+        long LayerHandle );
+    void PutLayerLabelsVisible (
+        long LayerHandle,
+        VARIANT_BOOL _arg2 );
+    long GetUDLineStipple (
+        long LayerHandle );
+    void PutUDLineStipple (
+        long LayerHandle,
+        long _arg2 );
+    long GetUDFillStipple (
+        long LayerHandle,
+        long StippleRow );
+    void PutUDFillStipple (
+        long LayerHandle,
+        long StippleRow,
+        long _arg3 );
+    IDispatchPtr GetUDPointType (
+        long LayerHandle );
+    void PutRefUDPointType (
+        long LayerHandle,
+        IDispatch * _arg2 );
+    IDispatchPtr GetMapWinGISGetObject (
+        long LayerHandle );
+    _bstr_t GetLayerName (
+        long LayerHandle );
+    void PutLayerName (
+        long LayerHandle,
+        _bstr_t _arg2 );
+    VARIANT_BOOL SetImageLayerColorScheme (
+        long LayerHandle,
+        IDispatch * ColorScheme );
+    _bstr_t GetGridFileName (
+        long LayerHandle );
+    void PutGridFileName (
+        long LayerHandle,
+        _bstr_t _arg2 );
+    HRESULT UpdateImage (
+        long LayerHandle );
+    VARIANT_BOOL GetLayerLabelsShadow (
+        long LayerHandle );
+    void PutLayerLabelsShadow (
+        long LayerHandle,
+        VARIANT_BOOL _arg2 );
+    VARIANT_BOOL GetLayerLabelsScale (
+        long LayerHandle );
+    void PutLayerLabelsScale (
+        long LayerHandle,
+        VARIANT_BOOL _arg2 );
+    HRESULT AddLabelEx (
+        long LayerHandle,
+        _bstr_t Text,
+        OLE_COLOR Color,
+        double x,
+        double y,
+        enum tkHJustification hJustification,
+        double Rotation );
+    HRESULT GetLayerStandardViewWidth (
+        long LayerHandle,
+        double * Width );
+    HRESULT SetLayerStandardViewWidth (
+        long LayerHandle,
+        double Width );
+    long GetLayerLabelsOffset (
+        long LayerHandle );
+    void PutLayerLabelsOffset (
+        long LayerHandle,
+        long _arg2 );
+    OLE_COLOR GetLayerLabelsShadowColor (
+        long LayerHandle );
+    void PutLayerLabelsShadowColor (
+        long LayerHandle,
+        OLE_COLOR _arg2 );
+    VARIANT_BOOL GetUseLabelCollision (
+        long LayerHandle );
+    void PutUseLabelCollision (
+        long LayerHandle,
+        VARIANT_BOOL _arg2 );
+    VARIANT_BOOL IsTIFFGrid (
+        _bstr_t Filename );
+    VARIANT_BOOL IsSameProjection (
+        _bstr_t proj4_a,
+        _bstr_t proj4_b );
+    HRESULT ZoomToMaxVisibleExtents ( );
+    void PutMapResizeBehavior (
+        enum tkResizeBehavior _arg1 );
+    enum tkResizeBehavior GetMapResizeBehavior ( );
+    long HWnd ( );
+    long set_UDPointImageListAdd (
+        long LayerHandle,
+        IDispatch * newValue );
+    long GetShapePointImageListID (
+        long LayerHandle,
+        long Shape );
+    void PutShapePointImageListID (
+        long LayerHandle,
+        long Shape,
+        long _arg3 );
+    long get_UDPointImageListCount (
+        long LayerHandle );
+    IDispatchPtr get_UDPointImageListItem (
+        long LayerHandle,
+        long ImageIndex );
+    HRESULT ClearUDPointImageList (
+        long LayerHandle );
+    HRESULT DrawLineEx (
+        long LayerHandle,
+        double x1,
+        double y1,
+        double x2,
+        double y2,
+        long pixelWidth,
+        OLE_COLOR Color );
+    HRESULT DrawPointEx (
+        long LayerHandle,
+        double x,
+        double y,
+        long pixelSize,
+        OLE_COLOR Color );
+    HRESULT DrawCircleEx (
+        long LayerHandle,
+        double x,
+        double y,
+        double pixelRadius,
+        OLE_COLOR Color,
+        VARIANT_BOOL fill );
+    HRESULT LabelColor (
+        long LayerHandle,
+        OLE_COLOR LabelFontColor );
+    HRESULT SetDrawingLayerVisible (
+        long LayerHandle,
+        VARIANT_BOOL Visiable );
+    HRESULT ClearDrawingLabels (
+        long DrawHandle );
+    HRESULT DrawingFont (
+        long DrawHandle,
+        _bstr_t FontName,
+        long FontSize );
+    HRESULT AddDrawingLabelEx (
+        long DrawHandle,
+        _bstr_t Text,
+        OLE_COLOR Color,
+        double x,
+        double y,
+        enum tkHJustification hJustification,
+        double Rotation );
+    HRESULT AddDrawingLabel (
+        long DrawHandle,
+        _bstr_t Text,
+        OLE_COLOR Color,
+        double x,
+        double y,
+        enum tkHJustification hJustification );
+    long GetDrawingLabelsOffset (
+        long DrawHandle );
+    void PutDrawingLabelsOffset (
+        long DrawHandle,
+        long _arg2 );
+    VARIANT_BOOL GetDrawingLabelsScale (
+        long DrawHandle );
+    void PutDrawingLabelsScale (
+        long DrawHandle,
+        VARIANT_BOOL _arg2 );
+    VARIANT_BOOL GetDrawingLabelsShadow (
+        long DrawHandle );
+    void PutDrawingLabelsShadow (
+        long DrawHandle,
+        VARIANT_BOOL _arg2 );
+    OLE_COLOR GetDrawingLabelsShadowColor (
+        long DrawHandle );
+    void PutDrawingLabelsShadowColor (
+        long DrawHandle,
+        OLE_COLOR _arg2 );
+    VARIANT_BOOL GetUseDrawingLabelCollision (
+        long DrawHandle );
+    void PutUseDrawingLabelCollision (
+        long DrawHandle,
+        VARIANT_BOOL _arg2 );
+    VARIANT_BOOL GetDrawingLabelsVisible (
+        long DrawHandle );
+    void PutDrawingLabelsVisible (
+        long DrawHandle,
+        VARIANT_BOOL _arg2 );
+    HRESULT GetDrawingStandardViewWidth (
+        long DrawHandle,
+        double * Width );
+    HRESULT SetDrawingStandardViewWidth (
+        long DrawHandle,
+        double Width );
+    HRESULT DrawWidePolygon (
+        VARIANT * xPoints,
+        VARIANT * yPoints,
+        long numPoints,
+        OLE_COLOR Color,
+        VARIANT_BOOL fill,
+        short Width );
+    HRESULT DrawWideCircle (
+        double x,
+        double y,
+        double pixelRadius,
+        OLE_COLOR Color,
+        VARIANT_BOOL fill,
+        short Width );
+    IDispatchPtr SnapShot2 (
+        long ClippingLayerNbr,
+        double Zoom,
+        long pWidth );
+    HRESULT LayerFontEx (
+        long LayerHandle,
+        _bstr_t FontName,
+        long FontSize,
+        VARIANT_BOOL isBold,
+        VARIANT_BOOL isItalic,
+        VARIANT_BOOL isUnderline );
+    HRESULT set_UDPointFontCharFont (
+        long LayerHandle,
+        _bstr_t FontName,
+        float FontSize,
+        VARIANT_BOOL isBold,
+        VARIANT_BOOL isItalic,
+        VARIANT_BOOL isUnderline );
+    long set_UDPointFontCharListAdd (
+        long LayerHandle,
+        long newValue,
+        OLE_COLOR Color );
+    HRESULT set_UDPointFontCharFontSize (
+        long LayerHandle,
+        float FontSize );
+    long GetShapePointFontCharListID (
+        long LayerHandle,
+        long Shape );
+    void PutShapePointFontCharListID (
+        long LayerHandle,
+        long Shape,
+        long _arg3 );
+    HRESULT ReSourceLayer (
+        long LayerHandle,
+        _bstr_t newSrcPath );
+    OLE_COLOR GetShapeLayerStippleColor (
+        long LayerHandle );
+    void PutShapeLayerStippleColor (
+        long LayerHandle,
+        OLE_COLOR _arg2 );
+    OLE_COLOR GetShapeStippleColor (
+        long LayerHandle,
+        long Shape );
+    void PutShapeStippleColor (
+        long LayerHandle,
+        long Shape,
+        OLE_COLOR _arg3 );
+    VARIANT_BOOL GetShapeStippleTransparent (
+        long LayerHandle,
+        long Shape );
+    void PutShapeStippleTransparent (
+        long LayerHandle,
+        long Shape,
+        VARIANT_BOOL _arg3 );
+    VARIANT_BOOL GetShapeLayerStippleTransparent (
+        long LayerHandle );
+    void PutShapeLayerStippleTransparent (
+        long LayerHandle,
+        VARIANT_BOOL _arg2 );
+    VARIANT_BOOL GetTrapRMouseDown ( );
+    void PutTrapRMouseDown (
+        VARIANT_BOOL _arg1 );
+    void PutDisableWaitCursor (
+        VARIANT_BOOL _arg1 );
+    VARIANT_BOOL GetDisableWaitCursor ( );
+    VARIANT_BOOL AdjustLayerExtents (
+        long LayerHandle );
+    IDispatchPtr SnapShot3 (
+        double left,
+        double right,
+        double top,
+        double bottom,
+        long Width );
+    HRESULT DrawPolygonEx (
+        long LayerHandle,
+        VARIANT * xPoints,
+        VARIANT * yPoints,
+        long numPoints,
+        OLE_COLOR Color,
+        VARIANT_BOOL fill );
+
+    // Properties:
+    OLE_COLOR GetBackColor ( );
+    void PutBackColor ( OLE_COLOR _val );
+    double GetZoomPercent ( );
+    void PutZoomPercent ( double _val );
+    enum tkCursorMode GetCursorMode ( );
+    void PutCursorMode ( enum tkCursorMode _val );
+    enum tkCursor GetMapCursor ( );
+    void PutMapCursor ( enum tkCursor _val );
+    long GetUDCursorHandle ( );
+    void PutUDCursorHandle ( long _val );
+    VARIANT_BOOL GetSendMouseDown ( );
+    void PutSendMouseDown ( VARIANT_BOOL _val );
+    VARIANT_BOOL GetSendMouseUp ( );
+    void PutSendMouseUp ( VARIANT_BOOL _val );
+    VARIANT_BOOL GetSendMouseMove ( );
+    void PutSendMouseMove ( VARIANT_BOOL _val );
+    VARIANT_BOOL GetSendSelectBoxDrag ( );
+    void PutSendSelectBoxDrag ( VARIANT_BOOL _val );
+    VARIANT_BOOL GetSendSelectBoxFinal ( );
+    void PutSendSelectBoxFinal ( VARIANT_BOOL _val );
+    double GetExtentPad ( );
+    void PutExtentPad ( double _val );
+    long GetExtentHistory ( );
+    void PutExtentHistory ( long _val );
+    _bstr_t GetKey ( );
+    void PutKey ( _bstr_t _val );
+    VARIANT_BOOL GetDoubleBuffer ( );
+    void PutDoubleBuffer ( VARIANT_BOOL _val );
+    IDispatchPtr GetGlobalCallback ( );
+    void PutGlobalCallback ( IDispatch * _val );
+    long GetNumLayers ( );
+    void PutNumLayers ( long _val );
+    IDispatchPtr GetExtents ( );
+    void PutExtents ( IDispatch * _val );
+    long GetLastErrorCode ( );
+    void PutLastErrorCode ( long _val );
+    enum tkLockMode GetIsLocked ( );
+    void PutIsLocked ( enum tkLockMode _val );
+    _bstr_t GetMapState ( );
+    void PutMapState ( _bstr_t _val );
+    _bstr_t GetSerialNumber ( );
+    void PutSerialNumber ( _bstr_t _val );
+    long GetLineSeparationFactor ( );
+    void PutLineSeparationFactor ( long _val );
+    VARIANT_BOOL GetSendOnDrawBackBuffer ( );
+    void PutSendOnDrawBackBuffer ( VARIANT_BOOL _val );
+    VARIANT_BOOL GetMultilineLabels ( );
+    void PutMultilineLabels ( VARIANT_BOOL _val );
+    VARIANT_BOOL GetUseSeamlessPan ( );
+    void PutUseSeamlessPan ( VARIANT_BOOL _val );
+    double GetMouseWheelSpeed ( );
+    void PutMouseWheelSpeed ( double _val );
+    enum tkShapeDrawingMethod GetShapeDrawingMethod ( );
+    void PutShapeDrawingMethod ( enum tkShapeDrawingMethod _val );
+};
+
+enum __declspec(uuid("9106cf0f-8a9a-4040-a4b0-d60b72b46504"))
+tkCursorMode
+{
+    cmZoomIn = 0,
+    cmZoomOut = 1,
+    cmPan = 2,
+    cmSelection = 3,
+    cmNone = 4
+};
+
+enum __declspec(uuid("fd17ff91-8b93-47a2-a517-b4039579b549"))
+tkCursor
+{
+    crsrMapDefault = 0,
+    crsrAppStarting = 1,
+    crsrArrow = 2,
+    crsrCross = 3,
+    crsrHelp = 4,
+    crsrIBeam = 5,
+    crsrNo = 6,
+    crsrSizeAll = 7,
+    crsrSizeNESW = 8,
+    crsrSizeNS = 9,
+    crsrSizeNWSE = 10,
+    crsrSizeWE = 11,
+    crsrUpArrow = 12,
+    crsrWait = 13,
+    crsrUserDefined = 14
+};
+
+enum __declspec(uuid("5c462daa-5cc2-4b5c-9d5a-8ba1ec1774b7"))
+tkLockMode
+{
+    lmUnlock = 0,
+    lmLock = 1
+};
+
+enum __declspec(uuid("f3f936dd-eb4a-4ec4-a30c-4ec91a83c99b"))
+tkShapeDrawingMethod
+{
+    dmStandard = 0,
+    dmNewWithSelection = 1
+};
+
+enum __declspec(uuid("6ee497fb-b03b-4bba-914f-c05199be0f0d"))
+tkHJustification
+{
+    hjLeft = 0,
+    hjCenter = 1,
+    hjRight = 2,
+    hjNone = 3,
+    hjRaw = 4
+};
+
+enum __declspec(uuid("320ac432-2396-4e9f-9bcb-ec87de8449be"))
+tkDrawReferenceList
+{
+    dlScreenReferencedList = 0,
+    dlSpatiallyReferencedList = 1
+};
+
+enum __declspec(uuid("f4fb70ae-68f3-45d4-945f-78ee26a28f1d"))
+tkLineStipple
+{
+    lsNone = 0,
+    lsDotted = 1,
+    lsDashed = 2,
+    lsDashDotDash = 3,
+    lsDoubleSolid = 4,
+    lsDoubleSolidPlusDash = 5,
+    lsTrainTracks = 6,
+    lsCustom = 7,
+    lsDashDotDot = 8
+};
+
+enum __declspec(uuid("546ff8cf-249a-48e6-ad00-7015854d77b1"))
+tkFillStipple
+{
+    fsNone = 0,
+    fsVerticalBars = 1,
+    fsHorizontalBars = 2,
+    fsDiagonalDownRight = 3,
+    fsDiagonalDownLeft = 4,
+    fsPolkaDot = 5,
+    fsCustom = 6,
+    fsCross = 7,
+    fsRaster = 8
+};
+
+enum __declspec(uuid("c2095580-06b9-41f5-b06e-908b6fc0c8a3"))
+tkPointType
+{
+    ptSquare = 0,
+    ptCircle = 1,
+    ptDiamond = 2,
+    ptTriangleUp = 3,
+    ptTriangleDown = 4,
+    ptTriangleLeft = 5,
+    ptTriangleRight = 6,
+    ptUserDefined = 7,
+    ptImageList = 8,
+    ptFontChar = 9
+};
+
+enum __declspec(uuid("bcdbd4e0-8b7c-11da-a72b-0800200c9a66"))
+tkResizeBehavior
+{
+    rbClassic = 0,
+    rbModern = 1,
+    rbIntuitive = 2,
+    rbWarp = 3,
+    rbKeepScale = 4
+};
+
+struct __declspec(uuid("abea1545-08ab-4d5c-a594-d3017211ea95"))
+_DMapEvents : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    // Methods:
+    HRESULT MouseDown (
+        short Button,
+        short Shift,
+        long x,
+        long y );
+    HRESULT MouseUp (
+        short Button,
+        short Shift,
+        long x,
+        long y );
+    HRESULT MouseMove (
+        short Button,
+        short Shift,
+        long x,
+        long y );
+    HRESULT FileDropped (
+        _bstr_t Filename );
+    HRESULT SelectBoxFinal (
+        long left,
+        long right,
+        long bottom,
+        long top );
+    HRESULT SelectBoxDrag (
+        long left,
+        long right,
+        long bottom,
+        long top );
+    HRESULT ExtentsChanged ( );
+    HRESULT MapState (
+        long LayerHandle );
+    HRESULT OnDrawBackBuffer (
+        long BackBuffer );
+    HRESULT DblClick ( );
+};
+
+struct __declspec(uuid("e6d4eb7a-3e8f-45b2-a514-90ef7b2f5c0a"))
+IShapefileColorBreak : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetStartValue,put=PutStartValue))
+    _variant_t StartValue;
+    __declspec(property(get=GetEndValue,put=PutEndValue))
+    _variant_t EndValue;
+    __declspec(property(get=GetStartColor,put=PutStartColor))
+    OLE_COLOR StartColor;
+    __declspec(property(get=GetEndColor,put=PutEndColor))
+    OLE_COLOR EndColor;
+    __declspec(property(get=GetCaption,put=PutCaption))
+    _bstr_t Caption;
+    __declspec(property(get=GetVisible,put=PutVisible))
+    VARIANT_BOOL Visible;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _variant_t GetStartValue ( );
+    void PutStartValue (
+        const _variant_t & pVal );
+    _variant_t GetEndValue ( );
+    void PutEndValue (
+        const _variant_t & pVal );
+    OLE_COLOR GetStartColor ( );
+    void PutStartColor (
+        OLE_COLOR pVal );
+    OLE_COLOR GetEndColor ( );
+    void PutEndColor (
+        OLE_COLOR pVal );
+    _bstr_t GetCaption ( );
+    void PutCaption (
+        _bstr_t pVal );
+    VARIANT_BOOL GetVisible ( );
+    void PutVisible (
+        VARIANT_BOOL pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_StartValue (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_StartValue (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_EndValue (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_EndValue (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_StartColor (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_StartColor (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_EndColor (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_EndColor (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_Caption (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Caption (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Visible (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_Visible (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+};
+
+struct __declspec(uuid("90e6bbf7-a956-49be-a5cd-a4640c263ab6"))
+ICallback : IDispatch
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT Progress (
+        _bstr_t KeyOfSender,
+        long Percent,
+        _bstr_t Message );
+    HRESULT Error (
+        _bstr_t KeyOfSender,
+        _bstr_t ErrorMsg );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Progress (
+        /*[in]*/ BSTR KeyOfSender,
+        /*[in]*/ long Percent,
+        /*[in]*/ BSTR Message ) = 0;
+      virtual HRESULT __stdcall raw_Error (
+        /*[in]*/ BSTR KeyOfSender,
+        /*[in]*/ BSTR ErrorMsg ) = 0;
+};
+
+struct __declspec(uuid("fae1b21a-10c5-4c33-8dc2-931edc9fbf82"))
+IShapefileColorScheme : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetColorBreak,put=PutColorBreak))
+    IShapefileColorBreakPtr ColorBreak[];
+    __declspec(property(get=GetLayerHandle,put=PutLayerHandle))
+    long LayerHandle;
+    __declspec(property(get=GetFieldIndex,put=PutFieldIndex))
+    long FieldIndex;
+    __declspec(property(get=GetLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    ICallbackPtr GlobalCallback;
+    __declspec(property(get=GetKey,put=PutKey))
+    _bstr_t Key;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long NumBreaks ( );
+    HRESULT Remove (
+        long Index );
+    long Add (
+        struct IShapefileColorBreak * Break );
+    IShapefileColorBreakPtr GetColorBreak (
+        long Index );
+    void PutColorBreak (
+        long Index,
+        struct IShapefileColorBreak * pVal );
+    long GetLayerHandle ( );
+    void PutLayerHandle (
+        long pVal );
+    long GetFieldIndex ( );
+    void PutFieldIndex (
+        long pVal );
+    long GetLastErrorCode ( );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    ICallbackPtr GetGlobalCallback ( );
+    void PutGlobalCallback (
+        struct ICallback * pVal );
+    _bstr_t GetKey ( );
+    void PutKey (
+        _bstr_t pVal );
+    long InsertAt (
+        int Position,
+        struct IShapefileColorBreak * Break );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_NumBreaks (
+        /*[out,retval]*/ long * result ) = 0;
+      virtual HRESULT __stdcall raw_Remove (
+        /*[in]*/ long Index ) = 0;
+      virtual HRESULT __stdcall raw_Add (
+        /*[in]*/ struct IShapefileColorBreak * Break,
+        /*[out,retval]*/ long * result ) = 0;
+      virtual HRESULT __stdcall get_ColorBreak (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ struct IShapefileColorBreak * * pVal ) = 0;
+      virtual HRESULT __stdcall put_ColorBreak (
+        /*[in]*/ long Index,
+        /*[in]*/ struct IShapefileColorBreak * pVal ) = 0;
+      virtual HRESULT __stdcall get_LayerHandle (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_LayerHandle (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_FieldIndex (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_FieldIndex (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_LastErrorCode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ErrorMsg (
+        /*[in]*/ long ErrorCode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GlobalCallback (
+        /*[out,retval]*/ struct ICallback * * pVal ) = 0;
+      virtual HRESULT __stdcall put_GlobalCallback (
+        /*[in]*/ struct ICallback * pVal ) = 0;
+      virtual HRESULT __stdcall get_Key (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Key (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall raw_InsertAt (
+        /*[in]*/ int Position,
+        /*[in]*/ struct IShapefileColorBreak * Break,
+        /*[out,retval]*/ long * result ) = 0;
+};
+
+struct __declspec(uuid("54f4c2f7-ed40-43b7-9d6f-e45965df7f95"))
+Map;
+    // [ default ] dispinterface _DMap
+    // [ default, source ] dispinterface _DMapEvents
+
+struct __declspec(uuid("a038d3e9-46cb-4f95-a40a-88826bf71ba6"))
+ShapefileColorScheme;
+    // [ default ] interface IShapefileColorScheme
+
+struct __declspec(uuid("700a2aaa-0d28-4943-92ec-08aa9682617a"))
+ShapefileColorBreak;
+    // [ default ] interface IShapefileColorBreak
+
+struct __declspec(uuid("b4a353e3-d3df-455c-8e4d-cfc937800820"))
+Grid;
+    // [ default ] interface IGrid
+
+struct __declspec(uuid("e42814d1-6269-41b1-93c2-aa848f00e459"))
+IGridHeader : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetNumberCols,put=PutNumberCols))
+    long NumberCols;
+    __declspec(property(get=GetNumberRows,put=PutNumberRows))
+    long NumberRows;
+    __declspec(property(get=GetNodataValue,put=PutNodataValue))
+    _variant_t NodataValue;
+    __declspec(property(get=GetdX,put=PutdX))
+    double dX;
+    __declspec(property(get=GetdY,put=PutdY))
+    double dY;
+    __declspec(property(get=GetXllCenter,put=PutXllCenter))
+    double XllCenter;
+    __declspec(property(get=GetYllCenter,put=PutYllCenter))
+    double YllCenter;
+    __declspec(property(get=GetProjection,put=PutProjection))
+    _bstr_t Projection;
+    __declspec(property(get=GetNotes,put=PutNotes))
+    _bstr_t Notes;
+    __declspec(property(get=GetLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    ICallbackPtr GlobalCallback;
+    __declspec(property(get=GetKey,put=PutKey))
+    _bstr_t Key;
+    __declspec(property(put=PutOwner))
+    int * Owner[][][][];
+    __declspec(property(get=GetColorTable,put=PutColorTable))
+    _bstr_t ColorTable;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetNumberCols ( );
+    void PutNumberCols (
+        long pVal );
+    long GetNumberRows ( );
+    void PutNumberRows (
+        long pVal );
+    _variant_t GetNodataValue ( );
+    void PutNodataValue (
+        const _variant_t & pVal );
+    double GetdX ( );
+    void PutdX (
+        double pVal );
+    double GetdY ( );
+    void PutdY (
+        double pVal );
+    double GetXllCenter ( );
+    void PutXllCenter (
+        double pVal );
+    double GetYllCenter ( );
+    void PutYllCenter (
+        double pVal );
+    _bstr_t GetProjection ( );
+    void PutProjection (
+        _bstr_t pVal );
+    _bstr_t GetNotes ( );
+    void PutNotes (
+        _bstr_t pVal );
+    long GetLastErrorCode ( );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    ICallbackPtr GetGlobalCallback ( );
+    void PutGlobalCallback (
+        struct ICallback * pVal );
+    _bstr_t GetKey ( );
+    void PutKey (
+        _bstr_t pVal );
+    void PutOwner (
+        int * t,
+        int * d,
+        int * s,
+        int * l,
+        int * _arg5 );
+    HRESULT CopyFrom (
+        struct IGridHeader * pVal );
+    _bstr_t GetColorTable ( );
+    void PutColorTable (
+        _bstr_t pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_NumberCols (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_NumberCols (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_NumberRows (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_NumberRows (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_NodataValue (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_NodataValue (
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_dX (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_dX (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_dY (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_dY (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_XllCenter (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_XllCenter (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_YllCenter (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_YllCenter (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_Projection (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Projection (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Notes (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Notes (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_LastErrorCode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ErrorMsg (
+        /*[in]*/ long ErrorCode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GlobalCallback (
+        /*[out,retval]*/ struct ICallback * * pVal ) = 0;
+      virtual HRESULT __stdcall put_GlobalCallback (
+        /*[in]*/ struct ICallback * pVal ) = 0;
+      virtual HRESULT __stdcall get_Key (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Key (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall put_Owner (
+        /*[in]*/ int * t,
+        /*[in]*/ int * d,
+        /*[in]*/ int * s,
+        /*[in]*/ int * l,
+        /*[in]*/ int * _arg5 ) = 0;
+      virtual HRESULT __stdcall raw_CopyFrom (
+        /*[in]*/ struct IGridHeader * pVal ) = 0;
+      virtual HRESULT __stdcall get_ColorTable (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_ColorTable (
+        /*[in]*/ BSTR pVal ) = 0;
+};
+
+enum __declspec(uuid("f02c004b-fd7d-4ace-b672-bdb8a41632bc"))
+GridDataType
+{
+    ShortDataType = 0,
+    LongDataType = 1,
+    FloatDataType = 2,
+    DoubleDataType = 3,
+    InvalidDataType = -1,
+    UnknownDataType = 4,
+    ByteDataType = 5
+};
+
+enum __declspec(uuid("50814193-87dc-45f0-9682-f64c5b153aac"))
+GridFileType
+{
+    Ascii = 0,
+    Binary = 1,
+    Esri = 2,
+    GeoTiff = 3,
+    Sdts = 4,
+    PAux = 5,
+    PCIDsk = 6,
+    DTed = 7,
+    Bil = 8,
+    Ecw = 9,
+    MrSid = 10,
+    Flt = 11,
+    Dem = 12,
+    UseExtension = 13,
+    InvalidGridFileType = -1
+};
+
+enum __declspec(uuid("5fdeb35e-865a-445a-a499-0bed8218a521"))
+ColoringType
+{
+    Hillshade = 0,
+    Gradient = 1,
+    Random = 2
+};
+
+enum __declspec(uuid("35e7af86-3942-4f7c-8164-d11942522ac3"))
+GradientModel
+{
+    Logorithmic = 0,
+    Linear = 1,
+    Exponential = 2
+};
+
+struct __declspec(uuid("1c6ecf5d-04fa-43c4-97b1-22d5ffb55fbd"))
+IGridColorBreak : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetHighColor,put=PutHighColor))
+    OLE_COLOR HighColor;
+    __declspec(property(get=GetLowColor,put=PutLowColor))
+    OLE_COLOR LowColor;
+    __declspec(property(get=GetHighValue,put=PutHighValue))
+    double HighValue;
+    __declspec(property(get=GetLowValue,put=PutLowValue))
+    double LowValue;
+    __declspec(property(get=GetColoringType,put=PutColoringType))
+    enum ColoringType _ColoringType;
+    __declspec(property(get=GetGradientModel,put=PutGradientModel))
+    enum GradientModel _GradientModel;
+    __declspec(property(get=GetLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    ICallbackPtr GlobalCallback;
+    __declspec(property(get=GetKey,put=PutKey))
+    _bstr_t Key;
+    __declspec(property(get=GetCaption,put=PutCaption))
+    _bstr_t Caption;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    OLE_COLOR GetHighColor ( );
+    void PutHighColor (
+        OLE_COLOR pVal );
+    OLE_COLOR GetLowColor ( );
+    void PutLowColor (
+        OLE_COLOR pVal );
+    double GetHighValue ( );
+    void PutHighValue (
+        double pVal );
+    double GetLowValue ( );
+    void PutLowValue (
+        double pVal );
+    enum ColoringType GetColoringType ( );
+    void PutColoringType (
+        enum ColoringType pVal );
+    enum GradientModel GetGradientModel ( );
+    void PutGradientModel (
+        enum GradientModel pVal );
+    long GetLastErrorCode ( );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    ICallbackPtr GetGlobalCallback ( );
+    void PutGlobalCallback (
+        struct ICallback * pVal );
+    _bstr_t GetKey ( );
+    void PutKey (
+        _bstr_t pVal );
+    _bstr_t GetCaption ( );
+    void PutCaption (
+        _bstr_t pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_HighColor (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_HighColor (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_LowColor (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_LowColor (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_HighValue (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_HighValue (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_LowValue (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_LowValue (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_ColoringType (
+        /*[out,retval]*/ enum ColoringType * pVal ) = 0;
+      virtual HRESULT __stdcall put_ColoringType (
+        /*[in]*/ enum ColoringType pVal ) = 0;
+      virtual HRESULT __stdcall get_GradientModel (
+        /*[out,retval]*/ enum GradientModel * pVal ) = 0;
+      virtual HRESULT __stdcall put_GradientModel (
+        /*[in]*/ enum GradientModel pVal ) = 0;
+      virtual HRESULT __stdcall get_LastErrorCode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ErrorMsg (
+        /*[in]*/ long ErrorCode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GlobalCallback (
+        /*[out,retval]*/ struct ICallback * * pVal ) = 0;
+      virtual HRESULT __stdcall put_GlobalCallback (
+        /*[in]*/ struct ICallback * pVal ) = 0;
+      virtual HRESULT __stdcall get_Key (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Key (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Caption (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Caption (
+        /*[in]*/ BSTR pVal ) = 0;
+};
+
+enum __declspec(uuid("db5bd81d-8dc0-401b-a78b-8738f53f4810"))
+PredefinedColorScheme
+{
+    FallLeaves = 0,
+    SummerMountains = 1,
+    Desert = 2,
+    Glaciers = 3,
+    Meadow = 4,
+    ValleyFires = 5,
+    DeadSea = 6,
+    Highway1 = 7
+};
+
+struct __declspec(uuid("c60625ab-ad4c-405e-8ca2-62e36e4b3f73"))
+IVector : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=Geti,put=Puti))
+    double i;
+    __declspec(property(get=Getj,put=Putj))
+    double j;
+    __declspec(property(get=Getk,put=Putk))
+    double k;
+    __declspec(property(get=GetLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    ICallbackPtr GlobalCallback;
+    __declspec(property(get=GetKey,put=PutKey))
+    _bstr_t Key;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    double Geti ( );
+    void Puti (
+        double pVal );
+    double Getj ( );
+    void Putj (
+        double pVal );
+    double Getk ( );
+    void Putk (
+        double pVal );
+    HRESULT Normalize ( );
+    double Dot (
+        struct IVector * V );
+    IVectorPtr CrossProduct (
+        struct IVector * V );
+    long GetLastErrorCode ( );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    ICallbackPtr GetGlobalCallback ( );
+    void PutGlobalCallback (
+        struct ICallback * pVal );
+    _bstr_t GetKey ( );
+    void PutKey (
+        _bstr_t pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_i (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_i (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_j (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_j (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_k (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_k (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall raw_Normalize ( ) = 0;
+      virtual HRESULT __stdcall raw_Dot (
+        /*[in]*/ struct IVector * V,
+        /*[out,retval]*/ double * result ) = 0;
+      virtual HRESULT __stdcall raw_CrossProduct (
+        /*[in]*/ struct IVector * V,
+        /*[out,retval]*/ struct IVector * * result ) = 0;
+      virtual HRESULT __stdcall get_LastErrorCode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ErrorMsg (
+        /*[in]*/ long ErrorCode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GlobalCallback (
+        /*[out,retval]*/ struct ICallback * * pVal ) = 0;
+      virtual HRESULT __stdcall put_GlobalCallback (
+        /*[in]*/ struct ICallback * pVal ) = 0;
+      virtual HRESULT __stdcall get_Key (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Key (
+        /*[in]*/ BSTR pVal ) = 0;
+};
+
+struct __declspec(uuid("1c43b56d-2065-4953-9138-31afe8470ff5"))
+IGridColorScheme : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetNumBreaks))
+    long NumBreaks;
+    __declspec(property(get=GetAmbientIntensity,put=PutAmbientIntensity))
+    double AmbientIntensity;
+    __declspec(property(get=GetLightSourceIntensity,put=PutLightSourceIntensity))
+    double LightSourceIntensity;
+    __declspec(property(get=GetLightSourceAzimuth))
+    double LightSourceAzimuth;
+    __declspec(property(get=GetLightSourceElevation))
+    double LightSourceElevation;
+    __declspec(property(get=GetBreak))
+    IGridColorBreakPtr Break[];
+    __declspec(property(get=GetNoDataColor,put=PutNoDataColor))
+    OLE_COLOR NoDataColor;
+    __declspec(property(get=GetLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    ICallbackPtr GlobalCallback;
+    __declspec(property(get=GetKey,put=PutKey))
+    _bstr_t Key;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetNumBreaks ( );
+    double GetAmbientIntensity ( );
+    void PutAmbientIntensity (
+        double pVal );
+    double GetLightSourceIntensity ( );
+    void PutLightSourceIntensity (
+        double pVal );
+    double GetLightSourceAzimuth ( );
+    double GetLightSourceElevation ( );
+    HRESULT SetLightSource (
+        double Azimuth,
+        double Elevation );
+    HRESULT InsertBreak (
+        struct IGridColorBreak * BrkInfo );
+    IGridColorBreakPtr GetBreak (
+        long Index );
+    HRESULT DeleteBreak (
+        long Index );
+    HRESULT Clear ( );
+    OLE_COLOR GetNoDataColor ( );
+    void PutNoDataColor (
+        OLE_COLOR pVal );
+    HRESULT UsePredefined (
+        double LowValue,
+        double HighValue,
+        enum PredefinedColorScheme Preset );
+    IVectorPtr GetLightSource ( );
+    long GetLastErrorCode ( );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    ICallbackPtr GetGlobalCallback ( );
+    void PutGlobalCallback (
+        struct ICallback * pVal );
+    _bstr_t GetKey ( );
+    void PutKey (
+        _bstr_t pVal );
+    HRESULT InsertAt (
+        int Position,
+        struct IGridColorBreak * Break );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_NumBreaks (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_AmbientIntensity (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_AmbientIntensity (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_LightSourceIntensity (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_LightSourceIntensity (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_LightSourceAzimuth (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_LightSourceElevation (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_SetLightSource (
+        /*[in]*/ double Azimuth,
+        /*[in]*/ double Elevation ) = 0;
+      virtual HRESULT __stdcall raw_InsertBreak (
+        /*[in]*/ struct IGridColorBreak * BrkInfo ) = 0;
+      virtual HRESULT __stdcall get_Break (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ struct IGridColorBreak * * pVal ) = 0;
+      virtual HRESULT __stdcall raw_DeleteBreak (
+        /*[in]*/ long Index ) = 0;
+      virtual HRESULT __stdcall raw_Clear ( ) = 0;
+      virtual HRESULT __stdcall get_NoDataColor (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_NoDataColor (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall raw_UsePredefined (
+        /*[in]*/ double LowValue,
+        /*[in]*/ double HighValue,
+        /*[in]*/ enum PredefinedColorScheme Preset ) = 0;
+      virtual HRESULT __stdcall raw_GetLightSource (
+        /*[out,retval]*/ struct IVector * * result ) = 0;
+      virtual HRESULT __stdcall get_LastErrorCode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ErrorMsg (
+        /*[in]*/ long ErrorCode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GlobalCallback (
+        /*[out,retval]*/ struct ICallback * * pVal ) = 0;
+      virtual HRESULT __stdcall put_GlobalCallback (
+        /*[in]*/ struct ICallback * pVal ) = 0;
+      virtual HRESULT __stdcall get_Key (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Key (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall raw_InsertAt (
+        /*[in]*/ int Position,
+        /*[in]*/ struct IGridColorBreak * Break ) = 0;
+};
+
+struct __declspec(uuid("18dfb64a-9e72-4cbe-afd6-a5b7421dd0cb"))
+IGrid : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetHeader))
+    IGridHeaderPtr Header;
+    __declspec(property(get=GetValue,put=PutValue))
+    _variant_t Value[][];
+    __declspec(property(get=GetInRam))
+    VARIANT_BOOL InRam;
+    __declspec(property(get=GetMaximum))
+    _variant_t Maximum;
+    __declspec(property(get=GetMinimum))
+    _variant_t Minimum;
+    __declspec(property(get=GetDataType))
+    enum GridDataType DataType;
+    __declspec(property(get=GetFilename))
+    _bstr_t Filename;
+    __declspec(property(get=GetLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    ICallbackPtr GlobalCallback;
+    __declspec(property(get=GetKey,put=PutKey))
+    _bstr_t Key;
+    __declspec(property(get=GetCdlgFilter))
+    _bstr_t CdlgFilter;
+    __declspec(property(get=GetRasterColorTableColoringScheme))
+    IGridColorSchemePtr RasterColorTableColoringScheme;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    IGridHeaderPtr GetHeader ( );
+    _variant_t GetValue (
+        long Column,
+        long Row );
+    void PutValue (
+        long Column,
+        long Row,
+        const _variant_t & pVal );
+    VARIANT_BOOL GetInRam ( );
+    _variant_t GetMaximum ( );
+    _variant_t GetMinimum ( );
+    enum GridDataType GetDataType ( );
+    _bstr_t GetFilename ( );
+    long GetLastErrorCode ( );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    ICallbackPtr GetGlobalCallback ( );
+    void PutGlobalCallback (
+        struct ICallback * pVal );
+    _bstr_t GetKey ( );
+    void PutKey (
+        _bstr_t pVal );
+    VARIANT_BOOL Open (
+        _bstr_t Filename,
+        enum GridDataType DataType,
+        VARIANT_BOOL InRam,
+        enum GridFileType FileType,
+        struct ICallback * cBack );
+    VARIANT_BOOL CreateNew (
+        _bstr_t Filename,
+        struct IGridHeader * Header,
+        enum GridDataType DataType,
+        const _variant_t & InitialValue,
+        VARIANT_BOOL InRam,
+        enum GridFileType FileType,
+        struct ICallback * cBack );
+    VARIANT_BOOL Close ( );
+    VARIANT_BOOL Save (
+        _bstr_t Filename,
+        enum GridFileType GridFileType,
+        struct ICallback * cBack );
+    VARIANT_BOOL Clear (
+        const _variant_t & ClearValue );
+    HRESULT ProjToCell (
+        double x,
+        double y,
+        long * Column,
+        long * Row );
+    HRESULT CellToProj (
+        long Column,
+        long Row,
+        double * x,
+        double * y );
+    _bstr_t GetCdlgFilter ( );
+    VARIANT_BOOL AssignNewProjection (
+        _bstr_t Projection );
+    IGridColorSchemePtr GetRasterColorTableColoringScheme ( );
+    VARIANT_BOOL GetRow (
+        long Row,
+        float * Vals );
+    VARIANT_BOOL PutRow (
+        long Row,
+        float * Vals );
+    VARIANT_BOOL GetFloatWindow (
+        long StartRow,
+        long EndRow,
+        long StartCol,
+        long EndCol,
+        float * Vals );
+    VARIANT_BOOL PutFloatWindow (
+        long StartRow,
+        long EndRow,
+        long StartCol,
+        long EndCol,
+        float * Vals );
+    VARIANT_BOOL SetInvalidValuesToNodata (
+        double MinThresholdValue,
+        double MaxThresholdValue );
+    VARIANT_BOOL Resource (
+        _bstr_t newSrcPath );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Header (
+        /*[out,retval]*/ struct IGridHeader * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Value (
+        /*[in]*/ long Column,
+        /*[in]*/ long Row,
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall put_Value (
+        /*[in]*/ long Column,
+        /*[in]*/ long Row,
+        /*[in]*/ VARIANT pVal ) = 0;
+      virtual HRESULT __stdcall get_InRam (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_Maximum (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_Minimum (
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_DataType (
+        /*[out,retval]*/ enum GridDataType * pVal ) = 0;
+      virtual HRESULT __stdcall get_Filename (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_LastErrorCode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ErrorMsg (
+        /*[in]*/ long ErrorCode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GlobalCallback (
+        /*[out,retval]*/ struct ICallback * * pVal ) = 0;
+      virtual HRESULT __stdcall put_GlobalCallback (
+        /*[in]*/ struct ICallback * pVal ) = 0;
+      virtual HRESULT __stdcall get_Key (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Key (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall raw_Open (
+        /*[in]*/ BSTR Filename,
+        /*[in]*/ enum GridDataType DataType,
+        /*[in]*/ VARIANT_BOOL InRam,
+        /*[in]*/ enum GridFileType FileType,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_CreateNew (
+        /*[in]*/ BSTR Filename,
+        /*[in]*/ struct IGridHeader * Header,
+        /*[in]*/ enum GridDataType DataType,
+        /*[in]*/ VARIANT InitialValue,
+        /*[in]*/ VARIANT_BOOL InRam,
+        /*[in]*/ enum GridFileType FileType,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Close (
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Save (
+        /*[in]*/ BSTR Filename,
+        /*[in]*/ enum GridFileType GridFileType,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Clear (
+        /*[in]*/ VARIANT ClearValue,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_ProjToCell (
+        /*[in]*/ double x,
+        /*[in]*/ double y,
+        /*[out]*/ long * Column,
+        /*[out]*/ long * Row ) = 0;
+      virtual HRESULT __stdcall raw_CellToProj (
+        /*[in]*/ long Column,
+        /*[in]*/ long Row,
+        /*[out]*/ double * x,
+        /*[out]*/ double * y ) = 0;
+      virtual HRESULT __stdcall get_CdlgFilter (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall raw_AssignNewProjection (
+        /*[in]*/ BSTR Projection,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall get_RasterColorTableColoringScheme (
+        /*[out,retval]*/ struct IGridColorScheme * * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetRow (
+        /*[in]*/ long Row,
+        /*[in,out]*/ float * Vals,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_PutRow (
+        /*[in]*/ long Row,
+        /*[in,out]*/ float * Vals,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_GetFloatWindow (
+        /*[in]*/ long StartRow,
+        /*[in]*/ long EndRow,
+        /*[in]*/ long StartCol,
+        /*[in]*/ long EndCol,
+        /*[in,out]*/ float * Vals,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_PutFloatWindow (
+        /*[in]*/ long StartRow,
+        /*[in]*/ long EndRow,
+        /*[in]*/ long StartCol,
+        /*[in]*/ long EndCol,
+        /*[in,out]*/ float * Vals,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_SetInvalidValuesToNodata (
+        /*[in]*/ double MinThresholdValue,
+        /*[in]*/ double MaxThresholdValue,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Resource (
+        /*[in]*/ BSTR newSrcPath,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+};
+
+struct __declspec(uuid("044afe79-d3de-4500-a14b-decea635b497"))
+GridHeader;
+    // [ default ] interface IGridHeader
+
+struct __declspec(uuid("86e02063-602c-47f2-9778-81e6979e3267"))
+ESRIGridManager;
+    // [ default ] interface IESRIGridManager
+
+struct __declspec(uuid("55b3f2da-eb09-4fa9-b74b-9a1b3e457318"))
+IESRIGridManager : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    ICallbackPtr GlobalCallback;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetLastErrorCode ( );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    ICallbackPtr GetGlobalCallback ( );
+    void PutGlobalCallback (
+        struct ICallback * pVal );
+    VARIANT_BOOL CanUseESRIGrids ( );
+    VARIANT_BOOL DeleteESRIGrids (
+        _bstr_t Filename );
+    VARIANT_BOOL IsESRIGrid (
+        _bstr_t Filename );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_LastErrorCode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ErrorMsg (
+        /*[in]*/ long ErrorCode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GlobalCallback (
+        /*[out,retval]*/ struct ICallback * * pVal ) = 0;
+      virtual HRESULT __stdcall put_GlobalCallback (
+        /*[in]*/ struct ICallback * pVal ) = 0;
+      virtual HRESULT __stdcall raw_CanUseESRIGrids (
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_DeleteESRIGrids (
+        /*[in]*/ BSTR Filename,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_IsESRIGrid (
+        /*[in]*/ BSTR Filename,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+};
+
+struct __declspec(uuid("0db362e3-6f79-4226-af19-47b67b27e99b"))
+Image;
+    // [ default ] interface IImage
+
+enum __declspec(uuid("485eebc8-5f16-48bc-bd18-dbbda0ca6e4a"))
+ImageType
+{
+    BITMAP_FILE = 0,
+    GIF_FILE = 1,
+    USE_FILE_EXTENSION = 2,
+    TIFF_FILE = 3,
+    JPEG_FILE = 4,
+    PNG_FILE = 5,
+    PPM_FILE = 7,
+    ECW_FILE = 8,
+    JPEG2000_FILE = 9,
+    SID_FILE = 10,
+    PNM_FILE = 11,
+    PGM_FILE = 12,
+    BIL_FILE = 13,
+    ADF_FILE = 14,
+    GRD_FILE = 15,
+    IMG_FILE = 16,
+    ASC_FILE = 17,
+    BT_FILE = 18,
+    MAP_FILE = 19,
+    LF2_FILE = 20,
+    KAP_FILE = 21,
+    DEM_FILE = 22
+};
+
+struct __declspec(uuid("79c5f83e-fb53-4189-9ec4-4ac25440d825"))
+IImage : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetHasColorTable))
+    VARIANT_BOOL HasColorTable;
+    __declspec(property(get=GetPaletteInterpretation))
+    _bstr_t PaletteInterpretation;
+    __declspec(property(get=GetBufferSize,put=PutBufferSize))
+    int BufferSize;
+    __declspec(property(get=GetNoBands))
+    int NoBands;
+    __declspec(property(get=GetImageColorScheme,put=PutImageColorScheme))
+    enum PredefinedColorScheme ImageColorScheme;
+    __declspec(property(get=GetImageData))
+    unsigned char * ImageData;
+    __declspec(property(get=GetWidth))
+    long Width;
+    __declspec(property(get=GetHeight))
+    long Height;
+    __declspec(property(get=GetYllCenter,put=PutYllCenter))
+    double YllCenter;
+    __declspec(property(get=GetXllCenter,put=PutXllCenter))
+    double XllCenter;
+    __declspec(property(get=GetdY,put=PutdY))
+    double dY;
+    __declspec(property(get=GetdX,put=PutdX))
+    double dX;
+    __declspec(property(get=GetValue,put=PutValue))
+    long Value[][];
+    __declspec(property(get=GetIsInRam))
+    VARIANT_BOOL IsInRam;
+    __declspec(property(get=GetTransparencyColor,put=PutTransparencyColor))
+    OLE_COLOR TransparencyColor;
+    __declspec(property(get=GetUseTransparencyColor,put=PutUseTransparencyColor))
+    VARIANT_BOOL UseTransparencyColor;
+    __declspec(property(get=GetLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetCdlgFilter))
+    _bstr_t CdlgFilter;
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    ICallbackPtr GlobalCallback;
+    __declspec(property(get=GetKey,put=PutKey))
+    _bstr_t Key;
+    __declspec(property(get=GetFileHandle))
+    long FileHandle;
+    __declspec(property(get=GetImageType))
+    enum ImageType _ImageType;
+    __declspec(property(get=GetFilename))
+    _bstr_t Filename;
+    __declspec(property(get=GetAllowHillshade,put=PutAllowHillshade))
+    VARIANT_BOOL AllowHillshade;
+    __declspec(property(get=GetSetToGrey,put=PutSetToGrey))
+    VARIANT_BOOL SetToGrey;
+    __declspec(property(get=GetUseHistogram,put=PutUseHistogram))
+    VARIANT_BOOL UseHistogram;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL Open (
+        _bstr_t ImageFileName,
+        enum ImageType FileType,
+        VARIANT_BOOL InRam,
+        struct ICallback * cBack );
+    VARIANT_BOOL Save (
+        _bstr_t ImageFileName,
+        VARIANT_BOOL WriteWorldFile,
+        enum ImageType FileType,
+        struct ICallback * cBack );
+    VARIANT_BOOL CreateNew (
+        long NewWidth,
+        long NewHeight );
+    VARIANT_BOOL Close ( );
+    VARIANT_BOOL Clear (
+        OLE_COLOR CanvasColor,
+        struct ICallback * cBack );
+    VARIANT_BOOL GetRow (
+        long Row,
+        long * Vals );
+    long GetWidth ( );
+    long GetHeight ( );
+    double GetYllCenter ( );
+    void PutYllCenter (
+        double pVal );
+    double GetXllCenter ( );
+    void PutXllCenter (
+        double pVal );
+    double GetdY ( );
+    void PutdY (
+        double pVal );
+    double GetdX ( );
+    void PutdX (
+        double pVal );
+    long GetValue (
+        long Row,
+        long col );
+    void PutValue (
+        long Row,
+        long col,
+        long pVal );
+    VARIANT_BOOL GetIsInRam ( );
+    OLE_COLOR GetTransparencyColor ( );
+    void PutTransparencyColor (
+        OLE_COLOR pVal );
+    VARIANT_BOOL GetUseTransparencyColor ( );
+    void PutUseTransparencyColor (
+        VARIANT_BOOL pVal );
+    long GetLastErrorCode ( );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    _bstr_t GetCdlgFilter ( );
+    ICallbackPtr GetGlobalCallback ( );
+    void PutGlobalCallback (
+        struct ICallback * pVal );
+    _bstr_t GetKey ( );
+    void PutKey (
+        _bstr_t pVal );
+    long GetFileHandle ( );
+    enum ImageType GetImageType ( );
+    IPictureDisp * GetPicture ( );
+    void PutRefPicture (
+        IPictureDisp * pVal );
+    _bstr_t GetFilename ( );
+    VARIANT_BOOL GetImageBitsDC (
+        long hDC );
+    VARIANT_BOOL SetImageBitsDC (
+        long hDC );
+    HRESULT SetVisibleExtents (
+        double newMinX,
+        double newMinY,
+        double newMaxX,
+        double newMaxY,
+        long newPixelsInView,
+        float transPercent );
+    VARIANT_BOOL SetProjection (
+        _bstr_t Proj4 );
+    _bstr_t GetProjection ( );
+    HRESULT get_OriginalWidth (
+        long * OriginalWidth );
+    HRESULT get_OriginalHeight (
+        long * OriginalHeight );
+    VARIANT_BOOL Resource (
+        _bstr_t newImgPath );
+    VARIANT_BOOL _pushSchemetkRaster (
+        struct IGridColorScheme * cScheme );
+    double GetOriginalXllCenter ( );
+    double GetOriginalYllCenter ( );
+    double GetOriginal_dX ( );
+    double GetOriginal_dY ( );
+    long GetOriginalHeight ( );
+    long GetOriginalWidth ( );
+    VARIANT_BOOL GetAllowHillshade ( );
+    void PutAllowHillshade (
+        VARIANT_BOOL pVal );
+    VARIANT_BOOL GetSetToGrey ( );
+    void PutSetToGrey (
+        VARIANT_BOOL pVal );
+    VARIANT_BOOL GetUseHistogram ( );
+    void PutUseHistogram (
+        VARIANT_BOOL pVal );
+    VARIANT_BOOL GetHasColorTable ( );
+    _bstr_t GetPaletteInterpretation ( );
+    int GetBufferSize ( );
+    void PutBufferSize (
+        int pVal );
+    int GetNoBands ( );
+    enum PredefinedColorScheme GetImageColorScheme ( );
+    void PutImageColorScheme (
+        enum PredefinedColorScheme pVal );
+    unsigned char * GetImageData ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Open (
+        /*[in]*/ BSTR ImageFileName,
+        /*[in]*/ enum ImageType FileType,
+        /*[in]*/ VARIANT_BOOL InRam,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Save (
+        /*[in]*/ BSTR ImageFileName,
+        /*[in]*/ VARIANT_BOOL WriteWorldFile,
+        /*[in]*/ enum ImageType FileType,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_CreateNew (
+        /*[in]*/ long NewWidth,
+        /*[in]*/ long NewHeight,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Close (
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Clear (
+        /*[in]*/ OLE_COLOR CanvasColor,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_GetRow (
+        /*[in]*/ long Row,
+        /*[in,out]*/ long * Vals,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall get_Width (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Height (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_YllCenter (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_YllCenter (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_XllCenter (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_XllCenter (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_dY (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_dY (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_dX (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_dX (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_Value (
+        /*[in]*/ long Row,
+        /*[in]*/ long col,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Value (
+        /*[in]*/ long Row,
+        /*[in]*/ long col,
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_IsInRam (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_TransparencyColor (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_TransparencyColor (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_UseTransparencyColor (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_UseTransparencyColor (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_LastErrorCode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ErrorMsg (
+        /*[in]*/ long ErrorCode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_CdlgFilter (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GlobalCallback (
+        /*[out,retval]*/ struct ICallback * * pVal ) = 0;
+      virtual HRESULT __stdcall put_GlobalCallback (
+        /*[in]*/ struct ICallback * pVal ) = 0;
+      virtual HRESULT __stdcall get_Key (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Key (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_FileHandle (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ImageType (
+        /*[out,retval]*/ enum ImageType * pVal ) = 0;
+      virtual HRESULT __stdcall get_Picture (
+        /*[out,retval]*/ IPictureDisp * * pVal ) = 0;
+      virtual HRESULT __stdcall putref_Picture (
+        /*[in]*/ IPictureDisp * pVal ) = 0;
+      virtual HRESULT __stdcall get_Filename (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetImageBitsDC (
+        /*[in]*/ long hDC,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_SetImageBitsDC (
+        /*[in]*/ long hDC,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_SetVisibleExtents (
+        /*[in]*/ double newMinX,
+        /*[in]*/ double newMinY,
+        /*[in]*/ double newMaxX,
+        /*[in]*/ double newMaxY,
+        /*[in]*/ long newPixelsInView,
+        /*[in]*/ float transPercent ) = 0;
+      virtual HRESULT __stdcall raw_SetProjection (
+        /*[in]*/ BSTR Proj4,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_GetProjection (
+        /*[out,retval]*/ BSTR * Proj4 ) = 0;
+      virtual HRESULT __stdcall raw_get_OriginalWidth (
+        long * OriginalWidth ) = 0;
+      virtual HRESULT __stdcall raw_get_OriginalHeight (
+        long * OriginalHeight ) = 0;
+      virtual HRESULT __stdcall raw_Resource (
+        /*[in]*/ BSTR newImgPath,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall raw__pushSchemetkRaster (
+        /*[in]*/ struct IGridColorScheme * cScheme,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_GetOriginalXllCenter (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetOriginalYllCenter (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetOriginal_dX (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetOriginal_dY (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetOriginalHeight (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetOriginalWidth (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_AllowHillshade (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_AllowHillshade (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_SetToGrey (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_SetToGrey (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_UseHistogram (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_UseHistogram (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_HasColorTable (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_PaletteInterpretation (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_BufferSize (
+        /*[out,retval]*/ int * pVal ) = 0;
+      virtual HRESULT __stdcall put_BufferSize (
+        /*[in]*/ int pVal ) = 0;
+      virtual HRESULT __stdcall get_NoBands (
+        /*[out,retval]*/ int * pVal ) = 0;
+      virtual HRESULT __stdcall get_ImageColorScheme (
+        /*[out,retval]*/ enum PredefinedColorScheme * pVal ) = 0;
+      virtual HRESULT __stdcall put_ImageColorScheme (
+        /*[in]*/ enum PredefinedColorScheme pVal ) = 0;
+      virtual HRESULT __stdcall get_ImageData (
+        /*[out,retval]*/ unsigned char * * pVal ) = 0;
+};
+
+struct __declspec(uuid("c0eac9eb-1d02-4bd9-8dab-4bf922c8cd13"))
+Shapefile;
+    // [ default ] interface IShapefile
+
+struct __declspec(uuid("a5692259-035e-487a-8d89-509dd6dd0f64"))
+IExtents : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetxMin))
+    double xMin;
+    __declspec(property(get=GetxMax))
+    double xMax;
+    __declspec(property(get=GetyMin))
+    double yMin;
+    __declspec(property(get=GetyMax))
+    double yMax;
+    __declspec(property(get=GetzMin))
+    double zMin;
+    __declspec(property(get=GetzMax))
+    double zMax;
+    __declspec(property(get=GetmMin))
+    double mMin;
+    __declspec(property(get=GetmMax))
+    double mMax;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SetBounds (
+        double xMin,
+        double yMin,
+        double zMin,
+        double xMax,
+        double yMax,
+        double zMax );
+    HRESULT GetBounds (
+        double * xMin,
+        double * yMin,
+        double * zMin,
+        double * xMax,
+        double * yMax,
+        double * zMax );
+    double GetxMin ( );
+    double GetxMax ( );
+    double GetyMin ( );
+    double GetyMax ( );
+    double GetzMin ( );
+    double GetzMax ( );
+    double GetmMin ( );
+    double GetmMax ( );
+    HRESULT GetMeasureBounds (
+        double * mMin,
+        double * mMax );
+    HRESULT SetMeasureBounds (
+        double mMin,
+        double mMax );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SetBounds (
+        /*[in]*/ double xMin,
+        /*[in]*/ double yMin,
+        /*[in]*/ double zMin,
+        /*[in]*/ double xMax,
+        /*[in]*/ double yMax,
+        /*[in]*/ double zMax ) = 0;
+      virtual HRESULT __stdcall raw_GetBounds (
+        /*[out]*/ double * xMin,
+        /*[out]*/ double * yMin,
+        /*[out]*/ double * zMin,
+        /*[out]*/ double * xMax,
+        /*[out]*/ double * yMax,
+        /*[out]*/ double * zMax ) = 0;
+      virtual HRESULT __stdcall get_xMin (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_xMax (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_yMin (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_yMax (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_zMin (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_zMax (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_mMin (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_mMax (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetMeasureBounds (
+        /*[out]*/ double * mMin,
+        /*[out]*/ double * mMax ) = 0;
+      virtual HRESULT __stdcall raw_SetMeasureBounds (
+        /*[in]*/ double mMin,
+        /*[in]*/ double mMax ) = 0;
+};
+
+enum __declspec(uuid("cdf57781-4fe1-46ed-ac51-59cd3c89b4c8"))
+ShpfileType
+{
+    SHP_NULLSHAPE = 0,
+    SHP_POINT = 1,
+    SHP_POLYLINE = 3,
+    SHP_POLYGON = 5,
+    SHP_MULTIPOINT = 8,
+    SHP_POINTZ = 11,
+    SHP_POLYLINEZ = 13,
+    SHP_POLYGONZ = 15,
+    SHP_MULTIPOINTZ = 18,
+    SHP_POINTM = 21,
+    SHP_POLYLINEM = 23,
+    SHP_POLYGONM = 25,
+    SHP_MULTIPOINTM = 28,
+    SHP_MULTIPATCH = 31
+};
+
+struct __declspec(uuid("74f07889-1380-43ee-837a-bbb268311005"))
+IPoint : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=Getx,put=Putx))
+    double x;
+    __declspec(property(get=Gety,put=Puty))
+    double y;
+    __declspec(property(get=GetZ,put=PutZ))
+    double Z;
+    __declspec(property(get=GetLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    ICallbackPtr GlobalCallback;
+    __declspec(property(get=GetKey,put=PutKey))
+    _bstr_t Key;
+    __declspec(property(get=GetM,put=PutM))
+    double M;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    double Getx ( );
+    void Putx (
+        double pVal );
+    double Gety ( );
+    void Puty (
+        double pVal );
+    double GetZ ( );
+    void PutZ (
+        double pVal );
+    long GetLastErrorCode ( );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    ICallbackPtr GetGlobalCallback ( );
+    void PutGlobalCallback (
+        struct ICallback * pVal );
+    _bstr_t GetKey ( );
+    void PutKey (
+        _bstr_t pVal );
+    double GetM ( );
+    void PutM (
+        double pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_x (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_x (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_y (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_y (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_Z (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_Z (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_LastErrorCode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ErrorMsg (
+        /*[in]*/ long ErrorCode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GlobalCallback (
+        /*[out,retval]*/ struct ICallback * * pVal ) = 0;
+      virtual HRESULT __stdcall put_GlobalCallback (
+        /*[in]*/ struct ICallback * pVal ) = 0;
+      virtual HRESULT __stdcall get_Key (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Key (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_M (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall put_M (
+        /*[in]*/ double pVal ) = 0;
+};
+
+enum __declspec(uuid("3e52c14e-3f39-4286-b630-af8988a8bdd2"))
+tkSpatialRelation
+{
+    srContains = 0,
+    srCrosses = 1,
+    srDisjoint = 2,
+    srEquals = 3,
+    srIntersects = 4,
+    srOverlaps = 5,
+    srTouches = 6,
+    srWithin = 7
+};
+
+enum __declspec(uuid("85c1f392-6405-4b9a-82f4-43d4d54e4264"))
+tkClipOperation
+{
+    clDifference = 0,
+    clIntersection = 1,
+    clSymDifference = 2,
+    clUnion = 3
+};
+
+struct __declspec(uuid("5fa550e3-2044-4034-baaa-b4cce90a0c41"))
+IShape : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetnumPoints))
+    long numPoints;
+    __declspec(property(get=GetNumParts))
+    long NumParts;
+    __declspec(property(get=GetShapeType,put=PutShapeType))
+    enum ShpfileType ShapeType;
+    __declspec(property(get=GetPoint,put=PutPoint))
+    IPointPtr Point[];
+    __declspec(property(get=GetPart,put=PutPart))
+    long Part[];
+    __declspec(property(get=GetLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    ICallbackPtr GlobalCallback;
+    __declspec(property(get=GetKey,put=PutKey))
+    _bstr_t Key;
+    __declspec(property(get=GetIsValid))
+    VARIANT_BOOL IsValid;
+    __declspec(property(get=GetPartIsClockWise))
+    VARIANT_BOOL PartIsClockWise[];
+    __declspec(property(get=GetExtents))
+    IExtentsPtr Extents;
+    __declspec(property(get=GetCentroid))
+    IPointPtr Centroid;
+    __declspec(property(get=GetLength))
+    double Length;
+    __declspec(property(get=GetPerimeter))
+    double Perimeter;
+    __declspec(property(get=GetArea))
+    double Area;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetnumPoints ( );
+    long GetNumParts ( );
+    enum ShpfileType GetShapeType ( );
+    void PutShapeType (
+        enum ShpfileType pVal );
+    IPointPtr GetPoint (
+        long PointIndex );
+    void PutPoint (
+        long PointIndex,
+        struct IPoint * pVal );
+    long GetPart (
+        long PartIndex );
+    void PutPart (
+        long PartIndex,
+        long pVal );
+    long GetLastErrorCode ( );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    ICallbackPtr GetGlobalCallback ( );
+    void PutGlobalCallback (
+        struct ICallback * pVal );
+    _bstr_t GetKey ( );
+    void PutKey (
+        _bstr_t pVal );
+    VARIANT_BOOL Create (
+        enum ShpfileType ShpType );
+    VARIANT_BOOL InsertPoint (
+        struct IPoint * NewPoint,
+        long * PointIndex );
+    VARIANT_BOOL DeletePoint (
+        long PointIndex );
+    VARIANT_BOOL InsertPart (
+        long PointIndex,
+        long * PartIndex );
+    VARIANT_BOOL DeletePart (
+        long PartIndex );
+    IExtentsPtr GetExtents ( );
+    _bstr_t SerializeToString ( );
+    VARIANT_BOOL CreateFromString (
+        _bstr_t Serialized );
+    VARIANT_BOOL PointInThisPoly (
+        struct IPoint * pt );
+    IPointPtr GetCentroid ( );
+    double GetLength ( );
+    double GetPerimeter ( );
+    double GetArea ( );
+    VARIANT_BOOL Relates (
+        struct IShape * Shape,
+        enum tkSpatialRelation Relation );
+    double Distance (
+        struct IShape * Shape );
+    IShapePtr Buffer (
+        double Distance,
+        long nQuadSegments );
+    IShapePtr Clip (
+        struct IShape * Shape,
+        enum tkClipOperation Operation );
+    VARIANT_BOOL Contains (
+        struct IShape * Shape );
+    VARIANT_BOOL Crosses (
+        struct IShape * Shape );
+    VARIANT_BOOL Disjoint (
+        struct IShape * Shape );
+    VARIANT_BOOL Equals (
+        struct IShape * Shape );
+    VARIANT_BOOL Intersects (
+        struct IShape * Shape );
+    VARIANT_BOOL Overlaps (
+        struct IShape * Shape );
+    VARIANT_BOOL Touches (
+        struct IShape * Shape );
+    VARIANT_BOOL Within (
+        struct IShape * Shape );
+    IShapePtr Boundry ( );
+    IShapePtr ConvexHull ( );
+    VARIANT_BOOL GetIsValid ( );
+    VARIANT_BOOL GetXY (
+        long PointIndex,
+        double * x,
+        double * y );
+    VARIANT_BOOL GetPartIsClockWise (
+        long PartIndex );
+    VARIANT_BOOL ReversePointsOrder (
+        long PartIndex );
+    VARIANT_BOOL GetIntersection (
+        struct IShape * Shape,
+        VARIANT * Results );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_numPoints (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_NumParts (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ShapeType (
+        /*[out,retval]*/ enum ShpfileType * pVal ) = 0;
+      virtual HRESULT __stdcall put_ShapeType (
+        /*[in]*/ enum ShpfileType pVal ) = 0;
+      virtual HRESULT __stdcall get_Point (
+        /*[in]*/ long PointIndex,
+        /*[out,retval]*/ struct IPoint * * pVal ) = 0;
+      virtual HRESULT __stdcall put_Point (
+        /*[in]*/ long PointIndex,
+        /*[in]*/ struct IPoint * pVal ) = 0;
+      virtual HRESULT __stdcall get_Part (
+        /*[in]*/ long PartIndex,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Part (
+        /*[in]*/ long PartIndex,
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_LastErrorCode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ErrorMsg (
+        /*[in]*/ long ErrorCode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GlobalCallback (
+        /*[out,retval]*/ struct ICallback * * pVal ) = 0;
+      virtual HRESULT __stdcall put_GlobalCallback (
+        /*[in]*/ struct ICallback * pVal ) = 0;
+      virtual HRESULT __stdcall get_Key (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Key (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall raw_Create (
+        /*[in]*/ enum ShpfileType ShpType,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_InsertPoint (
+        /*[in]*/ struct IPoint * NewPoint,
+        /*[in,out]*/ long * PointIndex,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_DeletePoint (
+        /*[in]*/ long PointIndex,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_InsertPart (
+        /*[in]*/ long PointIndex,
+        /*[in,out]*/ long * PartIndex,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_DeletePart (
+        /*[in]*/ long PartIndex,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall get_Extents (
+        /*[out,retval]*/ struct IExtents * * pVal ) = 0;
+      virtual HRESULT __stdcall raw_SerializeToString (
+        /*[out,retval]*/ BSTR * Serialized ) = 0;
+      virtual HRESULT __stdcall raw_CreateFromString (
+        /*[in]*/ BSTR Serialized,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_PointInThisPoly (
+        /*[in]*/ struct IPoint * pt,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall get_Centroid (
+        /*[out,retval]*/ struct IPoint * * pVal ) = 0;
+      virtual HRESULT __stdcall get_Length (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_Perimeter (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_Area (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall raw_Relates (
+        /*[in]*/ struct IShape * Shape,
+        /*[in]*/ enum tkSpatialRelation Relation,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Distance (
+        /*[in]*/ struct IShape * Shape,
+        /*[out,retval]*/ double * retval ) = 0;
+      virtual HRESULT __stdcall raw_Buffer (
+        /*[in]*/ double Distance,
+        /*[in]*/ long nQuadSegments,
+        /*[out,retval]*/ struct IShape * * retval ) = 0;
+      virtual HRESULT __stdcall raw_Clip (
+        /*[in]*/ struct IShape * Shape,
+        /*[in]*/ enum tkClipOperation Operation,
+        /*[out,retval]*/ struct IShape * * retval ) = 0;
+      virtual HRESULT __stdcall raw_Contains (
+        /*[in]*/ struct IShape * Shape,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Crosses (
+        /*[in]*/ struct IShape * Shape,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Disjoint (
+        /*[in]*/ struct IShape * Shape,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Equals (
+        /*[in]*/ struct IShape * Shape,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Intersects (
+        /*[in]*/ struct IShape * Shape,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Overlaps (
+        /*[in]*/ struct IShape * Shape,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Touches (
+        /*[in]*/ struct IShape * Shape,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Within (
+        /*[in]*/ struct IShape * Shape,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Boundry (
+        /*[out,retval]*/ struct IShape * * retval ) = 0;
+      virtual HRESULT __stdcall raw_ConvexHull (
+        /*[out,retval]*/ struct IShape * * retval ) = 0;
+      virtual HRESULT __stdcall get_IsValid (
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall get_XY (
+        /*[in]*/ long PointIndex,
+        /*[in,out]*/ double * x,
+        /*[in,out]*/ double * y,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall get_PartIsClockWise (
+        /*[in]*/ long PartIndex,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_ReversePointsOrder (
+        /*[in]*/ long PartIndex,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_GetIntersection (
+        /*[in]*/ struct IShape * Shape,
+        /*[out]*/ VARIANT * Results,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+};
+
+enum __declspec(uuid("44e55993-60b9-4f67-9500-073a3fca2249"))
+SelectMode
+{
+    INTERSECTION = 0,
+    INCLUSION = 1
+};
+
+enum __declspec(uuid("5ad363ad-e860-4789-87e8-f3100af3707d"))
+FieldType
+{
+    STRING_FIELD = 0,
+    INTEGER_FIELD = 1,
+    DOUBLE_FIELD = 2
+};
+
+struct __declspec(uuid("3f3751a5-4cf8-4ac3-afc2-60de8b90fc7b"))
+IField : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetName,put=PutName))
+    _bstr_t Name;
+    __declspec(property(get=GetWidth,put=PutWidth))
+    long Width;
+    __declspec(property(get=GetPrecision,put=PutPrecision))
+    long Precision;
+    __declspec(property(get=GetType,put=PutType))
+    enum FieldType Type;
+    __declspec(property(get=GetLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    ICallbackPtr GlobalCallback;
+    __declspec(property(get=GetKey,put=PutKey))
+    _bstr_t Key;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    _bstr_t GetName ( );
+    void PutName (
+        _bstr_t pVal );
+    long GetWidth ( );
+    void PutWidth (
+        long pVal );
+    long GetPrecision ( );
+    void PutPrecision (
+        long pVal );
+    enum FieldType GetType ( );
+    void PutType (
+        enum FieldType pVal );
+    long GetLastErrorCode ( );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    ICallbackPtr GetGlobalCallback ( );
+    void PutGlobalCallback (
+        struct ICallback * pVal );
+    _bstr_t GetKey ( );
+    void PutKey (
+        _bstr_t pVal );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_Name (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Name (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_Width (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Width (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_Precision (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_Precision (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall get_Type (
+        /*[out,retval]*/ enum FieldType * pVal ) = 0;
+      virtual HRESULT __stdcall put_Type (
+        /*[in]*/ enum FieldType pVal ) = 0;
+      virtual HRESULT __stdcall get_LastErrorCode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ErrorMsg (
+        /*[in]*/ long ErrorCode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GlobalCallback (
+        /*[out,retval]*/ struct ICallback * * pVal ) = 0;
+      virtual HRESULT __stdcall put_GlobalCallback (
+        /*[in]*/ struct ICallback * pVal ) = 0;
+      virtual HRESULT __stdcall get_Key (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Key (
+        /*[in]*/ BSTR pVal ) = 0;
+};
+
+struct __declspec(uuid("7399b752-61d9-4a23-973f-1033431dd009"))
+IShapeDrawingOptions : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetDrawFill,put=PutDrawFill))
+    VARIANT_BOOL DrawFill;
+    __declspec(property(get=GetDrawLine,put=PutDrawLine))
+    VARIANT_BOOL DrawLine;
+    __declspec(property(get=GetDrawPoint,put=PutDrawPoint))
+    VARIANT_BOOL DrawPoint;
+    __declspec(property(get=GetFillColor,put=PutFillColor))
+    OLE_COLOR FillColor;
+    __declspec(property(get=GetLineColor,put=PutLineColor))
+    OLE_COLOR LineColor;
+    __declspec(property(get=GetPointColor,put=PutPointColor))
+    OLE_COLOR PointColor;
+    __declspec(property(get=GetFillStipple,put=PutFillStipple))
+    enum tkFillStipple FillStipple;
+    __declspec(property(get=GetLineStipple,put=PutLineStipple))
+    enum tkLineStipple LineStipple;
+    __declspec(property(get=GetPointType,put=PutPointType))
+    enum tkPointType PointType;
+    __declspec(property(get=GetFillTransparency,put=PutFillTransparency))
+    float FillTransparency;
+    __declspec(property(get=GetLineWidth,put=PutLineWidth))
+    float LineWidth;
+    __declspec(property(get=GetPointSize,put=PutPointSize))
+    float PointSize;
+    __declspec(property(get=GetStippleTransparent,put=PutStippleTransparent))
+    VARIANT_BOOL StippleTransparent;
+    __declspec(property(get=GetStippleColor,put=PutStippleColor))
+    OLE_COLOR StippleColor;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL GetDrawFill ( );
+    void PutDrawFill (
+        VARIANT_BOOL pVal );
+    VARIANT_BOOL GetDrawLine ( );
+    void PutDrawLine (
+        VARIANT_BOOL pVal );
+    VARIANT_BOOL GetDrawPoint ( );
+    void PutDrawPoint (
+        VARIANT_BOOL pVal );
+    OLE_COLOR GetFillColor ( );
+    void PutFillColor (
+        OLE_COLOR pVal );
+    OLE_COLOR GetLineColor ( );
+    void PutLineColor (
+        OLE_COLOR pVal );
+    OLE_COLOR GetPointColor ( );
+    void PutPointColor (
+        OLE_COLOR pVal );
+    enum tkFillStipple GetFillStipple ( );
+    void PutFillStipple (
+        enum tkFillStipple pVal );
+    enum tkLineStipple GetLineStipple ( );
+    void PutLineStipple (
+        enum tkLineStipple pVal );
+    enum tkPointType GetPointType ( );
+    void PutPointType (
+        enum tkPointType pVal );
+    float GetFillTransparency ( );
+    void PutFillTransparency (
+        float pVal );
+    float GetLineWidth ( );
+    void PutLineWidth (
+        float pVal );
+    float GetPointSize ( );
+    void PutPointSize (
+        float pVal );
+    VARIANT_BOOL GetStippleTransparent ( );
+    void PutStippleTransparent (
+        VARIANT_BOOL pVal );
+    OLE_COLOR GetStippleColor ( );
+    void PutStippleColor (
+        OLE_COLOR pVal );
+    IImagePtr get_RasterFill ( );
+    HRESULT put_RasterFill (
+        struct IImage * newValue );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_DrawFill (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_DrawFill (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_DrawLine (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_DrawLine (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_DrawPoint (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_DrawPoint (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_FillColor (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_FillColor (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_LineColor (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_LineColor (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_PointColor (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_PointColor (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall get_FillStipple (
+        /*[out,retval]*/ enum tkFillStipple * pVal ) = 0;
+      virtual HRESULT __stdcall put_FillStipple (
+        /*[in]*/ enum tkFillStipple pVal ) = 0;
+      virtual HRESULT __stdcall get_LineStipple (
+        /*[out,retval]*/ enum tkLineStipple * pVal ) = 0;
+      virtual HRESULT __stdcall put_LineStipple (
+        /*[in]*/ enum tkLineStipple pVal ) = 0;
+      virtual HRESULT __stdcall get_PointType (
+        /*[out,retval]*/ enum tkPointType * pVal ) = 0;
+      virtual HRESULT __stdcall put_PointType (
+        /*[in]*/ enum tkPointType pVal ) = 0;
+      virtual HRESULT __stdcall get_FillTransparency (
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall put_FillTransparency (
+        /*[in]*/ float pVal ) = 0;
+      virtual HRESULT __stdcall get_LineWidth (
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall put_LineWidth (
+        /*[in]*/ float pVal ) = 0;
+      virtual HRESULT __stdcall get_PointSize (
+        /*[out,retval]*/ float * pVal ) = 0;
+      virtual HRESULT __stdcall put_PointSize (
+        /*[in]*/ float pVal ) = 0;
+      virtual HRESULT __stdcall get_StippleTransparent (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_StippleTransparent (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_StippleColor (
+        /*[out,retval]*/ OLE_COLOR * pVal ) = 0;
+      virtual HRESULT __stdcall put_StippleColor (
+        /*[in]*/ OLE_COLOR pVal ) = 0;
+      virtual HRESULT __stdcall raw_get_RasterFill (
+        /*[out,retval]*/ struct IImage * * pVal ) = 0;
+      virtual HRESULT __stdcall raw_put_RasterFill (
+        /*[in]*/ struct IImage * newValue ) = 0;
+};
+
+struct __declspec(uuid("5dc72405-c39c-4755-8cfc-9876a89225bc"))
+IShapefile : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetNumShapes))
+    long NumShapes;
+    __declspec(property(get=GetNumFields))
+    long NumFields;
+    __declspec(property(get=GetExtents))
+    IExtentsPtr Extents;
+    __declspec(property(get=GetShapefileType))
+    enum ShpfileType ShapefileType;
+    __declspec(property(get=GetShape))
+    IShapePtr Shape[];
+    __declspec(property(get=GetEditingShapes))
+    VARIANT_BOOL EditingShapes;
+    __declspec(property(get=GetLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetCdlgFilter))
+    _bstr_t CdlgFilter;
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    ICallbackPtr GlobalCallback;
+    __declspec(property(get=GetKey,put=PutKey))
+    _bstr_t Key;
+    __declspec(property(get=GetHasSpatialIndex,put=PutHasSpatialIndex))
+    VARIANT_BOOL HasSpatialIndex;
+    __declspec(property(get=GetCacheExtents,put=PutCacheExtents))
+    VARIANT_BOOL CacheExtents;
+    __declspec(property(get=GetUseQTree,put=PutUseQTree))
+    VARIANT_BOOL UseQTree;
+    __declspec(property(get=GetSpatialIndexMaxAreaPercent,put=PutSpatialIndexMaxAreaPercent))
+    double SpatialIndexMaxAreaPercent;
+    __declspec(property(get=GetCanUseSpatialIndex))
+    VARIANT_BOOL CanUseSpatialIndex[];
+    __declspec(property(get=GetNumSelected))
+    long NumSelected;
+    __declspec(property(get=GetShapeSelected,put=PutShapeSelected))
+    VARIANT_BOOL ShapeSelected[];
+    __declspec(property(get=GetSelectionDrawingOptions,put=PutSelectionDrawingOptions))
+    IShapeDrawingOptionsPtr SelectionDrawingOptions;
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetField))
+    IFieldPtr Field[];
+    __declspec(property(get=GetCellValue))
+    _variant_t CellValue[][];
+    __declspec(property(get=GetEditingTable))
+    VARIANT_BOOL EditingTable;
+    __declspec(property(get=GetFileHandle))
+    long FileHandle;
+    __declspec(property(get=GetFilename))
+    _bstr_t Filename;
+    __declspec(property(get=GetProjection,put=PutProjection))
+    _bstr_t Projection;
+    __declspec(property(get=GetFieldByName))
+    IFieldPtr FieldByName[];
+    __declspec(property(get=GetnumPoints))
+    long numPoints[];
+    __declspec(property(get=GetUseSpatialIndex,put=PutUseSpatialIndex))
+    VARIANT_BOOL UseSpatialIndex;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetNumShapes ( );
+    long GetNumFields ( );
+    IExtentsPtr GetExtents ( );
+    enum ShpfileType GetShapefileType ( );
+    IShapePtr GetShape (
+        long ShapeIndex );
+    VARIANT_BOOL GetEditingShapes ( );
+    long GetLastErrorCode ( );
+    _bstr_t GetCdlgFilter ( );
+    ICallbackPtr GetGlobalCallback ( );
+    void PutGlobalCallback (
+        struct ICallback * pVal );
+    _bstr_t GetKey ( );
+    void PutKey (
+        _bstr_t pVal );
+    VARIANT_BOOL Open (
+        _bstr_t ShapefileName,
+        struct ICallback * cBack );
+    VARIANT_BOOL CreateNew (
+        _bstr_t ShapefileName,
+        enum ShpfileType ShapefileType );
+    VARIANT_BOOL SaveAs (
+        _bstr_t ShapefileName,
+        struct ICallback * cBack );
+    VARIANT_BOOL Close ( );
+    VARIANT_BOOL EditClear ( );
+    VARIANT_BOOL EditInsertShape (
+        struct IShape * Shape,
+        long * ShapeIndex );
+    VARIANT_BOOL EditDeleteShape (
+        long ShapeIndex );
+    VARIANT_BOOL SelectShapes (
+        struct IExtents * BoundBox,
+        double Tolerance,
+        enum SelectMode SelectMode,
+        VARIANT * result );
+    VARIANT_BOOL StartEditingShapes (
+        VARIANT_BOOL StartEditTable,
+        struct ICallback * cBack );
+    VARIANT_BOOL StopEditingShapes (
+        VARIANT_BOOL ApplyChanges,
+        VARIANT_BOOL StopEditTable,
+        struct ICallback * cBack );
+    VARIANT_BOOL EditInsertField (
+        struct IField * NewField,
+        long * FieldIndex,
+        struct ICallback * cBack );
+    VARIANT_BOOL EditDeleteField (
+        long FieldIndex,
+        struct ICallback * cBack );
+    VARIANT_BOOL EditCellValue (
+        long FieldIndex,
+        long ShapeIndex,
+        const _variant_t & NewVal );
+    VARIANT_BOOL StartEditingTable (
+        struct ICallback * cBack );
+    VARIANT_BOOL StopEditingTable (
+        VARIANT_BOOL ApplyChanges,
+        struct ICallback * cBack );
+    IFieldPtr GetField (
+        long FieldIndex );
+    _variant_t GetCellValue (
+        long FieldIndex,
+        long ShapeIndex );
+    VARIANT_BOOL GetEditingTable ( );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    long GetFileHandle ( );
+    _bstr_t GetFilename ( );
+    IPointPtr QuickPoint (
+        long ShapeIndex,
+        long PointIndex );
+    IExtentsPtr QuickExtents (
+        long ShapeIndex );
+    SAFEARRAY * QuickPoints (
+        long ShapeIndex,
+        long * numPoints );
+    VARIANT_BOOL PointInShape (
+        long ShapeIndex,
+        double x,
+        double y );
+    long PointInShapefile (
+        double x,
+        double y );
+    VARIANT_BOOL BeginPointInShapefile ( );
+    HRESULT EndPointInShapefile ( );
+    _bstr_t GetProjection ( );
+    void PutProjection (
+        _bstr_t pVal );
+    IFieldPtr GetFieldByName (
+        _bstr_t Fieldname );
+    long GetnumPoints (
+        long ShapeIndex );
+    VARIANT_BOOL CreateNewWithShapeID (
+        _bstr_t ShapefileName,
+        enum ShpfileType ShapefileType );
+    VARIANT_BOOL GetUseSpatialIndex ( );
+    void PutUseSpatialIndex (
+        VARIANT_BOOL pVal );
+    VARIANT_BOOL CreateSpatialIndex (
+        _bstr_t ShapefileName );
+    VARIANT_BOOL GetHasSpatialIndex ( );
+    void PutHasSpatialIndex (
+        VARIANT_BOOL pVal );
+    VARIANT_BOOL Resource (
+        _bstr_t newShpPath );
+    VARIANT_BOOL GetCacheExtents ( );
+    void PutCacheExtents (
+        VARIANT_BOOL pVal );
+    VARIANT_BOOL RefreshExtents ( );
+    VARIANT_BOOL RefreshShapeExtents (
+        long ShapeId );
+    HRESULT QuickQueryInEditMode (
+        struct IExtents * BoundBox,
+        int * * result,
+        int * ResultCount );
+    VARIANT_BOOL GetUseQTree ( );
+    void PutUseQTree (
+        VARIANT_BOOL pVal );
+    VARIANT_BOOL Save (
+        struct ICallback * cBack );
+    VARIANT_BOOL IsSpatialIndexValid ( );
+    void PutSpatialIndexMaxAreaPercent (
+        double pVal );
+    double GetSpatialIndexMaxAreaPercent ( );
+    VARIANT_BOOL GetCanUseSpatialIndex (
+        struct IExtents * pArea );
+    IShapefilePtr GetIntersection (
+        VARIANT_BOOL SelectedOnlyOfThis,
+        struct IShapefile * sf,
+        VARIANT_BOOL SelectedOnly,
+        enum ShpfileType FileType,
+        struct ICallback * cBack );
+    VARIANT_BOOL SelectByShapefile (
+        struct IShapefile * sf,
+        enum tkSpatialRelation Relation,
+        VARIANT_BOOL SelectedOnly,
+        VARIANT * result,
+        struct ICallback * cBack );
+    long GetNumSelected ( );
+    VARIANT_BOOL GetShapeSelected (
+        long ShapeIndex );
+    void PutShapeSelected (
+        long ShapeIndex,
+        VARIANT_BOOL pVal );
+    IShapeDrawingOptionsPtr GetSelectionDrawingOptions ( );
+    void PutSelectionDrawingOptions (
+        struct IShapeDrawingOptions * pVal );
+    HRESULT SelectAll ( );
+    HRESULT SelectNone ( );
+    HRESULT InvertSelection ( );
+    IShapefilePtr Dissolve (
+        long FieldIndex,
+        VARIANT_BOOL SelectedOnly );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_NumShapes (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_NumFields (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Extents (
+        /*[out,retval]*/ struct IExtents * * pVal ) = 0;
+      virtual HRESULT __stdcall get_ShapefileType (
+        /*[out,retval]*/ enum ShpfileType * pVal ) = 0;
+      virtual HRESULT __stdcall get_Shape (
+        /*[in]*/ long ShapeIndex,
+        /*[out,retval]*/ struct IShape * * pVal ) = 0;
+      virtual HRESULT __stdcall get_EditingShapes (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_LastErrorCode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_CdlgFilter (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GlobalCallback (
+        /*[out,retval]*/ struct ICallback * * pVal ) = 0;
+      virtual HRESULT __stdcall put_GlobalCallback (
+        /*[in]*/ struct ICallback * pVal ) = 0;
+      virtual HRESULT __stdcall get_Key (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Key (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall raw_Open (
+        /*[in]*/ BSTR ShapefileName,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_CreateNew (
+        /*[in]*/ BSTR ShapefileName,
+        /*[in]*/ enum ShpfileType ShapefileType,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_SaveAs (
+        /*[in]*/ BSTR ShapefileName,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Close (
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_EditClear (
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_EditInsertShape (
+        /*[in]*/ struct IShape * Shape,
+        /*[in,out]*/ long * ShapeIndex,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_EditDeleteShape (
+        /*[in]*/ long ShapeIndex,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_SelectShapes (
+        /*[in]*/ struct IExtents * BoundBox,
+        /*[in]*/ double Tolerance,
+        /*[in]*/ enum SelectMode SelectMode,
+        /*[in,out]*/ VARIANT * result,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_StartEditingShapes (
+        /*[in]*/ VARIANT_BOOL StartEditTable,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_StopEditingShapes (
+        /*[in]*/ VARIANT_BOOL ApplyChanges,
+        /*[in]*/ VARIANT_BOOL StopEditTable,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_EditInsertField (
+        /*[in]*/ struct IField * NewField,
+        /*[in,out]*/ long * FieldIndex,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_EditDeleteField (
+        /*[in]*/ long FieldIndex,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_EditCellValue (
+        /*[in]*/ long FieldIndex,
+        /*[in]*/ long ShapeIndex,
+        /*[in]*/ VARIANT NewVal,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_StartEditingTable (
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_StopEditingTable (
+        /*[in]*/ VARIANT_BOOL ApplyChanges,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall get_Field (
+        /*[in]*/ long FieldIndex,
+        /*[out,retval]*/ struct IField * * pVal ) = 0;
+      virtual HRESULT __stdcall get_CellValue (
+        /*[in]*/ long FieldIndex,
+        /*[in]*/ long ShapeIndex,
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_EditingTable (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_ErrorMsg (
+        /*[in]*/ long ErrorCode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_FileHandle (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Filename (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall raw_QuickPoint (
+        /*[in]*/ long ShapeIndex,
+        /*[in]*/ long PointIndex,
+        /*[out,retval]*/ struct IPoint * * retval ) = 0;
+      virtual HRESULT __stdcall raw_QuickExtents (
+        /*[in]*/ long ShapeIndex,
+        /*[out,retval]*/ struct IExtents * * retval ) = 0;
+      virtual HRESULT __stdcall raw_QuickPoints (
+        /*[in]*/ long ShapeIndex,
+        /*[in,out]*/ long * numPoints,
+        /*[out,retval]*/ SAFEARRAY * * retval ) = 0;
+      virtual HRESULT __stdcall raw_PointInShape (
+        /*[in]*/ long ShapeIndex,
+        /*[in]*/ double x,
+        /*[in]*/ double y,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_PointInShapefile (
+        /*[in]*/ double x,
+        /*[in]*/ double y,
+        /*[out,retval]*/ long * ShapeIndex ) = 0;
+      virtual HRESULT __stdcall raw_BeginPointInShapefile (
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_EndPointInShapefile ( ) = 0;
+      virtual HRESULT __stdcall get_Projection (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Projection (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_FieldByName (
+        /*[in]*/ BSTR Fieldname,
+        /*[out,retval]*/ struct IField * * pVal ) = 0;
+      virtual HRESULT __stdcall get_numPoints (
+        /*[in]*/ long ShapeIndex,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall raw_CreateNewWithShapeID (
+        /*[in]*/ BSTR ShapefileName,
+        /*[in]*/ enum ShpfileType ShapefileType,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall get_UseSpatialIndex (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_UseSpatialIndex (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall raw_CreateSpatialIndex (
+        /*[in]*/ BSTR ShapefileName,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall get_HasSpatialIndex (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_HasSpatialIndex (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall raw_Resource (
+        /*[in]*/ BSTR newShpPath,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_CacheExtents (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_CacheExtents (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall raw_RefreshExtents (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall raw_RefreshShapeExtents (
+        /*[in]*/ long ShapeId,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall raw_QuickQueryInEditMode (
+        /*[in]*/ struct IExtents * BoundBox,
+        /*[in,out]*/ int * * result,
+        /*[in,out]*/ int * ResultCount ) = 0;
+      virtual HRESULT __stdcall get_UseQTree (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_UseQTree (
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall raw_Save (
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_IsSpatialIndexValid (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_SpatialIndexMaxAreaPercent (
+        /*[in]*/ double pVal ) = 0;
+      virtual HRESULT __stdcall get_SpatialIndexMaxAreaPercent (
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_CanUseSpatialIndex (
+        /*[in]*/ struct IExtents * pArea,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall raw_GetIntersection (
+        /*[in]*/ VARIANT_BOOL SelectedOnlyOfThis,
+        /*[in]*/ struct IShapefile * sf,
+        /*[in]*/ VARIANT_BOOL SelectedOnly,
+        /*[in]*/ enum ShpfileType FileType,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ struct IShapefile * * retval ) = 0;
+      virtual HRESULT __stdcall raw_SelectByShapefile (
+        /*[in]*/ struct IShapefile * sf,
+        /*[in]*/ enum tkSpatialRelation Relation,
+        /*[in]*/ VARIANT_BOOL SelectedOnly,
+        /*[in,out]*/ VARIANT * result,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall get_NumSelected (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ShapeSelected (
+        /*[in]*/ long ShapeIndex,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall put_ShapeSelected (
+        /*[in]*/ long ShapeIndex,
+        /*[in]*/ VARIANT_BOOL pVal ) = 0;
+      virtual HRESULT __stdcall get_SelectionDrawingOptions (
+        /*[out,retval]*/ struct IShapeDrawingOptions * * pVal ) = 0;
+      virtual HRESULT __stdcall put_SelectionDrawingOptions (
+        /*[in]*/ struct IShapeDrawingOptions * pVal ) = 0;
+      virtual HRESULT __stdcall raw_SelectAll ( ) = 0;
+      virtual HRESULT __stdcall raw_SelectNone ( ) = 0;
+      virtual HRESULT __stdcall raw_InvertSelection ( ) = 0;
+      virtual HRESULT __stdcall raw_Dissolve (
+        /*[in]*/ long FieldIndex,
+        /*[in]*/ VARIANT_BOOL SelectedOnly,
+        /*[out,retval]*/ struct IShapefile * * sf ) = 0;
+};
+
+struct __declspec(uuid("ce7e6869-6f74-4e9d-9f07-3dcbadab6299"))
+Shape;
+    // [ default ] interface IShape
+
+struct __declspec(uuid("03f9b3db-637b-4544-bf7a-2f190f821f0d"))
+Extents;
+    // [ default ] interface IExtents
+
+struct __declspec(uuid("ce63ad29-c5eb-4865-b143-e0ac35ed6fbc"))
+Point;
+    // [ default ] interface IPoint
+
+struct __declspec(uuid("97efb80f-3638-4bdc-9128-c5a30194c257"))
+Table;
+    // [ default ] interface ITable
+
+struct __declspec(uuid("4365a8a1-2e46-4223-b2dc-65764262d88b"))
+ITable : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetNumRows))
+    long NumRows;
+    __declspec(property(get=GetNumFields))
+    long NumFields;
+    __declspec(property(get=GetField))
+    IFieldPtr Field[];
+    __declspec(property(get=GetCellValue))
+    _variant_t CellValue[][];
+    __declspec(property(get=GetEditingTable))
+    VARIANT_BOOL EditingTable;
+    __declspec(property(get=GetLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetCdlgFilter))
+    _bstr_t CdlgFilter;
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    ICallbackPtr GlobalCallback;
+    __declspec(property(get=GetKey,put=PutKey))
+    _bstr_t Key;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long GetNumRows ( );
+    long GetNumFields ( );
+    IFieldPtr GetField (
+        long FieldIndex );
+    _variant_t GetCellValue (
+        long FieldIndex,
+        long RowIndex );
+    VARIANT_BOOL GetEditingTable ( );
+    long GetLastErrorCode ( );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    _bstr_t GetCdlgFilter ( );
+    ICallbackPtr GetGlobalCallback ( );
+    void PutGlobalCallback (
+        struct ICallback * pVal );
+    _bstr_t GetKey ( );
+    void PutKey (
+        _bstr_t pVal );
+    VARIANT_BOOL Open (
+        _bstr_t dbfFilename,
+        struct ICallback * cBack );
+    VARIANT_BOOL CreateNew (
+        _bstr_t dbfFilename );
+    VARIANT_BOOL SaveAs (
+        _bstr_t dbfFilename,
+        struct ICallback * cBack );
+    VARIANT_BOOL Close ( );
+    VARIANT_BOOL EditClear ( );
+    VARIANT_BOOL EditInsertField (
+        struct IField * Field,
+        long * FieldIndex,
+        struct ICallback * cBack );
+    VARIANT_BOOL EditReplaceField (
+        long FieldIndex,
+        struct IField * NewField,
+        struct ICallback * cBack );
+    VARIANT_BOOL EditDeleteField (
+        long FieldIndex,
+        struct ICallback * cBack );
+    VARIANT_BOOL EditInsertRow (
+        long * RowIndex );
+    VARIANT_BOOL EditCellValue (
+        long FieldIndex,
+        long RowIndex,
+        const _variant_t & NewVal );
+    VARIANT_BOOL StartEditingTable (
+        struct ICallback * cBack );
+    VARIANT_BOOL StopEditingTable (
+        VARIANT_BOOL ApplyChanges,
+        struct ICallback * cBack );
+    VARIANT_BOOL EditDeleteRow (
+        long RowIndex );
+    VARIANT_BOOL Save (
+        struct ICallback * cBack );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall get_NumRows (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_NumFields (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_Field (
+        /*[in]*/ long FieldIndex,
+        /*[out,retval]*/ struct IField * * pVal ) = 0;
+      virtual HRESULT __stdcall get_CellValue (
+        /*[in]*/ long FieldIndex,
+        /*[in]*/ long RowIndex,
+        /*[out,retval]*/ VARIANT * pVal ) = 0;
+      virtual HRESULT __stdcall get_EditingTable (
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall get_LastErrorCode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ErrorMsg (
+        /*[in]*/ long ErrorCode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_CdlgFilter (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GlobalCallback (
+        /*[out,retval]*/ struct ICallback * * pVal ) = 0;
+      virtual HRESULT __stdcall put_GlobalCallback (
+        /*[in]*/ struct ICallback * pVal ) = 0;
+      virtual HRESULT __stdcall get_Key (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Key (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall raw_Open (
+        /*[in]*/ BSTR dbfFilename,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_CreateNew (
+        /*[in]*/ BSTR dbfFilename,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_SaveAs (
+        /*[in]*/ BSTR dbfFilename,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Close (
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_EditClear (
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_EditInsertField (
+        /*[in]*/ struct IField * Field,
+        /*[in,out]*/ long * FieldIndex,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_EditReplaceField (
+        /*[in]*/ long FieldIndex,
+        /*[in]*/ struct IField * NewField,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_EditDeleteField (
+        /*[in]*/ long FieldIndex,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_EditInsertRow (
+        /*[in,out]*/ long * RowIndex,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_EditCellValue (
+        /*[in]*/ long FieldIndex,
+        /*[in]*/ long RowIndex,
+        /*[in]*/ VARIANT NewVal,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_StartEditingTable (
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_StopEditingTable (
+        /*[in]*/ VARIANT_BOOL ApplyChanges,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_EditDeleteRow (
+        /*[in]*/ long RowIndex,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Save (
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+};
+
+struct __declspec(uuid("c2c71e09-3deb-4e6c-b54a-d5613986bffe"))
+Field;
+    // [ default ] interface IField
+
+struct __declspec(uuid("b655545f-1d9c-4d81-a73c-205fc2c3c4ab"))
+ShapeNetwork;
+    // [ default ] interface IShapeNetwork
+
+enum __declspec(uuid("05d8ac58-5435-4957-b94b-8df7155d5f98"))
+AmbiguityResolution
+{
+    Z_VALUE = 0,
+    DISTANCE_TO_OUTLET = 1,
+    NO_RESOLUTION = 2
+};
+
+struct __declspec(uuid("2d4968f2-40d9-4f25-8be6-b51b959cc1b0"))
+IShapeNetwork : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetShapefile))
+    IShapefilePtr Shapefile;
+    __declspec(property(get=GetCurrentShape))
+    IShapePtr CurrentShape;
+    __declspec(property(get=GetCurrentShapeIndex))
+    long CurrentShapeIndex;
+    __declspec(property(get=GetDistanceToOutlet))
+    double DistanceToOutlet[];
+    __declspec(property(get=GetNumDirectUps))
+    long NumDirectUps;
+    __declspec(property(get=GetNetworkSize))
+    long NetworkSize;
+    __declspec(property(get=GetAmbigShapeIndex))
+    long AmbigShapeIndex[];
+    __declspec(property(get=GetLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    ICallbackPtr GlobalCallback;
+    __declspec(property(get=GetKey,put=PutKey))
+    _bstr_t Key;
+    __declspec(property(get=GetParentIndex,put=PutParentIndex))
+    long ParentIndex;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    long Build (
+        struct IShapefile * Shapefile,
+        long ShapeIndex,
+        long FinalPointIndex,
+        double Tolerance,
+        enum AmbiguityResolution ar,
+        struct ICallback * cBack );
+    VARIANT_BOOL DeleteShape (
+        long ShapeIndex );
+    IGridPtr RasterizeD8 (
+        VARIANT_BOOL UseNetworkBounds,
+        struct IGridHeader * Header,
+        double Cellsize,
+        struct ICallback * cBack );
+    VARIANT_BOOL MoveUp (
+        long UpIndex );
+    VARIANT_BOOL MoveDown ( );
+    VARIANT_BOOL MoveTo (
+        long ShapeIndex );
+    VARIANT_BOOL MoveToOutlet ( );
+    IShapefilePtr GetShapefile ( );
+    IShapePtr GetCurrentShape ( );
+    long GetCurrentShapeIndex ( );
+    double GetDistanceToOutlet (
+        long PointIndex );
+    long GetNumDirectUps ( );
+    long GetNetworkSize ( );
+    long GetAmbigShapeIndex (
+        long Index );
+    long GetLastErrorCode ( );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    ICallbackPtr GetGlobalCallback ( );
+    void PutGlobalCallback (
+        struct ICallback * pVal );
+    _bstr_t GetKey ( );
+    void PutKey (
+        _bstr_t pVal );
+    long GetParentIndex ( );
+    void PutParentIndex (
+        long pVal );
+    VARIANT_BOOL Open (
+        struct IShapefile * sf,
+        struct ICallback * cBack );
+    VARIANT_BOOL Close ( );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Build (
+        /*[in]*/ struct IShapefile * Shapefile,
+        /*[in]*/ long ShapeIndex,
+        /*[in]*/ long FinalPointIndex,
+        /*[in]*/ double Tolerance,
+        /*[in]*/ enum AmbiguityResolution ar,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ long * retval ) = 0;
+      virtual HRESULT __stdcall raw_DeleteShape (
+        /*[in]*/ long ShapeIndex,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_RasterizeD8 (
+        /*[in]*/ VARIANT_BOOL UseNetworkBounds,
+        /*[in]*/ struct IGridHeader * Header,
+        /*[in]*/ double Cellsize,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ struct IGrid * * retval ) = 0;
+      virtual HRESULT __stdcall raw_MoveUp (
+        /*[in]*/ long UpIndex,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_MoveDown (
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_MoveTo (
+        /*[in]*/ long ShapeIndex,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_MoveToOutlet (
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall get_Shapefile (
+        /*[out,retval]*/ struct IShapefile * * pVal ) = 0;
+      virtual HRESULT __stdcall get_CurrentShape (
+        /*[out,retval]*/ struct IShape * * pVal ) = 0;
+      virtual HRESULT __stdcall get_CurrentShapeIndex (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_DistanceToOutlet (
+        /*[in]*/ long PointIndex,
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_NumDirectUps (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_NetworkSize (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_AmbigShapeIndex (
+        /*[in]*/ long Index,
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_LastErrorCode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ErrorMsg (
+        /*[in]*/ long ErrorCode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GlobalCallback (
+        /*[out,retval]*/ struct ICallback * * pVal ) = 0;
+      virtual HRESULT __stdcall put_GlobalCallback (
+        /*[in]*/ struct ICallback * pVal ) = 0;
+      virtual HRESULT __stdcall get_Key (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Key (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall get_ParentIndex (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall put_ParentIndex (
+        /*[in]*/ long pVal ) = 0;
+      virtual HRESULT __stdcall raw_Open (
+        /*[in]*/ struct IShapefile * sf,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Close (
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+};
+
+struct __declspec(uuid("b898877f-dc9e-4fbf-b997-b65dc97b72e9"))
+Utils;
+    // [ default ] interface IUtils
+
+enum __declspec(uuid("6f09e672-ea03-47dc-bc25-4a165dacc148"))
+PolygonOperation
+{
+    DIFFERENCE_OPERATION = 0,
+    INTERSECTION_OPERATION = 1,
+    EXCLUSIVEOR_OPERATION = 2,
+    UNION_OPERATION = 3
+};
+
+enum __declspec(uuid("b4ea9a5d-c2db-4da9-ae5b-a70e57c66c5c"))
+SplitMethod
+{
+    InscribedRadius = 0,
+    AngleDeviation = 1
+};
+
+struct __declspec(uuid("55dd824e-332e-41ca-b40c-c8dc81ee209c"))
+ITin : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetNumTriangles))
+    long NumTriangles;
+    __declspec(property(get=GetNumVertices))
+    long NumVertices;
+    __declspec(property(get=GetLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetCdlgFilter))
+    _bstr_t CdlgFilter;
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    ICallbackPtr GlobalCallback;
+    __declspec(property(get=GetKey,put=PutKey))
+    _bstr_t Key;
+    __declspec(property(get=GetFilename))
+    _bstr_t Filename;
+    __declspec(property(get=GetIsNDTriangle))
+    VARIANT_BOOL IsNDTriangle[];
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL Open (
+        _bstr_t TinFile,
+        struct ICallback * cBack );
+    VARIANT_BOOL CreateNew (
+        struct IGrid * Grid,
+        double Deviation,
+        enum SplitMethod SplitTest,
+        double STParam,
+        long MeshDivisions,
+        long MaximumTriangles,
+        struct ICallback * cBack );
+    VARIANT_BOOL Save (
+        _bstr_t TinFilename,
+        struct ICallback * cBack );
+    VARIANT_BOOL Close ( );
+    VARIANT_BOOL Select (
+        long * TriangleHint,
+        double x,
+        double y,
+        double * Z );
+    long GetNumTriangles ( );
+    long GetNumVertices ( );
+    long GetLastErrorCode ( );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    _bstr_t GetCdlgFilter ( );
+    ICallbackPtr GetGlobalCallback ( );
+    void PutGlobalCallback (
+        struct ICallback * pVal );
+    _bstr_t GetKey ( );
+    void PutKey (
+        _bstr_t pVal );
+    HRESULT Triangle (
+        long TriIndex,
+        long * vtx1Index,
+        long * vtx2Index,
+        long * vtx3Index );
+    HRESULT Vertex (
+        long VtxIndex,
+        double * x,
+        double * y,
+        double * Z );
+    HRESULT Max (
+        double * x,
+        double * y,
+        double * Z );
+    HRESULT Min (
+        double * x,
+        double * y,
+        double * Z );
+    _bstr_t GetFilename ( );
+    VARIANT_BOOL GetIsNDTriangle (
+        long TriIndex );
+    HRESULT TriangleNeighbors (
+        long TriIndex,
+        long * triIndex1,
+        long * triIndex2,
+        long * triIndex3 );
+    VARIANT_BOOL CreateTinFromPoints (
+        SAFEARRAY * Points );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_Open (
+        /*[in]*/ BSTR TinFile,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_CreateNew (
+        /*[in]*/ struct IGrid * Grid,
+        /*[in]*/ double Deviation,
+        /*[in]*/ enum SplitMethod SplitTest,
+        /*[in]*/ double STParam,
+        /*[in]*/ long MeshDivisions,
+        /*[in]*/ long MaximumTriangles,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Save (
+        /*[in]*/ BSTR TinFilename,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Close (
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_Select (
+        /*[in,out]*/ long * TriangleHint,
+        /*[in]*/ double x,
+        /*[in]*/ double y,
+        /*[out]*/ double * Z,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall get_NumTriangles (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_NumVertices (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_LastErrorCode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ErrorMsg (
+        /*[in]*/ long ErrorCode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_CdlgFilter (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GlobalCallback (
+        /*[out,retval]*/ struct ICallback * * pVal ) = 0;
+      virtual HRESULT __stdcall put_GlobalCallback (
+        /*[in]*/ struct ICallback * pVal ) = 0;
+      virtual HRESULT __stdcall get_Key (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Key (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall raw_Triangle (
+        /*[in]*/ long TriIndex,
+        /*[out]*/ long * vtx1Index,
+        /*[out]*/ long * vtx2Index,
+        /*[out]*/ long * vtx3Index ) = 0;
+      virtual HRESULT __stdcall raw_Vertex (
+        /*[in]*/ long VtxIndex,
+        /*[out]*/ double * x,
+        /*[out]*/ double * y,
+        /*[out]*/ double * Z ) = 0;
+      virtual HRESULT __stdcall raw_Max (
+        /*[out]*/ double * x,
+        /*[out]*/ double * y,
+        /*[out]*/ double * Z ) = 0;
+      virtual HRESULT __stdcall raw_Min (
+        /*[out]*/ double * x,
+        /*[out]*/ double * y,
+        /*[out]*/ double * Z ) = 0;
+      virtual HRESULT __stdcall get_Filename (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_IsNDTriangle (
+        /*[in]*/ long TriIndex,
+        /*[out,retval]*/ VARIANT_BOOL * pVal ) = 0;
+      virtual HRESULT __stdcall raw_TriangleNeighbors (
+        /*[in]*/ long TriIndex,
+        /*[in,out]*/ long * triIndex1,
+        /*[in,out]*/ long * triIndex2,
+        /*[in,out]*/ long * triIndex3 ) = 0;
+      virtual HRESULT __stdcall raw_CreateTinFromPoints (
+        /*[in]*/ SAFEARRAY * Points,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+};
+
+struct __declspec(uuid("360bec33-7703-4693-b6ca-90fea22cf1b7"))
+IUtils : IDispatch
+{
+    //
+    // Property data
+    //
+
+    __declspec(property(get=GetLength))
+    double Length[];
+    __declspec(property(get=GetPerimeter))
+    double Perimeter[];
+    __declspec(property(get=GetArea))
+    double Area[];
+    __declspec(property(get=GetLastErrorCode))
+    long LastErrorCode;
+    __declspec(property(get=GetErrorMsg))
+    _bstr_t ErrorMsg[];
+    __declspec(property(get=GetGlobalCallback,put=PutGlobalCallback))
+    ICallbackPtr GlobalCallback;
+    __declspec(property(get=GetKey,put=PutKey))
+    _bstr_t Key;
+
+    //
+    // Wrapper methods for error-handling
+    //
+
+    VARIANT_BOOL PointInPolygon (
+        struct IShape * Shp,
+        struct IPoint * TestPoint );
+    VARIANT_BOOL GridReplace (
+        struct IGrid * Grd,
+        const _variant_t & OldValue,
+        const _variant_t & newValue,
+        struct ICallback * cBack );
+    VARIANT_BOOL GridInterpolateNoData (
+        struct IGrid * Grd,
+        struct ICallback * cBack );
+    VARIANT_BOOL RemoveColinearPoints (
+        struct IShapefile * Shapes,
+        double LinearTolerance,
+        struct ICallback * cBack );
+    double GetLength (
+        struct IShape * Shape );
+    double GetPerimeter (
+        struct IShape * Shape );
+    double GetArea (
+        struct IShape * Shape );
+    long GetLastErrorCode ( );
+    _bstr_t GetErrorMsg (
+        long ErrorCode );
+    ICallbackPtr GetGlobalCallback ( );
+    void PutGlobalCallback (
+        struct ICallback * pVal );
+    _bstr_t GetKey ( );
+    void PutKey (
+        _bstr_t pVal );
+    IShapePtr ClipPolygon (
+        enum PolygonOperation op,
+        struct IShape * SubjectPolygon,
+        struct IShape * ClipPolygon );
+    IGridPtr GridMerge (
+        const _variant_t & Grids,
+        _bstr_t MergeFilename,
+        VARIANT_BOOL InRam,
+        enum GridFileType GrdFileType,
+        struct ICallback * cBack );
+    IShapePtr ShapeMerge (
+        struct IShapefile * Shapes,
+        long IndexOne,
+        long IndexTwo,
+        struct ICallback * cBack );
+    IImagePtr GridToImage (
+        struct IGrid * Grid,
+        struct IGridColorScheme * cScheme,
+        struct ICallback * cBack );
+    IShapefilePtr GridToShapefile (
+        struct IGrid * Grid,
+        struct IGrid * ConnectionGrid,
+        struct ICallback * cBack );
+    IGridPtr GridToGrid (
+        struct IGrid * Grid,
+        enum GridDataType OutDataType,
+        struct ICallback * cBack );
+    IShapefilePtr ShapeToShapeZ (
+        struct IShapefile * Shapefile,
+        struct IGrid * Grid,
+        struct ICallback * cBack );
+    IShapefilePtr TinToShapefile (
+        struct ITin * Tin,
+        enum ShpfileType Type,
+        struct ICallback * cBack );
+    IGridPtr ShapefileToGrid (
+        struct IShapefile * Shpfile,
+        VARIANT_BOOL UseShapefileBounds,
+        struct IGridHeader * GrdHeader,
+        double Cellsize,
+        VARIANT_BOOL UseShapeNumber,
+        short SingleValue );
+    IPictureDisp * hBitmapToPicture (
+        long hBitmap );
+    VARIANT_BOOL GenerateHillShade (
+        _bstr_t bstrGridFilename,
+        _bstr_t bstrShadeFilename,
+        float Z,
+        float scale,
+        float az,
+        float alt );
+    VARIANT_BOOL GenerateContour (
+        _bstr_t pszSrcFilename,
+        _bstr_t pszDstFilename,
+        double dfInterval,
+        double dfNoData,
+        VARIANT_BOOL Is3D,
+        const _variant_t & dblFLArray,
+        struct ICallback * cBack );
+    VARIANT_BOOL TranslateRaster (
+        _bstr_t bstrSrcFilename,
+        _bstr_t bstrDstFilename,
+        _bstr_t bstrOptions,
+        struct ICallback * cBack );
+    IShapefilePtr OGRLayerToShapefile (
+        _bstr_t Filename,
+        enum ShpfileType ShpType,
+        struct ICallback * cBack );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_PointInPolygon (
+        /*[in]*/ struct IShape * Shp,
+        /*[in]*/ struct IPoint * TestPoint,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_GridReplace (
+        /*[in]*/ struct IGrid * Grd,
+        /*[in]*/ VARIANT OldValue,
+        /*[in]*/ VARIANT newValue,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_GridInterpolateNoData (
+        /*[in]*/ struct IGrid * Grd,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_RemoveColinearPoints (
+        /*[in]*/ struct IShapefile * Shapes,
+        /*[in]*/ double LinearTolerance,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall get_Length (
+        /*[in]*/ struct IShape * Shape,
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_Perimeter (
+        /*[in]*/ struct IShape * Shape,
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_Area (
+        /*[in]*/ struct IShape * Shape,
+        /*[out,retval]*/ double * pVal ) = 0;
+      virtual HRESULT __stdcall get_LastErrorCode (
+        /*[out,retval]*/ long * pVal ) = 0;
+      virtual HRESULT __stdcall get_ErrorMsg (
+        /*[in]*/ long ErrorCode,
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall get_GlobalCallback (
+        /*[out,retval]*/ struct ICallback * * pVal ) = 0;
+      virtual HRESULT __stdcall put_GlobalCallback (
+        /*[in]*/ struct ICallback * pVal ) = 0;
+      virtual HRESULT __stdcall get_Key (
+        /*[out,retval]*/ BSTR * pVal ) = 0;
+      virtual HRESULT __stdcall put_Key (
+        /*[in]*/ BSTR pVal ) = 0;
+      virtual HRESULT __stdcall raw_ClipPolygon (
+        /*[in]*/ enum PolygonOperation op,
+        /*[in]*/ struct IShape * SubjectPolygon,
+        /*[in]*/ struct IShape * ClipPolygon,
+        /*[out,retval]*/ struct IShape * * retval ) = 0;
+      virtual HRESULT __stdcall raw_GridMerge (
+        /*[in]*/ VARIANT Grids,
+        /*[in]*/ BSTR MergeFilename,
+        /*[in]*/ VARIANT_BOOL InRam,
+        /*[in]*/ enum GridFileType GrdFileType,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ struct IGrid * * retval ) = 0;
+      virtual HRESULT __stdcall raw_ShapeMerge (
+        /*[in]*/ struct IShapefile * Shapes,
+        /*[in]*/ long IndexOne,
+        /*[in]*/ long IndexTwo,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ struct IShape * * retval ) = 0;
+      virtual HRESULT __stdcall raw_GridToImage (
+        /*[in]*/ struct IGrid * Grid,
+        /*[in]*/ struct IGridColorScheme * cScheme,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ struct IImage * * retval ) = 0;
+      virtual HRESULT __stdcall raw_GridToShapefile (
+        /*[in]*/ struct IGrid * Grid,
+        /*[in]*/ struct IGrid * ConnectionGrid,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ struct IShapefile * * retval ) = 0;
+      virtual HRESULT __stdcall raw_GridToGrid (
+        /*[in]*/ struct IGrid * Grid,
+        /*[in]*/ enum GridDataType OutDataType,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ struct IGrid * * retval ) = 0;
+      virtual HRESULT __stdcall raw_ShapeToShapeZ (
+        /*[in]*/ struct IShapefile * Shapefile,
+        /*[in]*/ struct IGrid * Grid,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ struct IShapefile * * retval ) = 0;
+      virtual HRESULT __stdcall raw_TinToShapefile (
+        /*[in]*/ struct ITin * Tin,
+        /*[in]*/ enum ShpfileType Type,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ struct IShapefile * * retval ) = 0;
+      virtual HRESULT __stdcall raw_ShapefileToGrid (
+        /*[in]*/ struct IShapefile * Shpfile,
+        /*[in]*/ VARIANT_BOOL UseShapefileBounds,
+        /*[in]*/ struct IGridHeader * GrdHeader,
+        /*[in]*/ double Cellsize,
+        /*[in]*/ VARIANT_BOOL UseShapeNumber,
+        /*[in]*/ short SingleValue,
+        /*[out,retval]*/ struct IGrid * * retval ) = 0;
+      virtual HRESULT __stdcall raw_hBitmapToPicture (
+        /*[in]*/ long hBitmap,
+        /*[out,retval]*/ IPictureDisp * * retval ) = 0;
+      virtual HRESULT __stdcall raw_GenerateHillShade (
+        /*[in]*/ BSTR bstrGridFilename,
+        /*[in]*/ BSTR bstrShadeFilename,
+        /*[in]*/ float Z,
+        /*[in]*/ float scale,
+        /*[in]*/ float az,
+        /*[in]*/ float alt,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_GenerateContour (
+        /*[in]*/ BSTR pszSrcFilename,
+        /*[in]*/ BSTR pszDstFilename,
+        /*[in]*/ double dfInterval,
+        /*[in]*/ double dfNoData,
+        /*[in]*/ VARIANT_BOOL Is3D,
+        /*[in]*/ VARIANT dblFLArray,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_TranslateRaster (
+        /*[in]*/ BSTR bstrSrcFilename,
+        /*[in]*/ BSTR bstrDstFilename,
+        /*[in]*/ BSTR bstrOptions,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ VARIANT_BOOL * retval ) = 0;
+      virtual HRESULT __stdcall raw_OGRLayerToShapefile (
+        /*[in]*/ BSTR Filename,
+        /*[in]*/ enum ShpfileType ShpType,
+        /*[in]*/ struct ICallback * cBack,
+        /*[out,retval]*/ struct IShapefile * * sf ) = 0;
+};
+
+struct __declspec(uuid("d226c4b1-c97c-469d-8cbc-8e3df2139612"))
+Vector;
+    // [ default ] interface IVector
+
+struct __declspec(uuid("eceb5841-f84e-4dfd-8c96-32216c69c818"))
+GridColorScheme;
+    // [ default ] interface IGridColorScheme
+
+struct __declspec(uuid("b82b0eb0-05b6-4ff2-aa16-bcd33fde6568"))
+GridColorBreak;
+    // [ default ] interface IGridColorBreak
+
+struct __declspec(uuid("677b1af6-a28d-4fab-8a5f-0f8763d88638"))
+Tin;
+    // [ default ] interface ITin
+
+struct __declspec(uuid("58804a7f-2c75-41af-9d32-5bd08db1baf6"))
+ShapeDrawingOptions;
+    // [ default ] interface IShapeDrawingOptions
+
+//
+// Wrapper method implementations
+//
+
+#include "c:\xinhaoyuxitong\20200106uav_spider\20200106uav_spider\uav_spider\uav_spider\debug\mapwingis.tli"
+
+} // namespace MapWinGIS
+
+#pragma pack(pop)
