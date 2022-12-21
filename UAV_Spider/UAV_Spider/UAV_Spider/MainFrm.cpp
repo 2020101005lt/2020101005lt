@@ -10,7 +10,7 @@
 #include "DlgTrapCtrl.h"
 #include "DetectReportPane.h"
 #include "DetectCtrlPane.h"
-using namespace DetectReport;
+using namespace DetectReport;	
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -30,7 +30,7 @@ END_MESSAGE_MAP()
 
 static UINT indicators[] =
 {
-	ID_SEPARATOR,           // status line indicator
+	ID_SEPARATOR,           // è®¾ç½®çŠ¶æ€æŒ‡ç¤ºç¯
 	ID_INDICATOR_CAPS,
 	ID_INDICATOR_NUM,
 	ID_INDICATOR_SCRL,
@@ -61,9 +61,9 @@ int CMainFrame::ReadConfig()
 	GetCurrentDirectoryA(sizeof(buf),buf);
 	CString strFilePath;
 	strFilePath.Format("%s\\Config.ini",buf);
-	//¶ÁÈ¡µ½ÏòÁ¿	std::vector <MAPWINGIS_LAYERSHOWINFO>	myShpLayerShowInfoVec; --->>>°´ÕÕÀàĞÍÅÅĞòÁË£¡
-	//GetLayerShowConfigInfo(relativeDir + "\\Config\\Í¼²ãÏÔÊ¾ÅäÖÃ±í.csv");
-	CFileFind finder;   //²éÕÒÊÇ·ñ´æÔÚiniÎÄ¼ş£¬Èô²»´æÔÚ£¬ÔòÉú³ÉÒ»¸öĞÂµÄÄ¬ÈÏÉèÖÃµÄiniÎÄ¼ş£¬ÕâÑù¾Í±£Ö¤ÁËÎÒÃÇ¸ü¸ÄºóµÄÉèÖÃÃ¿´Î¶¼¿ÉÓÃ  
+	//è¯»å–åˆ°å‘é‡	std::vector <MAPWINGIS_LAYERSHOWINFO>	myShpLayerShowInfoVec; --->>>æŒ‰ç…§ç±»å‹æ’åºäº†ï¼
+	//GetLayerShowConfigInfo(relativeDir + "\\Config\\å›¾å±‚æ˜¾ç¤ºé…ç½®è¡¨.csv");
+	CFileFind finder;   //æŸ¥æ‰¾æ˜¯å¦å­˜åœ¨iniæ–‡ä»¶ï¼Œè‹¥ä¸å­˜åœ¨ï¼Œåˆ™ç”Ÿæˆä¸€ä¸ªæ–°çš„é»˜è®¤è®¾ç½®çš„iniæ–‡ä»¶ï¼Œè¿™æ ·å°±ä¿è¯äº†æˆ‘ä»¬æ›´æ”¹åçš„è®¾ç½®æ¯æ¬¡éƒ½å¯ç”¨  
 	BOOL ifFind = finder.FindFile(strFilePath);
 	if (!ifFind)
 	{
@@ -138,20 +138,20 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	//paneToolBar->SetOptions()
 	CXTPDockingPane* paneDetectReport = m_paneManager.CreatePane(
 		IDR_PANE_DETECT_REPORT, CRect(0, 0,500, 120), xtpPaneDockLeft);
-	//paneDetectReport->SetTitle(_T("Ì½²â·¢ÏÖ¼ÇÂ¼"));
-	paneDetectReport->SetTitle(_T("±à¶Ó²ÎÊıÁĞ±í"));
+	//paneDetectReport->SetTitle(_T("æ¢æµ‹å‘ç°è®°å½•"));
+	paneDetectReport->SetTitle(_T("ç¼–é˜Ÿå‚æ•°åˆ—è¡¨"));
 	CXTPDockingPane* paneTrapReport = m_paneManager.CreatePane(
 		IDR_PANE_TRAP_REPORT, CRect(0, 0,500, 120), xtpPaneDockBottom, paneDetectReport);
-	paneTrapReport->SetTitle(_T("ÓÕÆ­¶¯×÷¼ÇÂ¼"));
+	paneTrapReport->SetTitle(_T("è¯±éª—åŠ¨ä½œè®°å½•"));
 	CXTPDockingPane* paneDetectCtrl = m_paneManager.CreatePane(
 		IDR_PANE_DETECT_CONTROL, CRect(0, 0,400, 120), xtpPaneDockRight);
-	paneDetectCtrl->SetTitle(_T("Ì½²â¿ØÖÆÃæ°å"));
+	paneDetectCtrl->SetTitle(_T("æ¢æµ‹æ§åˆ¶é¢æ¿"));
 	CXTPDockingPane* paneTrapCtrl = m_paneManager.CreatePane(
 		IDR_PANE_TRAP_CONTROL, CRect(0, 0,400, 120), xtpPaneDockBottom, paneDetectCtrl);
-	paneTrapCtrl->SetTitle(_T("ÓÕÆ­¿ØÖÆÃæ°å"));
+	paneTrapCtrl->SetTitle(_T("è¯±éª—æ§åˆ¶é¢æ¿"));
 	CXTPDockingPane* paneOpLog = m_paneManager.CreatePane(
 		IDR_PANE_OPERATION_LOG, CRect(0, 0,200, 200), xtpPaneDockBottom);
-	paneOpLog->SetTitle(_T("²Ù×÷¼ÇÂ¼"));
+	paneOpLog->SetTitle(_T("æ“ä½œè®°å½•"));
 
 	// Set the icons for the docking pane tabs.
 	int nIDIcons[] = {IDR_PANE_TOOLBAR, IDR_PANE_DETECT_REPORT, IDR_PANE_TRAP_REPORT,IDR_PANE_DETECT_CONTROL,IDR_PANE_TRAP_CONTROL,IDR_PANE_OPERATION_LOG};
@@ -167,23 +167,23 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	//{
 	//	TRACE("---------------------------------------------test1 ok-------------------------------------");
 	//}
-	//if(!m_TCPclientDetect.Create())//´´½¨TCPµÄsocket
+	//if(!m_TCPclientDetect.Create())//åˆ›å»ºTCPçš„socket
 	//{
-	//	AfxMessageBox("DETECTÍøÂç´´½¨Ê§°Ü£¡");
+	//	AfxMessageBox("DETECTç½‘ç»œåˆ›å»ºå¤±è´¥ï¼");
 	//}
 	//if(!m_TCPclientDetect.Connect(m_strLoaclIP1, m_uDetectPort))
 	//{
-	//	int nErr = GetLastError();//10061Á¬½Ó²»µ½·şÎñÆ÷
-	//	AfxMessageBox("Á¬½ÓDETECTÍøÂçÊ§°Ü£¬Çë¼ì²éÍøÂçÊÇ·ñÁ¬½Ó£¡");
+	//	int nErr = GetLastError();//10061è¿æ¥ä¸åˆ°æœåŠ¡å™¨
+	//	AfxMessageBox("è¿æ¥DETECTç½‘ç»œå¤±è´¥ï¼Œè¯·æ£€æŸ¥ç½‘ç»œæ˜¯å¦è¿æ¥ï¼");
 	//}
-	//if(!m_TCPclientTrap.Create())//´´½¨TCPµÄsocket
+	//if(!m_TCPclientTrap.Create())//åˆ›å»ºTCPçš„socket
 	//{
-	//	AfxMessageBox("TRAPÍøÂç´´½¨Ê§°Ü£¡");
+	//	AfxMessageBox("TRAPç½‘ç»œåˆ›å»ºå¤±è´¥ï¼");
 	//}
 	//if(!m_TCPclientTrap.Connect(m_strLoaclIP2, m_uTrapPort))
 	//{
-	//	int nErr = GetLastError();//10061Á¬½Ó²»µ½·şÎñÆ÷
-	//	AfxMessageBox("Á¬½ÓTRAPÍøÂçÊ§°Ü£¬Çë¼ì²éÍøÂçÊÇ·ñÁ¬½Ó£¡");
+	//	int nErr = GetLastError();//10061è¿æ¥ä¸åˆ°æœåŠ¡å™¨
+	//	AfxMessageBox("è¿æ¥TRAPç½‘ç»œå¤±è´¥ï¼Œè¯·æ£€æŸ¥ç½‘ç»œæ˜¯å¦è¿æ¥ï¼");
 	//}
 	return 0;
 }
@@ -196,7 +196,7 @@ BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 	//  the CREATESTRUCT cs
 
 	cs.style |= WS_CLIPCHILDREN|WS_CLIPSIBLINGS;
-	cs.hMenu = NULL;			// 20191126-È¥µô²Ëµ¥À¸
+	cs.hMenu = NULL;			// 20191126-å»æ‰èœå•æ 
 	return TRUE;
 }
 
@@ -221,7 +221,7 @@ void CMainFrame::Dump(CDumpContext& dc) const
 
 void CMainFrame::RecvTCPData(CString szText)
 {
-	TRACE("Ln200-MainFrame:\t,½øÈëÖ÷´°¿Ú½ÓÊÕTCPÊı¾İ³ÌĞò£¡%s\n",szText);
+	TRACE("Ln200-MainFrame:\t,è¿›å…¥ä¸»çª—å£æ¥æ”¶TCPæ•°æ®ç¨‹åºï¼%s\n",szText);
 }
 
 
@@ -367,28 +367,28 @@ void CMainFrame::OnTimer(UINT nIDEvent)
 
 	//case ID_TIMER_REFRESH_TRAP:
 	//	{
-	//		fd_set rfd;                           // ÃèÊö·û¼¯ Õâ¸ö½«ÓÃÀ´²âÊÔÓĞÃ»ÓĞÒ»¸ö¿ÉÓÃµÄÁ¬½Ó
+	//		fd_set rfd;                           // æè¿°ç¬¦é›† è¿™ä¸ªå°†ç”¨æ¥æµ‹è¯•æœ‰æ²¡æœ‰ä¸€ä¸ªå¯ç”¨çš„è¿æ¥
 	//		struct timeval timeout;
-	//		timeout.tv_sec=0;               //µÈÏÂselectÓÃµ½Õâ¸ö
-	//		timeout.tv_usec=0;              //timeoutÉèÖÃÎª0£¬¿ÉÒÔÀí½âÎª·Ç×èÈû
+	//		timeout.tv_sec=0;               //ç­‰ä¸‹selectç”¨åˆ°è¿™ä¸ª
+	//		timeout.tv_usec=0;              //timeoutè®¾ç½®ä¸º0ï¼Œå¯ä»¥ç†è§£ä¸ºéé˜»å¡
 	//		int rev=0;
 	//		int SelectRcv;
 	//		int recvbuf = 1;
 	//		setsockopt(m_UDPclientTrap.s_UDPSockSrv,SOL_SOCKET,SO_RCVBUF,(char*)&recvbuf,sizeof(int));
-	//		//ÉèÖÃÎª·Ç×èÈûÄ£Ê½  
+	//		//è®¾ç½®ä¸ºéé˜»å¡æ¨¡å¼  
 	//		int imode=1;  
 	//		rev=ioctlsocket(m_UDPclientTrap.s_UDPSockSrv,FIONBIO,(u_long *)&imode);  
-	//		// UDPÊı¾İ½ÓÊÕ
-	//		FD_ZERO(&rfd);           //×ÜÊÇÕâÑùÏÈÇå¿ÕÒ»¸öÃèÊö·û¼¯
-	//		FD_SET(m_UDPclientTrap.s_UDPSockSrv,&rfd); //°Ñsock·ÅÈëÒª²âÊÔµÄÃèÊö·û¼¯
-	//		SelectRcv = select(m_UDPclientTrap.s_UDPSockSrv+1,&rfd,0,0, &timeout); //¼ì²é¸ÃÌ×½Ó×ÖÊÇ·ñ¿É¶Á
+	//		// UDPæ•°æ®æ¥æ”¶
+	//		FD_ZERO(&rfd);           //æ€»æ˜¯è¿™æ ·å…ˆæ¸…ç©ºä¸€ä¸ªæè¿°ç¬¦é›†
+	//		FD_SET(m_UDPclientTrap.s_UDPSockSrv,&rfd); //æŠŠsockæ”¾å…¥è¦æµ‹è¯•çš„æè¿°ç¬¦é›†
+	//		SelectRcv = select(m_UDPclientTrap.s_UDPSockSrv+1,&rfd,0,0, &timeout); //æ£€æŸ¥è¯¥å¥—æ¥å­—æ˜¯å¦å¯è¯»
 	//		if(SelectRcv<0) 
 	//		{
-	//			TRACE("¼àÌıÊ§°Ü\n");
+	//			TRACE("ç›‘å¬å¤±è´¥\n");
 	//		}
 	//		if(SelectRcv==0) 
 	//		{
-	//			/*TRACE("³¬Ê±\n");*/
+	//			/*TRACE("è¶…æ—¶\n");*/
 	//		}
 	//		if (SelectRcv > 0)
 	//		{
@@ -404,7 +404,7 @@ void CMainFrame::OnTimer(UINT nIDEvent)
 	//	m_paneDetectReport.m_dataDetect.m_strAppearTime = "10:15:36";
 	//	m_paneDetectReport.m_dataDetect.m_strDisappearTime = "10:18:42";
 	//	m_paneDetectReport.m_dataDetect.m_strAzimuth = "49.2";
-	//	m_paneDetectReport.m_dataDetect.m_strFreqRange = "Æµ¶Î2";
+	//	m_paneDetectReport.m_dataDetect.m_strFreqRange = "é¢‘æ®µ2";
 	//	m_paneDetectReport.m_dataDetect.m_strUAVType = "Dji2300";
 	//	//m_paneDetectReport.UpdateDetectData();
 	//	break;
