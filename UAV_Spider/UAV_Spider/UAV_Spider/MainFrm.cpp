@@ -126,9 +126,8 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	m_paneManager.SetTheme(xtpPaneThemeOffice2003);
 	m_paneManager.SetAlphaDockingContext(TRUE);
 	m_paneManager.SetShowDockingContextStickers(TRUE);
-	m_paneManager.SetShowContentsWhileDragging(TRUE);
+	m_paneManager.SetShowContentsWhileDragging(TRUE);//设置对接空格
 
-	// Create docking panes.
 	CXTPDockingPane* paneToolBar = m_paneManager.CreatePane(
 		IDR_PANE_TOOLBAR, CRect(0, 0,100, 100), xtpPaneDockTop);
 	paneToolBar->SetOptions(xtpPaneNoCloseable);
@@ -257,8 +256,8 @@ void CMainFrame::OnCustomize()
 		CXTPCustomizeCommandsPage* pCommands = dlg.GetCommandsPage();
 		pCommands->AddCategories(IDR_MAINFRAME);
 
-		// Use the command bar manager to initialize the
-		// customize dialog.
+		// 命令栏管理器初始化
+		// 自定义对话框.
 		pCommands->InsertAllCommandsCategory();
 		pCommands->InsertBuiltInMenus(IDR_MAINFRAME);
 		pCommands->InsertNewMenuCategory();
