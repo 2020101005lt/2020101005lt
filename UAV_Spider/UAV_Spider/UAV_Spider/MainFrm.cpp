@@ -46,10 +46,9 @@ static UINT uHideCmds[] =
 
 CMainFrame::CMainFrame()
 {
-	// TODO: add member initialization code here
 	m_pView = NULL;
 	CntInTimer = 0;
-	myOnTimer_Busy = 0;
+	myOnTimer_Busy = 0;//初始化代码
 }
 
 CMainFrame::~CMainFrame()
@@ -92,7 +91,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		  sizeof(indicators)/sizeof(UINT)))
 	{
 		TRACE0("Failed to create status bar\n");
-		return -1;      // fail to create
+		return -1;      //创建失败
 	}
 
 	// Initialize the command bars
@@ -104,7 +103,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	if(pCommandBars == NULL)
 	{
 		TRACE0("Failed to create command bars object.\n");
-		return -1;      // fail to create
+		return -1;      // 创建失败
 	}
 
 	// Set Office 2003 Theme
@@ -196,7 +195,7 @@ BOOL CMainFrame::PreCreateWindow(CREATESTRUCT& cs)
 	//  the CREATESTRUCT cs
 
 	cs.style |= WS_CLIPCHILDREN|WS_CLIPSIBLINGS;
-	cs.hMenu = NULL;			// 20191126-去掉菜单栏
+	cs.hMenu = NULL;			// 去掉菜单栏
 	return TRUE;
 }
 
@@ -264,7 +263,7 @@ void CMainFrame::OnCustomize()
 		pCommands->InsertBuiltInMenus(IDR_MAINFRAME);
 		pCommands->InsertNewMenuCategory();
 
-		// Dispaly the dialog.
+		// 显示对话框
 		dlg.DoModal();
 	}
 }
