@@ -15,7 +15,7 @@
 #define ID_TIMER_REFRESH_DETECT 200
 #define ID_TIMER_REFRESH_TRAP	201
 #define ID_TIMER_REFRESH_RUNTIME 202
-#define ID_TIMER_REFRESH_MAP	203
+#define ID_TIMER_REFRESH_MAP	203//å®šä¹‰å­—ç¬¦ä¸²
 using namespace DetectReport;
 using namespace TrapReport;
 
@@ -34,8 +34,8 @@ public:
 	UINT m_uTrapPort;
 
 	CUAV_SpiderView* m_pView;
-	int CntInTimer;	//µÚÒ»¸ö¶¨Ê±Æ÷ÊÂ¼ş--ÓÃÓÚÆÁÄ»³õÊ¼»¯
-	int	myOnTimer_Busy;//³ÌĞòÖØ¶¨Ê±Æ÷³ÌĞòÖĞÍË³öµÄ±êÖ¾£º0±í´ïÍË³ö
+	int CntInTimer;	//ç¬¬ä¸€ä¸ªå®šæ—¶å™¨äº‹ä»¶--ç”¨äºå±å¹•åˆå§‹åŒ–
+	int	myOnTimer_Busy;//ç¨‹åºé‡å®šæ—¶å™¨ç¨‹åºä¸­é€€å‡ºçš„æ ‡å¿—ï¼š0è¡¨è¾¾é€€å‡º
 // Operations
 public:
 	CToolbarPane m_panToolbar;
