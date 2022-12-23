@@ -118,8 +118,8 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	pCommandBars->GetCommandBarsOptions()->bLargeIcons = TRUE;
 
 	// 初始化对接窗格管理器并设置
-	// initial them for the docking panes.  Do this only after all
-	// control bars objects have been created and docked.
+	//在创建并设置好所有控制对象后，将所有对接窗口初始化处理。
+	
 	m_paneManager.InstallDockingPanes(this);
 	// Set Office 2003 Theme
 	m_paneManager.SetTheme(xtpPaneThemeOffice2003);
@@ -150,7 +150,7 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		IDR_PANE_OPERATION_LOG, CRect(0, 0,200, 200), xtpPaneDockBottom);
 	paneOpLog->SetTitle(_T("操作记录"));
 
-	// Set the icons for the docking pane tabs.
+	// 设置对接窗口选项的图标
 	int nIDIcons[] = {IDR_PANE_TOOLBAR, IDR_PANE_DETECT_REPORT, IDR_PANE_TRAP_REPORT,IDR_PANE_DETECT_CONTROL,IDR_PANE_TRAP_CONTROL,IDR_PANE_OPERATION_LOG};
 	m_paneManager.SetIcons(IDB_BITMAP_ICONS, nIDIcons,
 		_countof(nIDIcons), RGB(0, 255, 0));
