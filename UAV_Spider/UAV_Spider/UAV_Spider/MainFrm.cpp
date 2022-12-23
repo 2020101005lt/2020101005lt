@@ -18,12 +18,12 @@ using namespace DetectReport;
 
 // CMainFrame
 
-IMPLEMENT_DYNCREATE(CMainFrame, CFrameWnd)
+IMPLEMENT_DYNCREATE(CMainFrame, CFrameWnd)//类派生，动态声明宏
 
 BEGIN_MESSAGE_MAP(CMainFrame, CFrameWnd)
-	ON_WM_CREATE()
-	ON_WM_CLOSE()
-	ON_WM_TIMER()
+	ON_WM_CREATE()			//创建一个Windows标准消息
+	ON_WM_CLOSE()			//关闭消息
+	ON_WM_TIMER()			//定时器
 	ON_COMMAND(XTP_ID_CUSTOMIZE, OnCustomize)
 	ON_MESSAGE(XTPWM_DOCKINGPANE_NOTIFY, OnDockingPaneNotify)
 END_MESSAGE_MAP()
