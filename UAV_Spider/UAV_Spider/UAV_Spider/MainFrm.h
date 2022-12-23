@@ -19,7 +19,7 @@
 using namespace DetectReport;
 using namespace TrapReport;
 
-class CMainFrame : public CXTPFrameWnd
+class CMainFrame : public CXTPFrameWnd//构造函数
 {
 
 protected: // create from serialization only
@@ -53,20 +53,20 @@ public:
 	void RecvTCPData(CString szText);
 // Implementation
 public:
-	virtual ~CMainFrame();
+	virtual ~CMainFrame();//添加函数
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;
-#endif
+#endif//对提供运行对象内部状态进行检查
 
 protected:  // control bar embedded members
-	CXTPStatusBar  m_wndStatusBar;
-	CXTPDockingPaneManager m_paneManager;
+	CXTPStatusBar  m_wndStatusBar;//在对话框中添加变量成员
+	CXTPDockingPaneManager m_paneManager;//停靠窗口
 
 // Generated message map functions
 protected:
-	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
-	afx_msg void OnClose();
+	afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);//定义子窗口
+	afx_msg void OnClose();//定义子窗口
 	afx_msg void OnCustomize();
 	afx_msg void OnTimer(UINT nIDEvent);
 	afx_msg LRESULT OnDockingPaneNotify(WPARAM wParam, LPARAM lParam);
