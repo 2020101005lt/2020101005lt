@@ -40,7 +40,7 @@ static UINT uHideCmds[] =
 {
 	ID_FILE_PRINT,
 	ID_FILE_PRINT_PREVIEW,
-};
+};//对话框的显示以及打印
 
 // CMainFrame construction/destruction
 
@@ -94,11 +94,11 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 		return -1;      //创建失败
 	}
 
-	// Initialize the command bars
+	//初始化命令栏
 	if (!InitCommandBars())
 		return -1;
 
-	// Get a pointer to the command bars object.
+	// 获取命令栏显示的指针
 	CXTPCommandBars* pCommandBars = GetCommandBars();
 	if(pCommandBars == NULL)
 	{
@@ -107,18 +107,17 @@ int CMainFrame::OnCreate(LPCREATESTRUCT lpCreateStruct)
 	}
 
 	// Set Office 2003 Theme
-	CXTPPaintManager::SetTheme(xtpThemeOffice2003);
+	CXTPPaintManager::SetTheme(xtpThemeOffice2003);//隐藏命令数组
 
-	// Hide array of commands
-	pCommandBars->HideCommands(uHideCmds, _countof(uHideCmds));
+	
+	pCommandBars->HideCommands(uHideCmds, _countof(uHideCmds));//将“总是显示全部菜单”选项设置为失败
 
-	// Set "Always Show Full Menus" option to the FALSE
 	pCommandBars->GetCommandBarsOptions()->bAlwaysShowFullMenus = FALSE;
 
 	pCommandBars->GetShortcutManager()->SetAccelerators(IDR_MAINFRAME);
 	pCommandBars->GetCommandBarsOptions()->bLargeIcons = TRUE;
 
-	// Initialize the docking pane manager and set the
+	// 初始化对接窗格管理器并设置
 	// initial them for the docking panes.  Do this only after all
 	// control bars objects have been created and docked.
 	m_paneManager.InstallDockingPanes(this);
@@ -215,7 +214,7 @@ void CMainFrame::Dump(CDumpContext& dc) const
 #endif //_DEBUG
 
 
-// CMainFrame message handlers
+// 消息处理器
 
 void CMainFrame::RecvTCPData(CString szText)
 {
@@ -225,7 +224,7 @@ void CMainFrame::RecvTCPData(CString szText)
 
 void CMainFrame::OnClose()
 {
-	// Save the current state for toolbars and menus.
+	// 保存当前状态到工具栏和菜单
 	//SaveCommandBars(_T("CommandBars"));
 	KillTimer(ID_TIMER_REFRESH_MAP);
 	KillTimer(ID_TIMER_REFRESH_DETECT);
@@ -236,23 +235,23 @@ void CMainFrame::OnClose()
 
 void CMainFrame::OnCustomize()
 {
-	// Get a pointer to the command bars object.
+	// 获取命令栏对象指针
 	CXTPCommandBars* pCommandBars = GetCommandBars();
 	if(pCommandBars != NULL)
 	{
-		// Instanciate the customize dialog object.
+		// 实例化自定义对话框对象
 		CXTPCustomizeSheet dlg(pCommandBars);
 
-		// Add the keyboard page to the customize dialog.
+		// 将页面添加到自定义对话框中
 		CXTPCustomizeKeyboardPage pageKeyboard(&dlg);
 		dlg.AddPage(&pageKeyboard);
 		pageKeyboard.AddCategories(IDR_MAINFRAME);
 
-		// Add the options page to the customize dialog.
+		//添加选项页面到自定义对话框中
 		CXTPCustomizeOptionsPage pageOptions(&dlg);
 		dlg.AddPage(&pageOptions);
 
-		// Add the commands page to the customize dialog.
+		// 将命令页面添加到对话框中
 		CXTPCustomizeCommandsPage* pCommands = dlg.GetCommandsPage();
 		pCommands->AddCategories(IDR_MAINFRAME);
 
