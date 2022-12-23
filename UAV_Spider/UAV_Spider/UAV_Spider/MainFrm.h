@@ -27,7 +27,7 @@ protected: // create from serialization only
 	DECLARE_DYNCREATE(CMainFrame)
 	int ReadConfig();
 // Attributes
-public:
+public://添加函数
 	CString m_strLoaclIP1;//构造函数，定义对象
 	CString m_strLoaclIP2;
 	UINT m_uDetectPort;//声明变量
