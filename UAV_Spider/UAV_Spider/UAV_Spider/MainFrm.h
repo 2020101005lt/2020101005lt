@@ -28,9 +28,9 @@ protected: // create from serialization only
 	int ReadConfig();
 // Attributes
 public:
-	CString m_strLoaclIP1;
+	CString m_strLoaclIP1;//构造函数，定义对象
 	CString m_strLoaclIP2;
-	UINT m_uDetectPort;
+	UINT m_uDetectPort;//声明变量
 	UINT m_uTrapPort;
 
 	CUAV_SpiderView* m_pView;
